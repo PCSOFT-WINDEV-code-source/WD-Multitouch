@@ -1,0 +1,693 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : IInertiaProcessor
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1b227c960063402d
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAAB9t2iip+B2coUGs8xoE0bvLSeGUB4bP1+tXMfq3AEpwYfqqNw9JmUdtoVD2mhWy+SNuEjIhl47/5tqUYIzPTkZEHQtWDR17V/9Z9NpUScT324k/Tx96LcmLVVuWRpO/uX0LJB++RQHSQ6gQRo=
+     code : |1-
+      // Classe IInertiaProcessor
+      // =======================
+      // (Implémente l'interface COM IInertiaProcessor)
+      // 
+      // Gère les calculs concernant les mouvements d'objets pour Windows Touch
+      //
+      IInertiaProcessor est une classe
+      
+      	RESTREINT
+      		_this_												est un COMObjet		// Objet COM chargé
+      
+      	constant
+      	
+      		// Méthodes de l'interface
+      		
+      		// -> IUnknown
+      		IInertiaProcessor_QueryInterface					= 0		
+      		IInertiaProcessor_AddRef							= 1
+      		IInertiaProcessor_Release							= 2
+      		
+      		// -> IInertieProcessor : Propriétés
+      		IInertiaProcessor_get_InitialOriginX				= 3
+      		IInertiaProcessor_put_InitialOriginX				= 4
+      		IInertiaProcessor_get_InitialOriginY				= 5
+      		IInertiaProcessor_put_InitialOriginY				= 6
+      		IInertiaProcessor_get_InitialVelocityX				= 7
+      		IInertiaProcessor_put_InitialVelocityX				= 8 
+      		IInertiaProcessor_get_InitialVelocityY				= 9
+      		IInertiaProcessor_put_InitialVelocityY				= 10
+      		IInertiaProcessor_get_InitialAngularVelocity		= 11
+      		IInertiaProcessor_put_InitialAngularVelocity		= 12
+      		IInertiaProcessor_get_InitialExpansionVelocity		= 13
+      		IInertiaProcessor_put_InitialExpansionVelocity		= 14
+      		IInertiaProcessor_get_InitialRadius					= 15
+      		IInertiaProcessor_put_InitialRadius					= 16
+      		IInertiaProcessor_get_BoundaryLeft					= 17
+      		IInertiaProcessor_put_BoundaryLeft					= 18
+      		IInertiaProcessor_get_BoundaryTop					= 19
+      		IInertiaProcessor_put_BoundaryTop					= 20
+      		IInertiaProcessor_get_BoundaryRight					= 21
+      		IInertiaProcessor_put_BoundaryRight					= 22
+      		IInertiaProcessor_get_BoundaryBottom				= 23
+      		IInertiaProcessor_put_BoundaryBottom				= 24
+      		IInertiaProcessor_get_ElasticMarginLeft				= 25
+      		IInertiaProcessor_put_ElasticMarginLeft				= 26
+      		IInertiaProcessor_get_ElasticMarginTop				= 27
+      		IInertiaProcessor_put_ElasticMarginTop				= 28
+      		IInertiaProcessor_get_ElasticMarginRight			= 29
+      		IInertiaProcessor_put_ElasticMarginRight			= 30
+      		IInertiaProcessor_get_ElasticMarginBottom			= 31
+      		IInertiaProcessor_put_ElasticMarginBottom			= 32
+      		IInertiaProcessor_get_DesiredDisplacement			= 33
+      		IInertiaProcessor_put_DesiredDisplacement			= 34
+      		IInertiaProcessor_get_DesiredRotation				= 35
+      		IInertiaProcessor_put_DesiredRotation				= 36
+      		IInertiaProcessor_get_DesiredExpansion				= 37
+      		IInertiaProcessor_put_DesiredExpansion				= 38
+      		IInertiaProcessor_get_DesiredDeceleration			= 39
+      		IInertiaProcessor_put_DesiredDeceleration			= 40
+      		IInertiaProcessor_get_DesiredAngularDeceleration	= 41
+      		IInertiaProcessor_put_DesiredAngularDeceleration	= 42
+      		IInertiaProcessor_get_DesiredExpansionDeceleration	= 43
+      		IInertiaProcessor_put_DesiredExpansionDeceleration	= 44
+      		IInertiaProcessor_get_InitialTimestamp				= 45
+      		IInertiaProcessor_put_InitialTimestamp				= 46
+      		
+      		// -> IInertieProcessor : Méthodes
+      		IInertiaProcessor_Reset								= 47
+      		IInertiaProcessor_Process							= 48
+      		IInertiaProcessor_ProcessTime						= 49
+      		IInertiaProcessor_Complete							= 50
+      		IInertiaProcessor_CompleteTime						= 51
+      		
+      	FIN
+      Fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1955262171925725229
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()
+      
+      	QUAND EXCEPTION DANS
+      		
+      		// Crée une instance de IManipulationProcessor
+      		_this_ = COMCréeInstance(CLSID_InertiaProcessor, IID_IInertiaProcessor)
+      	FAIRE
+      		
+      		// On n'a pas pu créer l'instance
+      		libérer objet
+      	FIN	
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1955262171925790765
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : AddRef
+     procedure_id : 1955264078891387268
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de AddRef
+      PROCEDURE AddRef()
+      renvoyer COMAppelleMéthode(_this_, IInertiaProcessor_AddRef)
+     type : 458752
+   -
+     name : QueryInterface
+     procedure_id : 1955264078891452882
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de QueryInterface
+      PROCEDURE QueryInterface(local riid est un entier systeme, local ppvObject est un entier systeme)
+      renvoyer COMAppelleMéthode(_this_, IInertiaProcessor_QueryInterface, riid, ppvObject)
+     type : 458752
+   -
+     name : Release
+     internal_properties : CAAAAAgAAADemYLCpZpFuPOu006itwwvWwBRzUQ1lJ7ZQ6dz1b+GT4d4fNktTZevfgobmYWib6SXoH8PszUNjLdIuhU3SFuDQCtir5JGK8gdQdrIHagBhRY9fEX9Rb2DP1UHplR3pskqcRPnF9FepU6nTw==
+     procedure_id : 1955264078891518465
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de Release
+      PROCEDURE Release()
+      renvoyer COMAppelleMéthode(_this_, IInertiaProcessor_Release)
+     type : 458752
+   -
+     name : Reset
+     internal_properties : CAAAAAgAAACjBXVdu6UdJAahnuWq8W/1qm2VLKw6YodJ8yJh3zGTW4CO/tFkAz298p2YDPnyzZsmPwRL6MBQsTAVaqph//Rd2ZqvPSAzQqDjwSut9PUCOhY9yb7v+CdUsAyAK/IpJd1LLOpxUlPTSbcvVN26v877INFkJ2YN+zE+NjdUapov6G/QeUDcyzHGmM/oUPONfyY2j9/G4FEaU5+Cg5B0vXnY2uU996SvcF96/L+rnPlLigV8LS7R3SZRxXmxqnn1Q8pWQsSU/UsAAf5QqH0znhoTT0hpsf+u2Z7iW4H+L4yv+XNoB1A/bhv7FtDBKi/7923MRqV5JnkuWyMs4TAcUcdY/83Luq0hg910ATvEesdT0Wa8p4L9luxUlhjmXa492zgSlNObD3VpAausFjZQK70WAox2upvtNg==
+     procedure_id : 1955267085368735770
+     type_code : 12
+     code : |1-
+      // Résumé : Initialise le processeur avec un "timestamp" initial
+      // Description des paramètres d'entrée/sortie de 'Reset' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] Reset ()
+      //
+      // Paramètres :
+      //	Aucun
+      //
+      PROCEDURE Reset()
+      RENVOYER COMAppelleMéthode(_this_, IInertiaProcessor_Reset)
+     type : 458752
+   -
+     name : Process
+     internal_properties : CAAAAAgAAAA5a2dHPmWrVZ8Y0h2fcT+8+QI07yHuguG/EnXZFbMYZDBILmrxraiSrc4UiTLhhpw6dhMv3pDK/fhzmmIE2L6/PgC3PmX7fX2++uQqD+6TUi/w5sytdV+KQMIargtdKTQNdcw05qaf2viM6PGa6Xb7j0ZSc2Za5FVIBL7yfT8bUeNEHj7iwlvQwWN49TG6RUkJ/Wt8uqoRKW34zl/aFHx4zAg=
+     procedure_id : 1955267115433578759
+     type_code : 12
+     code : |1-
+      // Résumé : Effectue les calculs pour un "timestamp" système donné et peut déclencher les événements Delta ou Completed en fonction des résultats.
+      // Description des paramètres d'entrée/sortie de 'Process' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] Process (<bCompleted> est booléen)
+      //
+      // Paramètres :
+      //	bCompleted (booléen) : Variable de type booléen qui recevra en retour l'état du calcul (Vrai si le calcul est terminé, Faux dans le cas contraire)
+      //
+      PROCEDURE Process(bCompleted est un booléen)
+      RENVOYER COMAppelleMéthode(_this_, IInertiaProcessor_Process, &bCompleted)
+     type : 458752
+   -
+     name : ProcessTime
+     internal_properties : CAAAAAgAAAAe3rpciuDf4tPfYuaSmcHzCa1bdmj/BRK7vbsJji3nHEfmpawK4NMtJJ/GdBh6g4H9QFcD6eAcs+lf3VITJG1cgdqyH8rE5kybqN9P9T9t7gms8Mdhyu6NYmaaHem+o6na+3LT9vteibxg3JLKaiJgzMDiqnL/c9hQ1oCpF/itmIKExHF8i2bDC3cAPMfVXbqO5RV7+M+wAM0utCsZuv6yZtFd
+     procedure_id : 1955267132613517238
+     type_code : 12
+     code : |1-
+      // Résumé : Effectue les calculs pour un "timestamp" donné et peut déclencher les événements Delta ou Completed en fonction des résultats.
+      // Description des paramètres d'entrée/sortie de 'ProcessTime' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessTime (<nTimestamp> est entier sans signe sur 4 octets, <bCompleted> est booléen)
+      //
+      // Paramètres :
+      //	nTimestamp (entier sans signe sur 4 octets) : Valeur du "timestamp"
+      //	bCompleted (booléen) : Variable de type booléen qui recevra en retour l'état du calcul (Vrai si le calcul est terminé, Faux dans le cas contraire)
+      //
+      PROCEDURE ProcessTime(local nTimestamp est un entier sans signe, bCompleted est un booléen)
+      RENVOYER COMAppelleMéthode(_this_, IInertiaProcessor_ProcessTime, nTimestamp, &bCompleted)
+     type : 458752
+   -
+     name : Complete
+     internal_properties : CAAAAAgAAADSKta4jQSOj7wT99fIzS0o3fSp07jE+7BHxVWzZbqOtpAdqun6PrMN8yoLAWwwz/s2zD9NFKgBGGIMmTQM2lj0fiGXtmmWBKXFelnOwVC54q1l9lFbdeizg9sO1bIw6STXqcQmlVL4fvPoTBV/HX2tYL0zPpvam9s1drBI6PNMSjKea5tx5GMxgirJPhYBZjpCeAcFiI269lYji739UeAlEB3R2xQWCJTIrNsmhclckV3kkcDfsJAccf2ZYdLXeuWi1gQs6MzRrRsfGt/7Pn3ufBsqZ2QOrwWnStW+HRSqcTmDfhVJtvdcsUTb8WwaLJROELtDTmYChkvULb5Z+sivfVosX6Ykq+5x7hQ+7ICaMXqv+vDiksxOozHzIdKLGCrG9eKzeyPO8WSpyRA8144dsMjuqWui9HBa
+     procedure_id : 1955267145498488484
+     type_code : 12
+     code : |1-
+      // Résumé : Traite éventuellement le "timestamp" système et déclenche l'événement Completed
+      // Description des paramètres d'entrée/sortie de 'Complete' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] Complete ()
+      //
+      // Paramètres :
+      //	Aucun
+      //
+      PROCEDURE Complete()
+      RENVOYER COMAppelleMéthode(_this_, IInertiaProcessor_Complete)
+     type : 458752
+   -
+     name : CompleteTime
+     internal_properties : CAAAAAgAAABUiU9gnnQT5t/LfvIuhR3vTckqJERpoehpkdXpdHtNnN1WnSASXqvPYtME3KI01a1/5HPjDUYc6bcz+0IZWtvE5yKCA14GQvZFSNW3c4Uvcgv/vWxOI4XiQzHfHiJjZGJtHheQS1x1Xm1H7Y8PQzv9Q7e7Q3vsHiUZFWmGPFHayWWvuU4BDKXAYAaZQQwOCsGi8UlXnGOMfGmqEHet9hqeUxsX
+     procedure_id : 1955267166973329520
+     type_code : 12
+     code : |1-
+      // Résumé : Traite éventuellement le "timestamp" donné et déclenche l'événement Completed
+      // Description des paramètres d'entrée/sortie de 'CompleteTime' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] CompleteTime (<nTimestamp> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	nTimestamp (entier sans signe sur 4 octets) : Valeur du "timestamp"
+      //
+      PROCEDURE CompleteTime(local nTimestamp est un entier sans signe)
+      RENVOYER COMAppelleMéthode(_this_, IInertiaProcessor_CompleteTime, nTimestamp)
+     type : 458752
+  properties :
+   -
+     name : InitialOriginX
+     identifier : 0x1b2281f3006f3535
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialOriginX()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialOriginX, &rValeur)
+         	
+         renvoyer rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialOriginX(rValeur est un reel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialOriginX, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialOriginY
+     identifier : 0x1b2281f700704452
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialOriginY()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialOriginy, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialOriginY(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialOriginy, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialVelocityX
+     identifier : 0x1b2281fb00715321
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialVelocityX()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialVelocityX, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialVelocityX(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialVelocityX, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialVelocityY
+     identifier : 0x1b2281fe00725ee4
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialVelocityY()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialVelocityY, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialVelocityY(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialVelocityY, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialAngularVelocity
+     identifier : 0x1b22820100736b71
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialAngularVelocity()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialAngularVelocity, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialAngularVelocity(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialAngularVelocity, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialExpansionVelocity
+     identifier : 0x1b228205007479f2
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialExpansionVelocity()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialExpansionVelocity, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialExpansionVelocity(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialExpansionVelocity, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialRadius
+     identifier : 0x1b2282080075868f
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialRadius()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialRadius, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialRadius(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialRadius, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : BoundaryLeft
+     identifier : 0x1b22820b007691d5
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE BoundaryLeft()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_BoundaryLeft, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE BoundaryLeft(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_BoundaryLeft, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : BoundaryTop
+     identifier : 0x1b22820e00779e73
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE BoundaryTop()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_BoundaryTop, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE BoundaryTop(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_BoundaryTop, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : BoundaryRight
+     identifier : 0x1b2282120078ad22
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE BoundaryRight()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_BoundaryRight, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE BoundaryRight(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_BoundaryRight, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : BoundaryBottom
+     identifier : 0x1b2282160079bcbc
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE BoundaryBottom()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_BoundaryBottom, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE BoundaryBottom(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_BoundaryBottom, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : ElasticMarginLeft
+     identifier : 0x1b228219007ac7f2
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE ElasticMarginLeft()
+         	
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_ElasticMarginLeft, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE ElasticMarginLeft(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_ElasticMarginLeft, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : ElasticMarginTop
+     identifier : 0x1b22821c007bd470
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE ElasticMarginTop()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_ElasticMarginTop, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE ElasticMarginTop(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_ElasticMarginTop, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : ElasticMarginRight
+     identifier : 0x1b22821e007cde9e
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE ElasticMarginRight()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_ElasticMarginRight, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE ElasticMarginRight(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_ElasticMarginRight, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : ElasticMarginBottom
+     identifier : 0x1b228222007debf6
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE ElasticMarginBottom()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_ElasticMarginBottom, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE ElasticMarginBottom(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_ElasticMarginBottom, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : DesiredDisplacement
+     identifier : 0x1b228225007ef816
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE DesiredDisplacement()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_DesiredDisplacement, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE DesiredDisplacement(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_DesiredDisplacement, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : DesiredRotation
+     identifier : 0x1b228228007f04d3
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE DesiredRotation()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_DesiredRotation, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE DesiredRotation(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_DesiredRotation, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : DesiredExpansion
+     identifier : 0x1b22822c0080142e
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE DesiredExpansion()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_DesiredExpansion, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE DesiredExpansion(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_DesiredExpansion, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : DesiredDeceleration
+     identifier : 0x1b22822f00811f84
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE DesiredDeceleration()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_DesiredDeceleration, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE DesiredDeceleration(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_DesiredDeceleration, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : DesiredAngularDeceleration
+     identifier : 0x1b22823200822bf2
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE DesiredAngularDeceleration()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_DesiredAngularDeceleration, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE DesiredAngularDeceleration(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_DesiredAngularDeceleration, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : DesiredExpansionDeceleration
+     identifier : 0x1b228236008338fd
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE DesiredExpansionDeceleration()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_DesiredExpansionDeceleration, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE DesiredExpansionDeceleration(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_DesiredExpansionDeceleration, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : InitialTimestamp
+     identifier : 0x1b228239008445c9
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE InitialTimestamp()
+         
+         	nValeur est un entier sans signe
+         	COMAppelleMéthode(_this_, IInertiaProcessor_get_InitialTimestamp, &nValeur)
+         
+         RENVOYER nValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE InitialTimestamp(nValeur est un entier sans signe)
+         COMAppelleMéthode(_this_, IInertiaProcessor_put_InitialTimestamp, nValeur)
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CClasse1
+resources :
+ string_res :
+  identifier : 0x1fbe22ed057b97ca
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

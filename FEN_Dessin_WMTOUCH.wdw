@@ -1,0 +1,1184 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Dessin_WMTOUCH
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Dessin_WMTOUCH
+ identifier : 0x2b436987da0eccb3
+ internal_properties : CAAAAAgAAACn9JFz40/UHAs1JwGftX+RUTkTCf0m8fo1SuuruK9tusTv97q2C4fuStFHCIbMRLdGIezbZ6gs43P6sDRts2A1ydZzleXEt3upamu7NC1MQi1OrpxGhHj1OhXzqlgRue2xL8b+U7W9yBcVgBeUSrhx6WGetpQcgTmzke7hqFnfFq+wurm7LHltbLeVWQgyz87oPwUAJ3VWVPCmhQF1XleYuZWP5vTuxDfGgWqbsxHvlWN6GhEaXzHPktaHK1LFxiZbTYd6u17J37c6btTsYscyIvCYMuQg7U2uRAAOdY3MdpKE28Q0zFvup3vJv7k+seBfxRW62u/VRYB1U7FNxqzRV1NN/GJXS5CwTcYShkPI3IbcxYF393EJ/TLQ7ulLVu+N9dURyR4U6kCgVYOlTbCaSn7LqQBRccwytyWyVNvMtde2ZeZXDKWHxff7++5muIcXq9kCEtuY8rm9AQ4xg0Kidz8E5d1CvIn0H/zZmR5DSRT18kmZlfjgn9K+X01KOKrDSrVHK9Ukn9RJCThZvMC3PtZ7cKuMN9FUuMYW+RfSvWACKxxcgNL6rFXw8gnuIBbnuY0squrMKufUo4Kg0A+CdDdEGMooiI6IpnZ4WgVGQPZhb+RickSGg2YS7I+L9XXIYakK/mZaBe6hLcVHCFaebvEcW9Ms/4vohf08eBx6vKFqD5KNU2PpdFi/zW2E/Zz7jutFLClKIeK7MNf9NSVGZ454qenWJ66e0U74sNoPUIXaPRB4nDdTOGmF1AsoM4qMIOxDw0wlhr/2l5RMiALRgBoDoyBUtw0eieL/sdXAaqkg1f+sVUv3B53fXqRuiI34e2k6UF+6sRj3+2DN1bQzpZ+4RaxldzTbVy/7g3fmGPb9ql0=
+ properties :
+  width : 1010
+  height : 762
+  widthClient : 1008
+  heightClient : 730
+ controls :
+  -
+    name : IMG_RIBBON
+    identifier : 0x2b436987da10ccb3
+    internal_properties : CAAAAAgAAACejBl9WYIIno4n0PqjeqhBk+JrJMJXWiDnLDd2ocYREXgxq+tWCWFtjD/pVMQyXClJ6iKJxECZUYcCmXVVoGIxeFL+TBJexq7XGTqIK8VmbimM3Xp8Z/S9+yJcy93TUtHXYvx9qeIGyOK6E4xWGy2wGi5rKFMJCn55C/FFlNzW8ajboxG9ReTAQ5feO6rwi42cAEeb36z91os+kA8mnnohWv07bw2cQEifa088Z8W11kl5Xi9F8duxMQSKzXjafjDOiEE+DflvAmzqhNxPISHlU59RBOA+XS7kYgSH3caZcJrfCGwLx9TlUhW1cnjHDnmlWPokQp1xqIXgKWPujVNea+Ynrf+2FRN+Zqn+EqgDRvxqw24NpckEK90vhm2vGZMR7LmvjAMb3Mx6rhXhqbynGdOTyLs1X+pSRE9sUYw36mbwuu/5aaC4arcqDsulI4Df5IF8xcdeHy0tDTSCitSGKtZEYtQeWb8rrFjBFcRpZyvrBxLOSISJfSqD5HG3J21QNTW3ek7x90N0wdSw+Gp3G0ecy8NJducJTptMtTVq2DmtkR2PU6JU4PdiOQ==
+    properties :
+     width : 1020
+     height : 93
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_DESSIN
+    identifier : 0x2b436987da25ccb3
+    internal_properties : CAAAAAgAAACZn4GQoM9ovANwWDGD2XRsna49bRbZq6jCC8epAfg9Md0jP7ndGliQa52El00irEnxkntUgwUtT5UvZqPH2stvJCaspaxsS5fHlAxwmMpfnMiK4F3WnyRkU7Cc1rweOfIkKeVCv4GHjyRkIrOUMLnz3SAlJ/ypf31aIiigCB3Ykf7OGen2zun+uCewtZiwvhgPsO2Lr6SdDw19H3i2UN9gjrC0V/fzQK/hA7LelInuCIAoEHnzcXxvUKy+TdhoT7qkfl1PZUcwoD4eMB/roABZCebmP2lAdWhUwpZR9eBBwwIPtROivtoX65KlprFSdmN6vf4k38MDtf5VVcB4/nDTILkRGD64Ix/MvEh6vFJr+gzhTpMxntR3cgOk8x7M26fqf08sMNT3WlAGANbR/uvNAuZY1sLHmokVT3IoFvm2Io0aLs7EuwOn7KTr9GO2tIIzzvBjB4iTqsb0jS30DX+ZuI57dkzLgNoC5U//egJ5T1BZWQpAAAk4qwSjJ3gVBbNkYkvxyWrHd7fCZBZ6qSa8fOrhNPlqolVINIiyUfmbbUznxwvn8dCGOYzWLXw7y5OQGwc14pfSq4UhrfNbdFWe3EmzMtK6fSn1otd48qU=
+    properties :
+     x : 6
+     y : 99
+     width : 996
+     height : 625
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         gstPoint = [SourisPosX, SourisPosY]
+        type : 14
+      -
+        code : |1-
+         
+         // Continue le dessin sur le champ
+         si ToucheEnfoncée(teBoutonG) ALORS
+         			
+         	// Dessin du trait
+         	dligne(SourisPosX, SourisPosY, gstPoint.x, gstPoint.y, gncouleur, gntaille)		
+         FIN
+         
+         // Conserve la position de la souris
+         gstPoint = [SourisPosX, SourisPosY]
+        type : 66048
+      -
+        code : |1-
+         
+         gstPoint = [sourisposx, sourisposy]
+        type : 66049
+      -
+        code : |1-
+         
+        type : 66050
+  -
+    name : BTN_TAILLE
+    identifier : 0x2b436987da26ccb3
+    internal_properties : CAAAAAgAAABWV3/6N0VroBdVNpKFuRjlOn3/AMxbiWRdqUrJOOXfZw/bsfUzeZl/yfJQ76UaTo1vMPHbRiB1rHbIQ3d6KBa9uJkoQ/8ODwhRaCOXGkcc1LHfk8wZDSsIdys7Sl2SM63LR6oC3Q5c5iaH3Ar2Ed2+LNmIka2xXWBPCC7ExRsKTW1SgPXIVWIP9SV3YRkHi0vgujPeBLAf8zD8U7GUVUgwE2EjBbuMJi3uo/bF7s+i3UzDyj1mM4zrS8ZijD+hvJ3oLfSUIObhdK4uz1V4jQzmgIqL4c/jT0OaoDLE/ecHwcLBCSK+b3tyBL5N/E8E/3hxftdX5rbZjgeOJYrsYItSlgSIpIQFGmf82/UKFM8+lqqYMVYp4GFY0QmwoBRQrt5ssDv6qgkKidB7NeWgcly/kGOE3KreuvkLEgrt4KqCFi6pfxntCp+0nnAr8grMtRCJgLPpNLRC7FTBgMgep5nhOvEvQdgl6gZZfoYFRcscS09p2rBEksETXFlEDEHs8Xt7iuiko1dAmZnOhOOqZlnb8j5KfPwsB7eaaGhqOruFOQsnhhfADBWHWfGY0rF71JDppzfA192G+yIkihrGftlMpZ/h8/qCj9HKzcquVEgsFjc/s0HCbWa0aCBuCa3YXczqDo64uubJO6cPQlyB1Xscm7Dpa9dbloW+osOlCQGtUMChWfUtzf0rtBGQfQWXsVO0Ilrj/2Tfs3G8/wMzHqvbdxeC+B4DDfQqxsoSg6ALEiiwb18eM7oZlLw=
+    properties :
+     x : 6
+     y : 10
+     width : 70
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         btn_taille..enfoncé = vrai
+         
+         // Ouvre la popup des tailles
+         OuvrePopupPosition(FENPOP_Taille, poSelonChamp+poBas+poDroite, btn_taille, val(BTN_TAILLE..note))
+         
+         // Taille sélectionnée
+         gnTaille = selon(val(btn_taille..note), 8, 16, 30, 40)
+         
+         BTN_TAILLE..Enfoncé = faux
+         
+         // Redémarre le dessin (la popup de taille fait du dessin)
+         dDébutDessin(IMG_DESSIN, dsansEffacer)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : FRM_Forme1
+    identifier : 0x2b436987da27ccb3
+    internal_properties : CAAAAAgAAAA/k/FlibaLE8mN7pe4Pi9xC+pM00yiwje8inTDFVRXPBmrLCXFEzoKwu/VYiTAqiiPLfWCsdhIDxiBnYoS2sRvPr+ZVXbQF8bv5AA3B7Hbke86VD7FfcJFGsLNGRMTrSejP6rT3TlerS3ag85badz5efyYi7c//szD0xIKpWuSzMEkRTMKFIRlWbKIHgJDC3Qs9cMURxfeCVlhIVyb31o0lvdBukHNAjHKEvSTBMXARVW2yFOBES6+w0vFXcHLVkjCJMnmhE41QopuMe//KAdSDlBCeRtICyah+glcYuEcwNIPPgvvT5g=
+    properties :
+     x : 82
+     y : 7
+     width : 2
+     height : 77
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : IMG_FONDCOUL1
+    identifier : 0x2b436987da29ccb3
+    internal_properties : CAAAAAgAAACpDrfu2kORMYhN/AX4zBRpEOJRIpFZg0XMiz3XqMNdhcyCp3n87GKCnyHE+zWwDtL75DzaJRhPVka+Mj7J17HD2DTDRvvmvuq5rst/4UDgqpqPqDszULrRxMwfLacsVXcBkh0NdlEmiYJ+AigbrRVmq8RTxOeydUlDvPDgcVVdXej3XLc6iYzszgTv99HhaX/LbEsvMYrVesdoZbufRUkopP2c1mJ+BsRda+c8cjdhxbuZMq3fzy+6wXcQ9pxX8c7qUDpQewn5YKGOIYI7gArbjwxQ99u6Jusjnl1AaHkZGm0bV+/JlAl/jeJg/dpeTc5/1jiSkL2ccivAl+u7b+olryGBb252vOmdfyk2jE5Jfg3w9JZFQdNfSP/ia7qUJE0R7JGrD9Z1SK4c+H+/oOkPN8vLUx0eNQRHrb90K/gvcgD7A2swaHTuZ34CWnthVEod68j12h7n1Y/MwrchuhO4zbStuJbzYIliuwSpCrl2uA0icmJtwQauCvfgbd1LcnLH5E6AN1T+ce+gqA==
+    properties :
+     x : 141
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL2
+    identifier : 0x2b436987da28ccb3
+    internal_properties : CAAAAAgAAAArjAl0zKl391qbept+UhJHHnQXrP/v4fueiShE37K85g0nmOhfl38JionjwkXVCwKPcJxKRZfA29zYsoJhZwHtZzWduAygHF87YK/Tm0X7isTJ6D2dvtzbtk55v+1MFc/KRsCULSGeIZoGVECGaWmUy37tVE9yT20vNti4uy3lNzwN0i/qkYbXhpzXD8kZsUeT1BPnKXItgg8ALTNX/fGQzMsIA9YqbJRJTetU5MnP7uiCUEtZuWk8v9b4+2YR3+CECrxvlbIQeBk6QaYXwNLCzEIGuV2wMH2dC4VzS2goOwCU2nJEN25dR0LwbXqu/Y6PRqjigL2M4kuwl+sr7yqVb+GRPp21HUIqyPQFQ4WQx/R5b8koxFDcNQglwsE79oNVoPVfE7pxOgTW6E/PsCGH65/Lv2Gu5TxfSQdMw0odjMZJMVNAvLCywwI0KAn/LtCfFeLp1gjdUzHqXLFbTv/E9dyHGHahArVGq9a5GpcQNi/0RCiTi6xMLNG6a0PF8PxZnqg+TW4UB3EiKg==
+    properties :
+     x : 141
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL3
+    identifier : 0x2b436987da2accb3
+    internal_properties : CAAAAAgAAABw10C7C2A+TKNYuVQ/hcWSi/OC04IiNNRj6pTARQLI1F0Jzjy3pyk9xksfUsdFFwB38jLajd86A/h6gnLra/G3G1NTIJSwlkHnVp9Ltd1fqGSzuim5Qornamg5j89MGYVGHGawxVlYicL8GKCodeHeY6hbnI+qWXXbqJTs0aWxXbiLnIcqEXgroo7Xh8MtwSk75oGXbc7jvlPyfe+9wU32sBG+W+4qrqSpy8cEvm3vqLRw6m/Vnd904KOuHS6r6dhGjrTl60HBLQIfZIEq3/W35xptwEQPgc4qgAz2pgOfLBPB6VFzpu/elOMTBKGVnC/aE9cpN9TFnzwZUsrKdrXy4mYglYzkLlMrmT8cWpRDxBf6inRzN83RJhGQebgywQi0CbDKrn1Oo51LhyrimzQUbowijujV7j2sArJ7skFkZQXucL4j/+1n3MfLsxzC7YEuBs0U4at68Jprz6BKddZtUNWqYyHsZw6HVEFIaS6zG/K3h1VgxuEDl0wlwJiQrz0Y3W/nliXNvjh58Q==
+    properties :
+     x : 179
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL4
+    identifier : 0x2b436987da2bccb3
+    internal_properties : CAAAAAgAAABjxHGsZBFPn3IjItMmqpp/ZhzvtOfHyZOmgSGz0MuB3RwOT2EEJK4g8V6cNfp6tKWaZzefglyHDtMJP33mFDKw0qisyXHdCznyUJ9ri/WTekSRwCV1rqTTHlbhD+W0dXeiNjBE7dneEbpG9Mhm2dHkm4ZlvLfiZ6WXjmAIY3WFT0QN4v8qyfYXRgw3R3n5mQfzXEtvIZKVKjfYRWNPhQEo1DsIszayjOTpLStsVAm3flhaGBMRSWE0h2NOxZ6bcQjGhrytQ23VyYa78N1Ou5m7Mwa6fZHEPAEZjynX98wUZ2SYzsZI2/pxYxYUASYSGQpTKvx25OHIJreEy18348ahE7WVQpEpmcZGnMiJzzlcE4j9070saOzwATxJho1P4k9ZNGmD575druA6bMP7dN2jj0NvAyVikeDbDXuQP87Z+Ipt89EexKggRbBkGrsjwhSDU4KvBMidFT8AlFsNslOoLSp3VvzJOmNoteKvEJcILifsTBC7o8RkNKmCo7t9uMSBRsAWZRa8rylq4g==
+    properties :
+     x : 179
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL5
+    identifier : 0x2b436987da2cccb3
+    internal_properties : CAAAAAgAAADiRfIp5ZLAHvFFHbdZv+Ik2xFEL6qjqDxbdOpfCa4HMdyG3mEmP7epTABFgGGdUYqpRGecO/lrm9GXzcHT41+uHXnPjYUCkHSpLTP2Z9bWowTKadSwvGVhoDUr05HAkYFWrnWSdVGYGbK8eDgIRfkuA3Cj1NTsZ7N5Btr64y8X79qt3v2Mgw5pADxdVQ3PzxvtcEttj4jZHKFQswW/OyPgWisoYZgM/PIHAQ06aJdVCh5i5AXn/7Vq3WYuna6raVjGDjRl6wGB7cJfJMHqHzX3px9pwFwzrfI2aHBO/td7aMt5NYFLuvvq+LNP7Pk5cGMK4ytB5xDpSwAZdsraQmFeCqbkTcxQkj/3EfukMqi3KJf6jkxTkxGdqr0MJXx+NVwQxazG+gkCEVb8+rPzfF3jbXooiIFsLILCK73pMx+AmLicnkO+VpfoxXa8uZyi7ajwmcnoBOrHeTwhpUosgQrxYOZfKGZBIxd6nkxyhIcACyT/Hw384xSyBoPCuZiE+8aLx0GV5Jc7LKrrYw==
+    properties :
+     x : 217
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL6
+    identifier : 0x2b436987da2dccb3
+    internal_properties : CAAAAAgAAAAFuhPKBnNZmXAlNOUglORxaBLhsuHB07U8Cyvloi0bvz4soQ/mxsD6H1AGz2S8fqfc5QkldPYhWOHzef/41vyyFK4ud/PPvZui3pWxWZuBUAobBo8zJGrpQAzfVfvS4/VI2JZmYx/cb1xEksYMnzfCEWjb3rWgbVM5BMaOwUur5Qqn6CkglzT14HKlNS9v7z1RXklhBzD7YClmi7Hd63eOGs0OfdzIcvLDkwlS8s8VpEakJs0PV186fuU4e+bRn+BEirwvlRJwWHma4Qa3IDLiLA+43zM61puHPadxyRqGtfIOVKBiIWRbOTyqS+hQG2jRCOJwvm86mEUSuUlZwSDf8eujFAOf8yCMUl7TkUcOodZjaXcmFr7C9yKPmB/dnOXvov9dGSzvwJYgojV16ifJdYkF3V/I2yqxE1GaAQzb3rCrlZ9MFgb+pxKG+NkFIDZlvXT9CsKTC+EidvljTPmSd3zBXDoLeKFqd2Rt1tEWeFGW5vbBpcJiNquEobl/vs6LSMIUezjaTYsMBA==
+    properties :
+     x : 217
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL7
+    identifier : 0x2b436987da2eccb3
+    internal_properties : CAAAAAgAAAApjjduWtcNXbz52PkUOGjlxD7dbj2tr0HQFyex3kmH2xIgVXOqKqQu+1QKowhQErtI0dUxoDLtpGWPxXvkkij+GJISq1dzAcGvxLPHnylf/gCV1NlZ2ugXmiqVa4kYwevuWgSYcTWSNeYayITKzX1op/qJkGsuy+kTMkQUF2lRo5BhhtN+dZqLIkD7Iw2d1csfQK+DtR55PsNMaY8j6f18MO88x+q+ULjl0a9Y6B3D0tTeLEe1BfWoE3hQO5rtL1xQynATQWDSOt98D5wN7iQwtobCfZnsZDFxjymXB9x8f/QgTu4Ya6qZUy7cWX666QobSoTmjNmQZj/UW49n0w6p8w1F6iG5Kc52lHAhN6G8wwANm31kMLRAWdzZdo1/aiep3Jn7t249BmCCNDtjHL0zB5MXI00qSSBjfZvw3z4hgMq1pfO44spCuybqnIVpBFpJGdjZ7qZ/991uAjWnCIXe4+C9kLaXDDU+25jx0tVKbOWi+uLVSW6OYofgDS3rytq3fI7Yp9R+8W8gKA==
+    properties :
+     x : 255
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL8
+    identifier : 0x2b436987da2fccb3
+    internal_properties : CAAAAAgAAAATtOHcNEGf78IT8gP22orPlsyfJHd3mWP2kZLGRQjG3FOtVqp1BYFb1Js9FNuLxSCl9hJ003UyFZZi9KxXhYMj/QsToqr+Rrsk6rEFZbf1XC4nEvufuNbV5NjryUeep3GcVAKS7xMo6xDQfrqoG5vexVQXiqGUKQ/9QAISzcdPwd6jNEVMO1CxpP6xCUtbY8nFyvWdg2SHHF0yxxUJFwt63pnaGQj8nv4HT3UWLstJoOrAEkkb67uGQoz+/UqnyTwK3rjRz0+zH2DJ+s/45Te10a/wD0sCjlv/7adR6coO3eJ2NGiSYZQD+XRiswAoO4jJ+NpwtkcS6I2y6RmZkcj3sSNTPNP/YwisCvZ7+f/e0T7DIcfuvlZiT9I/KO/thM3fqo/1yUwP2CbIGl1dAhc5fand7XfQA1r5ExE6cbzjljCzSbP4IPz+dzqAmDmjgvRHvRY5hrRxX2WiKAljesvgNbyDcO61PumiO7rR8rM0mnc8HMALEzTUpFky88tNaHTRFhBGNUbsX5kaEg==
+    properties :
+     x : 255
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL9
+    identifier : 0x2b436987da30ccb3
+    internal_properties : CAAAAAgAAADyVcI5leKwziHy0/4pLx/0Ndm8wRxMTiYxtEdVtFkXTaKy57va2qa+9/aaM7rQoj3Y+0eVMIrX6LFJ2aNe3hTcDFjkJ2+zy5RFHu8LYZE3HPgDDgUVdiK/3pAx99uweaHShBp8wS3AYR4k0KAEiRGSn+h3eNvW+f1/wHTEdXnB8aTriKt+nbBzfiaPByf5mc0fdk1rKZrLbofqjReJ9Z3qrGlq7zouZpRda5cMsunvNBg4TqMhuX8kHObQWxpNL5wwSnCToTDCqu8Mf4y9XrQgpoQ7nrIFm2CAYhrEdEHRYiWz33dBLEm46qVRwpeblqWs7d0/JXI3mTLLWIgYBGcAjIDuU8ryUP2RO7VCkEpVarlEoFpBDcfT3IMGbwboi3Z+Uw4IrKNovSP9zYiA6WZKME5A7Hb7GGeCVIipYK/2m9c4yv7jvZ8j6OvxrxD866PUQpP8ATH0YLq3/TxefwxnennA86ly8ZpTrOugAYQlyUSB2YM2KE/xgWbPHj76xdeyd/FlFKdLPLr7cw==
+    properties :
+     x : 293
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL10
+    identifier : 0x2b436987da31ccb3
+    internal_properties : CAAAAAgAAAC7HJlEvPmnJ4qrqmuuouJ3rkQn/K8/UStOOTr+LaDuNLtVLpL9PYlz/LPVXBOzfagdTpqsa12KnQ7K3AT//at75VNLihKWTkiA1INXL7lPThAFBAmJKlin6rrlO1kocbs+CrQI4UUCRTbqGJQanS1496r5QFs++/kjwpTk5/lBcyARNsPuRYobspDLMx0txRsv8N/zpW4pjhMceZ8z+W1MgF+sNxrOgEj14f8ouO2zYiQOXLcl1aW44w3e/VoHaYyqHgghfyebh2iRIoeAnf/NmYYivZmMJPER76l3J7xc/1Tgri6Yi6oZM06ced5aCUo7imSmzPnQJt90Gy9H824pU82lKuGZ6Y4WtDDBF8HcgyCNez2kkDTAOTxZ1q1fCufJHHm79449BsAi9FvDvN3zp9P3402KySBDndsQv14BgCo1z/vguJSW39IoMBH7KpzvZU5xXhzZRx3q4FErgsNYjZTrmLZt9qFqc2JpysscAt8kdHhD2/wc/OFKm7N1QEwJzliO/b5k1wGyug==
+    properties :
+     x : 293
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL11
+    identifier : 0x2b436987da32ccb3
+    internal_properties : CAAAAAgAAACLLGlUrMkXV7r72vseMnLnPtS3zB9PQRs+iaoOnTA+pAtlPqLtDblj7IPFLMMDzVjtHiq8G616TT6aDBTvDbtr9aObGoJmvjj3pPtHoyVXymTt+CUVRoj39prdE9VMQW8CqoDEhUEq/TIigEyO8WUcS5ol1HeCOyFf0pysw4WxD7Sxgp/CGWqTzrhby+EZNQ8LMBs/aVJ53vf8UecXZW0IjG+4c0YiaNgpifeArBl7tvDOYINpqZWg51R4c/ZRB3B0wvSXrf6E9J1GbXKrTEZGWMyU72POMne7HeMRKb5aGaLeiPga/TgnbczOAyAU35yRaEZYHqOGZBkybZGRjZRjcYPPhFPDP2QoijIjMds67f7j3U+eYhKeq5JTmJ9JKGEXyqvtyXgzfLJYBnUlJqN1zeHxvaeEn+41g4XK8TA/MmBj/8sQSCQmr+I4IAHrOqyflX5BjizpV226MAGbMpOofYTbqKZ9BrF6Q7LZejuskk+U5IgzK0zsjHHaCyPl0Ny5fojerc505xGCig==
+    properties :
+     x : 331
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL12
+    identifier : 0x2b436987da33ccb3
+    internal_properties : CAAAAAgAAAANouvSLkuB0Th97C14XBw5IErpqvnp6/2U01xAz1qQzm1b0JgHd1M1enWX3pV9vyrndBQy3WeEp1R8btahD4Vlh/EtcKTIqDLgUolNTR+tNOY/CqMnED5NHEAD0S/GH8n07FraVwvwY8gYNoIQAxNWXUzvsqmsEcfVCNq6lc8nmTb7zI20M1jp/Eaoy7W3E9Ml9CP1T5DFaLGcDxGHY0cAUh+YQQBEALYPbdHuMI8hOiYuhI13p4l2JTt4ezYxP/CkKgwfRSqYgGHCiX6/WLo6VD1jsm7FK3CgPpqgiFHB8oE/Z5ttTHnwgskp7vsrfp2A0R0LaaqfgQr/mEzUfKfK8eOzHPMPY4gcigYrOa/uEa6TcTe+Pubyb+L/aL8txJ0fas/V6RzPGNYI6q2d0sdZDTltfafwMwp5Q3G64TwjJnBz8dkG0qqsYZQqdl+NWI4hl3iHdAbPPUcESu+JJOE6r7aFvtyHDDc8xfRfQEXa/BlePi6ZjapKLtO8aUHH9obDAApcI1DyZZMEDA==
+    properties :
+     x : 331
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL13
+    identifier : 0x2b436987da34ccb3
+    internal_properties : CAAAAAgAAADRdq+WYg9VlWSxEEHMgMCNXLZFhlUVB8lonyiMGza8GpHvlOwrSzfJxmmrokkBQ94zULCeecMQI5h46pJtCzHxa9fNaDyQrHy1xJuPE3WPykSlYK3thsAPDiJVgw0EQXe66tAEpbl6PbtVhBg3OIFktwXcpyvM+9E/IkykUHrZc4BZTnsWBYLj2pgzg5Wrwatv5M+jvRZN4kOQ5bvbifF8KIsEHyL+lEQ9dUOMOLVnwuQyJAet7UnUQ/pQO4rNjyyQyuADUWjKMjfUp0TFNhxYjlAQo3/qVpvfMbcFpTKuLRbK/LQe8TSjqcgKD7RgS8j9XLIsCj8a+K1GMRUdH0LN74nBVs1FjTra8Iy9a2+mmSK3MdMS0lLUJSShrsU1/LXbkM8hnaxfMH6cyokxWv/hQXV1IVvIC2JB12nuXbTrPiQnNxvI5MjKG5hu6kux/HLFM5yjKMqLeUPANjtdcN32K6rxgtiDACvg+fiTvPluUI3Kklpt8RY22g94tZWTojJvtLYgbwy2qdfYUA==
+    properties :
+     x : 369
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL14
+    identifier : 0x2b436987da35ccb3
+    internal_properties : CAAAAAgAAAAViuPaNkOJySD15PUQJHThOCKxwhFRQyUsO8TYN9JYxnVDiEDPL9tNgs2Pxq3ltzLfTBxqdU+cr+wElo6JJy29b3nFmMwgsCPcTKtPRzFXtvjNbIFh8tAvMlKNc3EAeWMGsrzAma2azf4CYKyStbXAPzJhGDPGc0GLuvy8n5Fpm2gZvhtmraLjGijTy9VFTWOXeKcLfXahFttUwTeLcZW0yIf0zzLWePA9uSeA0OWbimxWpO+dvT1g67meNZo38fyqVpDpp1vnW2S1hltcgUuZ3abCHTk8pHHhD7lnR2ws34Sw3h7oq7op835c2W7ayfp7SoSmzIlwRs80S5/nI77Jg531+tHZGb62RBABR4FcM6CNGz1koFRgafzJRk2PGkd5rOkLZ44tdqByFHszXP0DR9PXQy26ySBTvatA/w4RIFrFt8HuqoIEiUxSDrclwPaJ/9A/zG43JX/MgrfR7Jny5+5NZiT/hC8k/byXOH0ixEGG1oYxNVLyhnvUESnvzt67ePJkK0jqXZscFA==
+    properties :
+     x : 369
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL15
+    identifier : 0x2b436987da36ccb3
+    internal_properties : CAAAAAgAAAB3KEWwiPWjMx7Xxtc6ns6DYogr8KMDFd96LV5CwUSSeDcBSg6J6dWvYC9xmF+/eWQxki4ADzFusepuANij8b8vQY8X1j5yKoaB+jHN1ac9TA4fCrMnSI7t/JDD6Z+Gx+kUxHKCTxtI24AAPqL46/N+tdxfgjlEATdVyAoiBV9/eSYDNDVMQ/ARlL5RoYs7W4n1kh3le1SfpHU6j/UBf0vyRmmamVi0Hn5HLyW+fouxYBoYepFTa8M+2nvQk8qNx/wAsrjr+VS+LmuAAyCZcmCMSpvsC0e+ImfjCaN9LZbCAY5CYJQ+PWhfbTDuT2Skj4wlBObcQvPWNPEepUVNzRyrzW8/6D9Ll0TQ5vIH3RtyNbqvHYNq2oqOUx77NMMpiKF71qvB5YgzBBr0xokxXus9OVV5SSMcRxZ9Xx3WVaiHmtxf5zdkvJCSG97kvOUX1gi7KYr1Glgdi5HelKVHZif8kZDvxNqBAi0m/76VvsdYfpvYoEx/5wAg8BV+r4+JtMCdWux6AbJQwz1+9g==
+    properties :
+     x : 407
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL16
+    identifier : 0x2b436987da37ccb3
+    internal_properties : CAAAAAgAAAA4nxjDM3gmpAvQMdy3DX3awyuKyxpKTBw7Us6KC1A6assHjO71HfN3uIXJfKVzuV6VuNjUAy08DepM7FwZOVNF6bHJKhK++Io4QJn1K/v5XtIZGMM3IPzBROqj4WWaM7O8AiQKs49q0wyOwtLOk6tMWXbRnr1Y88/dYiaWv3vDO26xEiGwt6LNPGCxGRETA6/ZrOepKwQ1+MUMnwGrB28Mnl+sBfwAwHZTNYGenFuZnvre8BFzi2G2gV+Q24rtD6wwyuBDsRiaAifEN9RVhozongOl5HjvcbYa/LRCmjufXG+l6R3vTod2pL8ryG2lTC9mp2dF4+zdv0Styh7mJkXS7mIo6SA0rttDnQdw9uTz1NNeaiDPL9XhHlV4vUS6eRDIJXj+eq1OIxX/v75u6yTUSoByGgTl/s3UNjo/boGk9WFi/sYTQymj8P83A7wuARVWrgFUoXc+tKZrMziiCbrBOLXWi8kAk8JDxA1AkQJn/zp/3404Lknrj3TdCCAYJ7WQVdcPfj3lVoAxOQ==
+    properties :
+     x : 407
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL17
+    identifier : 0x2b436987da38ccb3
+    internal_properties : CAAAAAgAAAAwlwB7SyD+DOMY+RT/xYXSyzPCE0JidBQjSufVuP0nAW4SA2d+nn5u+1aqI17MioGMa8MhTGZ/SJ05sduSonR4GFBIMxuH6xBjbFUZZ9dtGsYFBE8DZChNyGYf1bFWF8/QfmCWT5O2L+AaXpaa/x9IjZJdeqksHzsxbjK6iwcX5/LNvq3ca54JkJzN7U0vp0vtqGNl15jB1CkICyWHk4O4Ets4seh03DKHMR1CiBfNWu7qTH1Pz61SlZoOHb7LiWgmroSVW/mJ9epHDPky1z1Pr2sVDAjvUZ6aNJwaglPP7LfVkc33dp8WPE+raP01NGfGH9ftM3xNpyQFQibuLnXC1lIQuWj8RmsL3fegNrSbnEO2Gtjf34WJvk1A1SzSmcDwJVCuwkX2Q02v317ei8wsCrgy4oTlLgUk/nLHRtmUVdlS7AiVx6UhigGD2XqekXXKsG22A1sKdry9z6ZQedJJUC9aLWukH0jN6tX6y8ZbszJ3x5UgBiHDV4zlANhQb33YHS+n1uWN/ng5MQ==
+    properties :
+     x : 445
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL18
+    identifier : 0x2b436987da39ccb3
+    internal_properties : CAAAAAgAAADgR/Arm5DOHPMIicRP9bWi++Nyg1ISBORzGpBkkZ5sQNH1eghzC8WZWtd7NlOxm8yLjg6m6VOGv6yGvvYXx3Wz/+8/HMCkwjie1I1Brz8lst7d/BfrXPDFQC6Xffmer4eI9ljet0t+x/gCtv4iJxfgxQqVAtFk5zMpFiqCM4+PP0pl9nUEIybh6KQFlbV3X0NFoJtNf9AJTKHww81PmxtQ6jMweXAMxCpfWbXq0J8F8sbi5EVXJ9WqTSV4E7axh3BUAjQXTa4UBM12PYK7XLbWKIvVDEhf8b4q1IxKYkOf7OclQf0Hdq+mXB8rKA0VFJemf1eNk0wNZxQlslaunsWCBgJg6Tg8ljvrzdeAxjQbrMNWWhifz2VpTg3QZawiiSBAleAekoVGk+0f/15OC0y8ihiyYsQVTqX03qL3pmkE9amiou67Z0XHdHcbowzyxUke7s0coVsaiOqTN9gyjcZNqKXi08nkXw4/xOFIGY7bY4LHl0Vw9hEzxzwV0OggH63oLT+X5pU9LqjpYQ==
+    properties :
+     x : 445
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL19
+    identifier : 0x2b436987da3accb3
+    internal_properties : CAAAAAgAAAAihTJppdIAXrHiY67534/EpclsMWx8nnYBBKJWq4AWEoujBJad9adDkPml0LXThS71pOgU+02QSUK40BiBYZcdWYUpIuq+pBt5iAF9b+9pKlYhHHebDEyp0NpbSTGm449wqhDGTzPCY1hGEooSJ9OIxU7N8iG8S2fZotZOo6dTbxLR5vUkAwp9qIjBsW2PsyvN9MOVr2hF2LGM/8m3Ex/gYidQmYh0GA6nFXnu+Nfhgu7OBG33DxmGlYCOnT7LCeimLgQVW7lJtaqHzDnyF32PbzFX9lLJVyRMsu701OV93nUjS1+hYJUE/k3dckfP2lkUdbEv/V4b9Zaz7FCgkJNcXPiyozIupMlNaxEC0D5ZjjG8xKoJ6YuPsHt6l+4cnzqWy/JoDA/MIQ+tycjwner+qOaETC6fxBNGfKzhSMuS51e4QkxZgVvdXmF1CapUW+O4AN8Kt00I9gR9ITZQb+RvSsecqeeG/ayZbhsWL5jRVZTRqbMGGD/hsVY/7s5KdQdCh4HVpNd77GorIw==
+    properties :
+     x : 483
+     y : 13
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_FONDCOUL20
+    identifier : 0x2b436987da3bccb3
+    internal_properties : CAAAAAgAAADhRv8mkp/FBdQBgBF8UBA9LMaVFkVld3kYjyutUp1jD060Ofc+VjjidxhOr3zUPu/0ZSmVBL7h2BHD+ZcIptQSpBZW72s/pamKqB8Tx3mznkCxrBlZouwL0n4hz0lgbbPuXqT4OQ3usW6WNNjSdeGQ1z55GCtuHyXLdoCot+nNMwA1FgNWJe6nGhzP1/V9EaO3VH+TrQ5d4jMAJfMrGfn8mBOch7pOPDxVbVu88D3H6vyCRFe91dlEk3O+/UrnCbzK3jgRT+9Tv4Bp2m/YBdeVcdT0F/Pucj9rVVu5EbZaWSrekDiCdaAXJWyOg6BkB+Sx4BYgDjMm/PlaZfm5ZUSDGZPXZLt796RwWlIjMauilX4LnacOUtLW63pbkJdR2IE/itMtgbBLHBrI9kXFhssdDbkxxWfU70Z1a+1C+TgvEmjDvSu4Yjq6O06i5E2xRAqByRAZ5h7nV2XeQpV3SM0WU0gd6GYHfK1eY0Bp+q16PL16wqodASbGql/IZUXD8oLfJCaw35xGOafoYA==
+    properties :
+     x : 483
+     y : 51
+     width : 26
+     height : 26
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_BACKFONDCOUL1
+    identifier : 0x2b436987da24ccb3
+    internal_properties : CAAAAAgAAAAkw34HlgDutq6rnVgG8B8dlIuW18Sf6bC1jwsyTIsrXNcSCIQHFZ07LE+HNzYYPPNlR4uhoDIittdxgq3oYn43ofBqBS2GbU2YI6HZmrbQ+Q5UYhYeqcD/V1w2RvrtqcmxeNORS81ZvYsQ0xyP8Fty9tAhz7hQZbV/rDShfsoSaoyPsbXRLh61awnHR16cgRxWUGTR0UFpW4EaapeGYcYpBl2gI4FypQVFrDxyh3Aw0JJRNCStLXci2lWiMK9omQ2FoKhjtOYlJ2eM04ivP/o/PuagjNPBpoarLRgqwng9xApKVA1Vw1/dhMSBgrnJEJWFxP0Xra9aJ7npiBUDaZl3WqCBoZYEPbkRur7FdLe3A/botwg19qvIBEOET+rErrq9FX9n2JFv3+K6ZAmuUazK6uRaj3I71aLWxamFMEMcV7mQLFh57yzyxoKIXoU0OD0dqCxFnmdjDzEoL/ER8MnRXaAHk40B18xZEqqbXyorLPsNMaRAKV1a5DmWiYDPmHLtAx8=
+    properties :
+     x : 138
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL1..couleurfond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL2
+    identifier : 0x2b436987da11ccb3
+    internal_properties : CAAAAAgAAADpq36GLfmQdZ3BfODcBz7+TSUHkpcjjW2iEg2cPnXnr08BXzZCW3W1ZLBwLQ/THCdj1uyLQRm0PeCP11kChZ/08MMQLE+dR+l8pZzhw6UKdVrf+tUghlegJ3Gtz/xVog8QPduv4Msta06dHJSTlCnF6HOKTz4Le2AZ3WHzi54gpXfq9pmjakOVuFhoUiRqnG+j5Ck/iFbHEvd28a9vNGD3B3XKit355o9a46dVuGOJmhbUtXtejtE4wCTZsTevPlWp7/VrIuK46MYO+ACP31tnjDYJ2f4THCwzUysW5owtCr+6Jz10Uz7+xOGAvzAbjMhBKdm5P+x6RyjMFH6p2vfUOfRaFuqeWOouTH3HG7kNaHjvqg/1DSaMwNxzE5xLUcB7bLQts/+aqG3qhxeMh6NYs0SLzNoKU09sDjq8RC7YGhgiwtSE9IfW20TUSTk828sfQ0xKLGhYWWrcNvGinAWmfxhs9ByKS4ey9GgftwB6tBXOAwutzp01C+M=
+    properties :
+     x : 138
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL2..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL3
+    identifier : 0x2b436987da12ccb3
+    internal_properties : CAAAAAgAAAAQAGE8RQQGQ3l/PtP1ey8dD/GO3fcRjUQEf4CEWDLZIq28yJpS1FczKt7iwDqC6VmWE21LwBVJuAmf2DvvoWaBCytkHKIfHgRYFkNcfcAZXTTlkNM61XJzOAN7fzLxrtWXk9HT+2cjd5ziC/nMb4KdOYZByFqb6mzedVxBpbKZLsQUNiNwwoYNKSQxgLe7T82Mbu1BWoIKnMHD9ju7mjLtG1VppRdTYWGN0jQZRXfg87sohrAZd8EhEXfTxjM3hYzFvMRH0Cj2MCN2mElq5hMI6/QtsqV4Ce9rTjknF6X7Hx8VCFfy0dSwkSPld86ZDeGtunClPZq0jVOAJcKt+1aTYdFDrb2Mypu0gQb50kZH9ByKjA+afwHN5BiE30gzKB+WDy1x2BxhXgtJXH8igoJL/cOyuwsNlY2MJE0wfNTrQwG3Jx+zj/B3T7B9KGlxOYguR43kFnNRe5oj7N093Gl4e2a/psu1ZxqEx5AEB4Ra1HjAwrXMFPtxTmvM1w==
+    properties :
+     x : 176
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL3..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL4
+    identifier : 0x2b436987da13ccb3
+    internal_properties : CAAAAAgAAABCcBfTmoZvONCGoyeFeAd52q7w77zAYEiJNy18UhHpUS2pZy4m/819QgS0RZM/CjVNwgSfrQXEtTIPWxHy9Vg8HgPotCNRx+3a8diZj1H4WyhHMsmwzjt4JQ0xY6y1PLlKeRtD2NshR3BlwEyHwMM/6n8KSyL/Kyy7jalrV/rKz6Uain0vxotpEgDkNhiGYk3hJGn7CN5jjqnmhdO3jK7FJc2i/jkNhhvgR5OpoEOznAiATizy8nEcivAdzefy3d7KlvJmc2G6x91X3wmS1Dx+iz883vUEFW+eoEajfeUqZf5bsqob9FtdK0qHsDPQgfOAioTGrl3zxqORz7vwo+z31AFhH01TlanpiTicMoqi74v8kSAYMk9HhwUirG+YYq9yfU+CSgAv31Tr/pgHfDRjPslqpW2P1H4Dt3V5K5cxtTczxdH7fQhxsk3rQgyR3B4SmBt7D335SAk9lcJ9ueaF3P1Jl39vNvArfeHmfkmzc1KDSLbwg0heYIg=
+    properties :
+     x : 176
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL4..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL5
+    identifier : 0x2b436987da14ccb3
+    internal_properties : CAAAAAgAAAD1pxoiiVU8CYndKLwI88oioUkrhpsngXlW5mOmFFut7Y13Gfhw6XvDhpbmV7VhIh2ZlB61x78Ce3J9jRv4I+fpKBfs5FtBK2ncwaDxFylG0WKD7u380pvgtz2BzwiZbmMQMV/31Hcx6x7xWMw/sP0R6P/2V2KPT1jRMX1Dv7p8Me9+SoG/3u9FUIxUomAe+GPTQLV3rPKLIse6bc+DQDRD7/mWcmH16o9C76NVvGet/u4oXJoO/qFo4ESBIV+j0oFNE3nvrn5tYrB0WpYZZd3pDryLT3Dh9gYteeVMILofHDkYqWNWsZAA3s/yndIxBmobL/uHaYocgSqqFkxDKCFmo3qknLQ08kQIKqftXQcPQlr11K0Py1Ce2nK9Sd7R22IFkhYDNW0UylcAoY0+9V2qfYql+qx4PfmeDCaIPGYAluxKLjCM/BcmH7x4fUEMq6+DezgeXDiw8eZcsv2ydK3Siyx4+BiWX5uGGAyzA9Qu6CnaF2dBcjlRF/8=
+    properties :
+     x : 214
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL5..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL6
+    identifier : 0x2b436987da15ccb3
+    internal_properties : CAAAAAgAAABnVYywP6NCqydzzhIukaAQ0/etBGmVN6tsZGGkqtkj87dNg8Zuxwm9jBz8XUvnoBvroiDbpZUorbg7q2GWqf/M+Kf8FCsx2xlscXChZ/l24XKTPl0MAsuQx+2RPxjpXjOggS8n5CfhGy4hKPyPAG3huI9GhzK/v0ghIU3zj4osQX/O2jEPTl81IHzkEvDuaPMjUIUn/GJ7klcq/b8T0OTTf4lmojGlmj+Sn7NFzDfdzj64M8XWNuEsDETJTT+1MEfbTTep3MiEMkDEKsZJVe35Pmw7H6CxxlZ9CXX8kCqvrKmIGfPGAeDQ7t+CDUKhlvqLn2sX2RqsEbo6pvwzWHE2k2qUrKQEwpRY+vddzbffkgolhH0/myDuasINOc7B63I1QkZT5b1kmmcQsb1upS36LTrVytwIzQnu3Axi1vxqfHLQpErmWul4rQo2PwNKdfXJwfbQLm5qKywS+Df0Mu+QSWImSsok4R0EhvqNJbLIBsd4tdnT4KvDhW0=
+    properties :
+     x : 214
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL6..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL7
+    identifier : 0x2b436987da16ccb3
+    internal_properties : CAAAAAgAAAAx40buxWEI3fWZZPjEP0a2Be0/qv87tSXqukBT/67GnLrmyJOHaJTQGUXrAJx48wx2I714IvqLnC1EOoR3wmyX+DsYH98F441SFRSZw1WEb0ADbqlckqfANZl1G2gBQC3C7b8zvNddf4ChdBx7bB+r0usu25ZDB/yTERWjW+4eSzWu3nXLOucxwgQYpmQizkHBWI3jJCKHNhECASv7qNpphcm2Dl1BYuPowxeBtCfXwGDEhxau/mHI4KQhwT9zYnF946n//s4JQV/FSWc0cg5A5Y3WTH+Sn6m41qCJZwO0l9BRTACVopVfbUhZ9nXes/Vi0HYckFPtKIWn0YmCMe6ZfrdTbfeZXwP7X0IKrMg8aZ2Kaw6qcAGZKUOsykl+5AEcg6kwpN6BmaZxsD7pWhaFuG+0K0/NGzcEdvD2rA64IvpawJZENDnIiXhaQzE8i6MZkyJktPB2fzSkQO9W0KmOx+CkzDSyc6/qvKAnvwhyrG2ma5MVpnUN0zs=
+    properties :
+     x : 252
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL7..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL8
+    identifier : 0x2b436987da17ccb3
+    internal_properties : CAAAAAgAAACUGzX3sywatqN8j1kDPCZpKWa2Gr/MtPGHlENTO68S0j32vcCxDQQHmxb+4bdKw3OFCmi0XcOTD5AsxSI4+xyeklDbATjKH6TnNJhTPDvQD+TJ7WSOCym7MosGiz0L/dDr9qgPRhVxwKR4u8Vk08nHTP5X8oshotnfNhOvMKEDnQ0OE1qOE+pRPorYskEvEMXXSGfUezhb+tde50tTLLHKtiZYk0GS7IOwAp5uJH3boBushmxCGcaFMdBZ8lu8VUV9Lcb1t8tf2bORak2nE+oI+Wvn4s9icxGlMFWhEV22jSFHy2UvXN3XHW78LCAUtMlimUrSTqbLBD0XW8WFBSqi/grT7oMn5cIfEPMyoZt3zvbPDHvzu0cmWPqIwyUmngPiPLX56QYMiTus67hsLcI+19hjYRDPbxNIAn/h8R/v2hdyuUpsPxlEEIz5zLUD2TsPSdxn/hGTr5BF9JmAFY5SRowoQXxjAtELj1jc6VBOH7QWfUhoXknOtA==
+    properties :
+     x : 252
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL8..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL9
+    identifier : 0x2b436987da18ccb3
+    internal_properties : CAAAAAgAAADtr3K6Me2EYXElwAQgm+JKaQHTzlPvWUGOnqWMxpV/x4fhr7aKk/2tbFgQda97zMcz/mSz4ZlkPVA/vxn6VZxhRFuwCAc9J21YfQQNK/V6jS53IpEYzodUcynlC0xlwq+8haPrwAONryr9nEjDzLHNtMPqm86bS1yt/SFfY8ZA3cuSrnXLCht5jAj4jjSqrI8P5JkbqP6X5oO2YcuXXEhfW70Klm0RlrMOayeRoAPROkr85/oSsnG8itB9LUeize7aRkKW45HUmrBEyvaJDYXJ9qyTD0DxfvYFsY30iCqfpLmwOSse+WCojk+SPYJp/vqT/zPXGdp0YRLCPhQLeOHOk2IkFExcEryoimctje8HkoL13J2fe4i+Qhr1EebRa/o1mmb7/bVU4lcAoQ2+rYVKhYp92qxIlXkGtF5QwBq0HvRe3sAoaHuCT7gYnaWoB+9bXygmQAyM9b5QmtV+uMGqYwRAoGBOF9PO0LTLG6zWEPEi7x+Z2qE5D+c=
+    properties :
+     x : 290
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL9..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL10
+    identifier : 0x2b436987da19ccb3
+    internal_properties : CAAAAAgAAABTxnKmfvXfG6Z5APjOYzMotFkdgdrdweLCaWtpd904YvvItUhxe9hR8/6E4188He8FVCCcT/gFTX5CMmyU+FtII3rjPRT45vaxer83Ut+jRYS4xaJxS/2uPkZoIS+ZKxjMv2LCZ+i0WP51SX90q3CkYN9EJz3hfDwKJKPIpnbuXWpA436tqAxOX3zw8f1VNENCZCapjWdJjeQtMa+MsPHfMngFYLJCFHOKudlqKs9xoiAolvnmrwbTvYAdTAbRZjpGFD0QqvcfWbwol2yePBKHEPzSZcMzzVWJzY6qk+u6rP8GyI81NesP/rf/Tzd6Ask35+zjrIrNDtomafKGefRY+eqJADPg932uZMz1MABaVi4tGa+qiyeh3t5gL1HKXpj35m9rTNmnUdtOdiEnCMIG+yCirqsEuHxGxLO2zhKRmE0Ih+vDEh6DbTOQdxBIeNquygVMG7b+1DH495iPFmOd13EFgBMUoXLkDMWjuAGDSqV7wv+3DwIJ8w==
+    properties :
+     x : 290
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL10..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL11
+    identifier : 0x2b436987da1accb3
+    internal_properties : CAAAAAgAAADsrnG5MOyFUl4U0XUzthVf/NSK5Yo2lgrPBZ7VPQzGfB54ChF1dkaK+Yv96gLub2Cu+W+6WOi1DoHO7C6R3JNxekPAUCsh3/GOcXAlv4FAY3Q3Ak2wdrvcWT2Z/4wlJJl+SasPWPO5Y/x9QEjHyLvPtt/S78qXS7g3xWnXL8Ky95FK+pG3ZgPVfpCEMtCOalXVLGFHSMZbknXmBS//fF71AXXCuim9rqckj1PNgHODxGTImwtakgGw1hDtqV/ko9QgaMAQiUuNxdNJzZtgJtKEqcmaCLOmq7W00qyFG38wE6y1KCRxjnlDAdztGlHyp+l27Br4tHcJxGHD/aXm3brlKtsPIUNVE7evg2YuiOwQvXHmz6oO1G0FRS+YJu3aAB04p0WUQHolPRrlJII17vrpHMsYt7NhIrSZKeXJeRH/q+NNjVEZfxTdKgMTGtqjwmQuqiN7/U9JcGV3cT7nb8jzqsOH6SmFQPohY8f4SJ/lIeAR3iCa2aI4DuY=
+    properties :
+     x : 328
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL11..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL12
+    identifier : 0x2b436987da1bccb3
+    internal_properties : CAAAAAgAAADOzJNfFtK7jBxC/2NBhMMtjmK0I0C0FIRNG62EgskZgd1Bn5b2Hy3dsvTMdbtP4n11IuQ/RS38XVoX62kiDQfIgqc8iNc16yme5Rz94zUst0SDTtU8+sfs8an9X3jB6D2evd+3PF/lo9Q5lBA7NHfrZlvWZ147NxBX6TVnk4Ym48nOTsFTWj/l9nRo6mzaxjmt8CWHZGrPotVSgb8T2PqZCXEWEq2hirdEO+e9lDfnuOR8U9AuPuHIYGRhwf/TwpGdgwlfni4ne5GLg71eWKDSnytwaukYIWuKLDKPEbE2Qdpfbm6XoA8h/44btC8U9ZektrhSgpGvMu99Wwc0byhD4BUtA/mf2f3tfSwQvh6Gw1/oxbxststzIzHeGOMU/lt+YYvGhjxjo7h/YkzjkIgnQvUecYGDwFp/Q4H1vxsV4dtHGcUHeYSFfnlHLiAlkIpWfH+f60lFfAXJYQ6xrSpxKEEFa6s7+jRvMRWqOo33N5ZPnOLE98Ta7AQ=
+    properties :
+     x : 328
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL12..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL13
+    identifier : 0x2b436987da1cccb3
+    internal_properties : CAAAAAgAAAAw4kXtxGAJ3vKYZfnHOjm7GOA2ocYykn5bIatCiAdvL/8/CexcfYtHCKry83lN4PMvWG6Fs3t6d0jl2b+Ya2OzzquQ3GMx5w0aUWBpx0HwkzBX8nmoRgMQPXUR22zN7MnK4bM7eLvR55Bl2OzfkPsHsj8qG+qnw0RT5YkDN9Lab2VCUuW/RgtpkiBsJqBmCvW51Jkr0NarhqGOxSt39D6lxVWaljkt5svgh7s5aIPLRCCAy39S8mEsCgAFzf/W0aq+qtbKv+0rm7kj64Vm6MC6/6OgsoGgoePKjLI/0aneobKv9q7XAPcxN7ZzHFeE1d+U/ijq2nkPii8du5eEN0BTGNW1Q7nPAQ3llRRoxu62+4+gNfREzlu7M0HuGOMchvu2IeM2Nkxr87DX6kTrUPjfEj3Oydk7ADLf8393OVGfL4n1Dx+5jx7fxH+dkEJDsmg0UgXZLQ8PBtNHr3jbU8xXji975S25fLbtv6MkvAtxrWylapQWpXYM0jo=
+    properties :
+     x : 366
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL13..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL14
+    identifier : 0x2b436987da1dccb3
+    internal_properties : CAAAAAgAAABrJbu060VYdjhLXSDK9Iug1y7HrrBPQtONFIy8zlLL9EDkJ6Cs89YvZTHiJmXDqTyNlQTeSm2dqFt5BmXasbGOu2YPbRCENTFvPNwgQ4npCijfO7xpww9zShB0baZh9+6nw44TfdBwcpE19TbstjbkHKKHVQG51jUqc0TLkF1ABVMKyefSPPqCe+MjqUjGBUWW+Kac9B+B6VG8BguSW4O4K+6WtUxtzu2ctbmvHxBu5Qwd1057+4DBiZuazN+8eLWxiu2ijU8BDbGSZHsYZi+Foh05jjMGz8my6xfNcUltvEkBvcrBLtlDw88UZLOYPN590AvQWtk1OCPSAAVgU+NuI+t45eGHeb1PJgGSBKCnvETo2t4wOgFBfwin4HMkS2DtK+rQfObT+yL+y+oZSnXwO98z3beFFgj/yoLRfR1u9saV/nOHidb/WvAH8IZG8Z4+cXol5eRLGbsxI4DEtdceTq+RXA5dJl42SvZ5CfvJ3lbYbgk=
+    properties :
+     x : 404
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL15..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL15
+    identifier : 0x2b436987da1eccb3
+    internal_properties : CAAAAAgAAABuLPM/tnIb7PyiX4OhZGPN7oJUQyCUNKRtO875FRzODFLAAgVlHna2hfs9hqq+lxiaabcuUGAlko2WHNI5pBZRWk/EAF/dU4FGfXTlu33kv9wLVm1kIm+k+UEVB3DJIAU2JUeP5GftGzwxjBgzPI8zniN+36ZDvygf4Y0Py26eSyG2lpm7IsedPiwAEqQiPsGFGE1frHLX+h0qeWer4JKhwZk+6hUp0m9MM3/FjF9fQPxkDxyu/mHI4KQhwT9zYnF946n//s4Du8FLw+2+uFASv+tQyplY4bsqPOJPIUHWkQpvXn63EP+BD267xA/0Zddk9njSEjFPok/Ni0dEfwiT8CUd0xmPSd3dveygPp4WY5+IJZwcNsvDA4GuWNMEfktucbsWJmwTw0gforxjEBhHgpW+0bFDACr/s1Nbz+t1cVE/A9N/0VqDcH25rKClcEq0PHFtk9HP9oNJ77hlGUYRSGElS8vbmlRPUTVKmi1Xl3avfIIkVyS6jGQ=
+    properties :
+     x : 442
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL17..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL16
+    identifier : 0x2b436987da1fccb3
+    internal_properties : CAAAAAgAAADD8ahcC9++jwNP+m5ajbw0t5theC1J+3dAKIHsenHz47flK66+h4k9HLyE/XNXaPPzUuD7fQ3QVUADq4nGkVowalGqem2amdWqHRSR020E3+ALRoEsIjdgVRltmzBRiIWqnc9DNF+1V+gZFMRLdJ+rIqPGs1Yzd9wD4c2zA152k33OblXTor/peuzoPgSKblGBEBVLhPJndtFiOeuDmKJRrdkGXgXZihvg+6fJ1A9nwLAMSLJ6EoHQFnANyf9UUyQwGJDAOftWJTuxZRPodrKs+aFacNt+C630Ypzlq9cYU0QlYHSxbtEDyaQFMqlSB3Fm9HoQTM9ZrFHT7bX2ZYJlAjsX4ZM163cXSx7mUCwwpaG+31JWjB2tFU+YJu2imK3Q5900gNr93eKNXPpdzooBPOMIgfAMyX0WiLiuGnAuaCYUKH7ClqWMiYZya2cuqUGNFZr0GkpGLwgO5AOoZjM8lTZy/gbgpWFYKh6hMYb8OptUmeXH9Mff4Qk=
+    properties :
+     x : 480
+     y : 10
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL19..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL17
+    identifier : 0x2b436987da20ccb3
+    internal_properties : CAAAAAgAAAChkzb+9bFYrSVplMh0b1amNR3v+q/LBfXaatwXu+JikE6iBM+73Og8ncmXhKh87+BqL7l0Nt6vCAEYlvjjRhYJABvohN/tl+kstaQRy4XCPQJfGoXYPj8Iz+kttwytwq+wpTPHkMtd685dxDSblBENUAO6L7aT83hxJcGbO9bwJcdiftGjakMVqKggUsz6FAeLxIkvwC7/Gs+OESd/LIAnNy1SEo2pph+KM++1kDPh8l7k1zAikgHM2hBt3Rca5ZbirprOSxnW5AoyPMRbW5fLmMJlZQInMBgnl49qMkhp3hsGQxmod2JK2PWUM6xXWDytlfVV4xAu07xwKGJVRrMo5cCmUi5SjMaysNG7F7VZfBQLhjvZYWpoJCD3F5gXrbR3CICpF1N+tGEeS0v4I09MHyDXyD7+R/uQMtAmnMaw4sKqqPbktMFIAeAyu6mse2u529LMrJiW55Qk4L9m2DE+F7D0fIRiI9/arJA3j1iiXL12u8PllmV9Q6s=
+    properties :
+     x : 366
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL14..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL18
+    identifier : 0x2b436987da21ccb3
+    internal_properties : CAAAAAgAAAD6uA8rgl43ELjuG0/9IJ/hYgb497TIePDBj2O22FfHb9s/UTgUDVMbREoSzyGFmKuTGA5ZuwP648ylkSNoM6F2Og/EQH+dUyFGXdSF2x3k37zLFu3Eou+EeWG155DpYOVWZcdPBGctu7yRLPhT3M9T/mN+n8aDv0ifQS1va87eawG21hkbIgc9fsygskQC/uEl2A3fDLJXGt0KmUcLAJIBodk+qjWpkg8ME18lLL9fIFzkD1wOviHo4ARBoR+DMqFtM1lPzt4Ta3Gbc71OSKDC7/tA2mnocesajJIf8dEmQfp/zk7HYM9xf34r1B8EtYeUhuhiYoEfkn+dOxcUj9jD4DUNIylfGU0NTVywDq7mk4+YFazsBpszs9He6KNUjrteQetmdjxjs7hvUsxz4Kg38iUuocET0BovQ83RR2tVRScX3YHvoTT9CjnbUgCF4A5aBEsD+0lFVMFRXTqZ1XI9FLXxf4dnLujT1Ul+1uEb2zrrIG5IazBGGPA=
+    properties :
+     x : 404
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL16..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL19
+    identifier : 0x2b436987da22ccb3
+    internal_properties : CAAAAAgAAABzIZisO69OnzNfqj6KfUykJ8uRCB3ZC4dwOLO6nMs9deE3WQxISWsX6i7uk80RGkVdZI7Zp48Sd2bFzY+YAwLX5F88GENBO1WA6fil/3kGCV6LVsHEikuMa1U5w0hZjmMEKQd7NE+Rp3Kh6MgPeJX5bG+Ge6Jfvyw9Ed3nB2KsWRvG0qXHbgdhfJxkNhBOqBN3gHW7TArrvsu67UObSFzbe4G25tHt2mu+N+NZxDflzkpgU40+/nGYsITxUe87igkVWzGntmaa+A4mwGg3P9u/bB5pYXa7TOTDw7s21vTVWnfar20U8+Ye/JkItzjbjCDRsbkR13SKXxjs9C5pEr+EwSTC9lpeEFp2pOXfQ5mtgLi3OvfNRVZEsMwj06zj6QCDHIydM28SGJXynw+0Z3Ngk7x71JKyc5esrljeVnw6qAZwMCammqGgQYoKY2MizQn9gXKUZiaa6+jKBNN8sl/sJUYCbpYQ1REImo4xgVasaqtkqdXX5LfPkXk=
+    properties :
+     x : 442
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL18..CouleurFond)
+        type : 18
+  -
+    name : IMG_BACKFONDCOUL20
+    identifier : 0x2b436987da23ccb3
+    internal_properties : CAAAAAgAAABQQKF8hcRGg7k/NOKlWMoam9eyXUC0VJnaDnUqVfph2UeJbXHcFUZg/9652ADhXakvm5hxc5zDLQPi+llcgyx623mIftarjkjc9X4HmLiJ/AwX63hWRcsbuq/fw/5N+tlDH/1/l/P/y+Aez53YTyVhY6Gr6VMGDrt/RdLp196xOrUM8VXijo518wJd4kNXDcsSnKdJNOS+cI+VdgX6RpTpZ9ExWcfP+YUZZNyAIkeulw8r9MwPjfUR6607BPO/Wp9W2TMyGS/1PbpN7vtY8s8x87xjgCc2vzWlwFeNNSnPPnwye+6vXNu56IosGmP0ukzmF3tM0g1luBJgVUki6pUESAD0O9abVAgcbdH6CbLPtBzi7Kfa9xmFpJC0r1iDSPe+30Wb4muEc+Eq7YbimrqeQxI0XUnvx+O04NdqTgR2KPewjCG7aLMY05yePymmzE4/mrHO7qFXELu6M89JKb8oKlfzOJA9EI7sp9pGGOT7g4aAAvWMVDsxDquMFw==
+    properties :
+     x : 480
+     y : 48
+     width : 32
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         ChangeCouleur(IMG_FONDCOUL20..CouleurFond)
+        type : 18
+  -
+    name : BTN_AUTRECOULEUR
+    identifier : 0x2b436987da3cccb3
+    internal_properties : CAAAAAgAAADDtYonI6Zea79sCCJXfzXGZFEJ4/fG9i0BQfFIGe7bpIXbTHFcQlbjMXEGAD4pkY4xv5RQL5QcR/W1v+COuzzscFdvV7li2RwidgedSOOnFVbf/q1u3XAdOAejrJnn2mBeUaKa1lpReBL/mddNFNVzRgAZTxG9ZIUnI7WhjDgP8ykGaRVwzki3sXzPEQWk+TmwmX0tKe82u0k3NTrB5bSplsMwE3cr0hdxJi/WewZnMHfVAv/lxLCjDj4W7CbUXjQqPnKl3fEIaaXH4MqohdPjgftilGA8G9yyBHEtLhCgCKGb71FBb/AmJAI4oLb4vjd2NqjICm1rEE3fESOCEMs++lbmDj0hvK51ewLQol97ooITXeypRk0maRQpxbL2LGTXhQoRSE7ARQtQoBQJhC6dsU5/NlPLwDVIgngTZMiVO9ClltCm3c9N+Cyv3c89yTJpVKiAm/Ur2Kg09NQYHszFTG2Ra15mfe1uIwQGONrg3iW9Al75LS7t+rtQJCTv167QdbqZMwfN2ZTgEqJ+RSPdzcMaU7O95LPQxaxkRcFmRK+6IY+r/5M9vdpdEhoNf/mYWKhQ4KqK8Eh2ZEj+JM5fKHYYOW0H+9k6bjXWoHRYJLGmSHDUf4x4iOu3ffGw3TdqJthele83onG/u5VF9vTEfUQuVZdwLSM7rgZUIQO/ccS+Cva/nCziFOmZpjjITzVMloITMJ4IzTdzhhUtlvhpfytOCFEy4/uFnmicBrNpUr5K
+    properties :
+     x : 518
+     y : 10
+     width : 70
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         // Conserve la couleur d'origine
+         nCouleur est un entier = gnCouleur
+         
+         // Ouvre le sélecteur de couleur
+         si SelectCouleur(nCouleur, scinit) ALORS
+         	
+         	// Applique la nouvelle couleur
+         	ChangeCouleur(nCouleur)
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : IMG_BACKCOULEURSELECTIONNEE
+    identifier : 0x2b436987da3dccb3
+    internal_properties : CAAAAAgAAADugnP1gWlvIh9x2oOhKRP/lBAzp45KiwAatIMe0U04SXQ9sJ3kBs/MeZ6ZKB80/KIyivutA9MOgp5hhe2CFp7BUzN+PeSGl7lbo795chrsm8kbYxZX73fyuJ1pYymBtZAznCexrFa2FMcJO9i1o95GwvJJb6PawRMye15bXEDn2s9P3R5mWd1LzOluzJ/yqYVjrt/YLd3MVG/+iuh6Wpd8Ny8pNgbUp6s6B899NhrAXua16ypY7KSFcqftpt6XR4Y2qn0ShN5TAU1D3jxfiGWtoE33VPDY5uP3cPHWyxyjEdMkTWopXNbQnd543AXHUSo8aybStHpVzrs7A4CQpREB11W83tAUqh9S6L4s8ZxYGsVxCOIBbCviuuFrLc4mDNaDTjjA/+8+y2pSWQUxcB3SB5jNijOQ9/5e4N/9PQ+sd3B7mN/3U2m/Be6e1KqdhiGM1S0gLm6tqS9dYCVZYlcxGd28Y5aApGfYPE0xjbQUqEDPEEb84nxpDWCxk/M=
+    properties :
+     x : 90
+     y : 10
+     width : 42
+     height : 70
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_COULEURSELECTIONNEE
+    identifier : 0x2b436987da3eccb3
+    internal_properties : CAAAAAgAAAAttsn/Nev4DRGapEEHdbEN2deq64olelU7Mt+Bm6W7WRtuog7DNYxQAjw6q+CziG74FCdmAi4DbNxw7SEPvKMn758068TjA0qpl+4OW7NXqXkw1MgDLYvCmbDTMYBNOHJXhOnxnrt47KfYGK4X6PMMF+8M+/WSTDZMgJEYuO5AMnVcOkidRFi6ZzY/9xltsS6NzZBWDtyRCTI+IG1FSqfpYXbkPArvo4V8NxhSopmW+6O5oe6aU3L3jLZANMObXDY7pt4kiVscVJJcmRLB5QChFCjN0lWkHB/kbtZBZ3xZQS4kX9Aeaed17XGjh8UJu3v0J7H9n6h8Pm1bCMIU6Lt+EN6wlo3V3/xxbeiYAF+wEmfpdmRoncx5yG7wVH+hgoacdZG2RTnruu6Bzqpn4PxU6fHmh2dQA1/9fB7m518pT9/+c5sMddGXPGEGx30SoCLpiYxTlG84NyFoSCPC7ELvIOAe6qtF1iIiVfKTvhfKwiIYW1JQ/KPHCWa/Iu/W4afK2+F50sk=
+    properties :
+     x : 93
+     y : 13
+     width : 36
+     height : 64
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : FRM_Forme2
+    identifier : 0x2b436987da3fccb3
+    internal_properties : CAAAAAgAAABkWVs9XnZ3ou2C3Y6J1eKBzZgfCSan+ToYlxohaCtTKQiPQdInS7f+AE30RqoUyxDEB7CFnk6QIjCbP7qdF4jfHFDc9GDnRtahIVa8u0Us1GtiZ8b3KHnv/xbU6oNjcGu2sjOv0BImL6pIDKtMQuX8dXOj5K2xDJIkYmfUtiHYsRn5eFhyUa1S8r7WP6a95J8mHdpVrChf1H8RE7M/kGFT41q4H6nP43noDCWRwvtppCAQGl01VquUCQ458L0QuR8cBj5p+ce37eSPBPnbtjLPg4bRu7FQvJBtjpUhDHkBKgPrZw==
+    properties :
+     x : 594
+     y : 7
+     width : 2
+     height : 77
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : BTN_EFFACER
+    identifier : 0x2b436987da40ccc2
+    internal_properties : CAAAAAgAAABzz5xkx55yIaGGIdifpkteDqk5lav63pCWw0vH4fLOwogTWIQd6uZccksmbqKy0U5+aTXvX8XOMwIIU4ij3LKfAJw+StBXJ1wRnzx6kqvs0H6J4fg5eDoFgtu7Sfdkzw+/5fHOzuzn9LmlOUcoQoXb35qwecNR6GttQ14sAIfPtvBdwXMJZW2BbBzAlzvS1umVRlGekp20VD4vnyLOHpbHAABEK0AdiViEAf73bBsDGbfGEpTM/4Oa5NcFZzpLeSpT4wloELD5Oqg8o/HUuymdTQzoIgw4Z5tyB5PNnMd1FjIqHKbg7scDk+lvfxkD+6wXob0Tak1vOKOPGy1iCDmQyKJwsImtDHqnh+B4L3sHRkonRUxNUqF2YfZ/pyiwYsa1pygDNtHHhs6VP7XU6c3etOviU0Jk9+63U1NAc/larpmivzdJqtJyfYU0UPb2lr1WnWhSr7g3pWvaekFGZf7y4zN0B+VCgQ3EN3wqWPCeugGzxYssMdp1HA4VR6MsfNCS5kFnWeMxw/joiNRrWD3aOi/RmW/9O2WJb3+3hGu33QPFEFUz5WN+0njdob6OrvwEUZJ+6938OYtTyTvbkdFRmtW9jKpvvflOm+wdHwV9PPsRVt1qYfOFjfAISL2LG9plgZ8H4pHhLNsxpNtjwAwMS9O/HXnqBmmTNHTgjIaJltHmen7mJkKu+OnrTJz8Z95qzKms/r3F4CpHFaa4e4vkCHolMT041bRm3fcVMeg9zE7a
+    properties :
+     x : 602
+     y : 10
+     width : 70
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         AnimationPrépare(img_dessin)
+         
+         // Redémarre le dessin
+         dDébutDessin(IMG_DESSIN, dEffacer)
+         gbInit = vrai
+         
+         animationjoue(animfondu)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : FRM_Forme3
+    identifier : 0x2b436987da41ccc2
+    internal_properties : CAAAAAgAAACdfoJWp60eeZKV9LXciK1CElVaxuvmuHFh3sU3sDtfN/xBj+ylvw0e6NeolFbwq2r0FTIL3BIeHoS5I1Qpg8NRxcQ8BFRx0rjfTXDMlX8qzBkqB3oL1iHBYfYyOk0tnjNg5rv3jFiG1cCMbocq4JcIo1rkZS4GX3fNPWT1j141EggkfUWHaoR7773XfNvmPWgpwF/SIbHeNcBU6Ox4xaqYjkHHwnQCECRbXej0rZaEQ4HdKeCwIbBLhAs412zXAF61g4VUDMJkuKvGyzIcdf0URsGUePYLccdUpbz6JVAo06oSHg==
+    properties :
+     x : 678
+     y : 7
+     width : 2
+     height : 77
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : LIB_Nombre_de_points_de
+    identifier : 0x2b436987da42ccc2
+    internal_properties : CAAAAAgAAAC4MnX9NIe4SHClEQ2ZgYz1kt/LapsplMu8gbmfFC9eqxxAUuP3iHkIBOgJP7nI7ZU03362IuooXgehGoZh0zDlmWYWoin56L1UfWKh7NK1zMVA88CBYthWXKnkS2vvX9ADo27B5Hp/e8GA/i3y2uer3rvYWy0xvQlfiaDpX/v2ObO7cyz+0HgbWr69363aBh21oyJ4TU2exqFFeyYjtDqcAvzGN1kqm3BNpSj4bZc4oYuTyt0fkxmDqOTOqMlbzaw9S+CtNjnB36Su7oQ4lz9Sl/JZ317YGXaIpUdAPacm0c+jKUuYvlhoPsLJFG+cEJ3+AgYwIzUE2z6MxpylCVYw7tcH0giDxtLAhYkUBZ19qrdG/8MD1fLV0b3yUe0etLQXE7pSfXXbWWbLnsAmIJdv27N3wp7iIQ==
+    properties :
+     x : 758
+     y : 34
+     width : 173
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : LIB_NBCONTACTS
+    identifier : 0x2b436987da43ccc2
+    internal_properties : CAAAAAgAAABD5ncGarb0cbUIoFwQ9baVziD9E+y6lUb3MKriOeaQX0B2qXaCpV7r9FtPQVoENhkzHd8wVoKYr31HFhhuavsWk23fbvtki1WIcS52tOL2x0pttqFwPN56ImmZF4UxVkqoKOItZdUeNzt9GSgqIFhX+7FnG70lvJdi9dWDdyfOvNMoyaxz+pyO6I+YQihM04oBaIucKo8RQ9iKtdfjPbARJwR+grYFqD5gS7uln8GNFWHuy+ekZgjcrP98ZrTMtHm+Xc1b5i4UKeoEiVpq0BulHU+9yzLoix1zJ9KNsHsvk2tJUYOUiIsxwvG85C2zITWOYE9YGIw4uv8islu98m7l9wVxncjCU2eyY5xgK3dT4Fd7ykUi/LMDe4eVAg==
+    properties :
+     x : 937
+     y : 34
+     width : 56
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+ menu :
+  name : _Menu
+  identifier : 0x2b436987da44ccc2
+  internal_properties : CAAAAAgAAAD7S+2GOLjEeheq9Y6YZGIRPpLnwB8KUS2je4S4X5oxSGrv51WBBaVxxbk/BTEdUwW0fnnvlhQNIBAuQTAO0S9+S8FMTvDhqkS1JydqFJBfHlbZSFzBkZAjjJ5aIH/cuMnF4Pme57TAyYvjnlkzTJmN5UX9hu+BEl3AsIsso5gsz3oX/KHp1ai/xWZCb54MlUFXdWmT2EOpULKqea/LH9EOlTkaiWsV2aM2/FfXQjTSY3NhAR6zEzKHYKVJwiZULchG0D4LNvRbPifZJPDMmlF6ptz+Rg0QN6SXG5jU7HifIzmkonwDFnOJQw==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAAC/+elMyM2DlH9YkNjiGHYYBZOppkFtd4LPjAJh9oXhzNfY+1ivVzlr6OYc/qmKtYBoI4V6SDEl8n2CNUJoI/q7cIqZZBwVfiQ+LdTK7patVpdMJjbj3wGUr9Lj+A==
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAAC9E734MdVQg2oYf0p0S1+mHntd31n2+PGy7DnmjqNwrQOGWsJGEVoX4TfiynXSPOY18D7yOebi0ZT3mJvz1VMPDCibD08NmtBopqMDs3NAQYFR7vDrYnmfeSuwiWGZGaw8gA8WQWbVHaQ4plOlwfMqeEjuQWAhxKL6LunsyFaw+sQHNDTJ+j/4ASHf3z8kAQm1IIfZqoUZubg93EQOt2hg/+xnqJThhofIw37lkqoF60fgWsUhz6MZYD6FL6wW4oEONy3sGlyOcyPoPN7IQqYs17IJ1XY9LI7L7/AaJEtA9XOWM4WLzRo=
+     code : |1-
+      
+      gnCouleur est un entier
+      gnTaille  est un entier = 30
+      gstPoint  est un point
+      gtaPoints est un tableau associatif (*, *, wlEntier) de point
+      gbInit	  est un booléen = vrai
+      
+      // Couleurs par défaut
+      IMG_FONDCOUL1..CouleurFond  = HTMLVersRVB("#000000")
+      IMG_FONDCOUL2..CouleurFond  = HTMLVersRVB("#ffffff")
+      IMG_FONDCOUL3..CouleurFond  = HTMLVersRVB("#7f7f7f")
+      IMG_FONDCOUL4..CouleurFond  = HTMLVersRVB("#c3c3c3")
+      IMG_FONDCOUL5..CouleurFond  = HTMLVersRVB("#880015")
+      IMG_FONDCOUL6..CouleurFond  = HTMLVersRVB("#b97a57")
+      IMG_FONDCOUL7..CouleurFond  = HTMLVersRVB("#ed1c24")
+      IMG_FONDCOUL8..CouleurFond  = HTMLVersRVB("#ffaec9")
+      IMG_FONDCOUL9..CouleurFond  = HTMLVersRVB("#ff7f27")
+      IMG_FONDCOUL10..CouleurFond = HTMLVersRVB("#ffc90e")
+      IMG_FONDCOUL11..CouleurFond = HTMLVersRVB("#fff200")
+      IMG_FONDCOUL12..CouleurFond = HTMLVersRVB("#efe4b0")
+      IMG_FONDCOUL13..CouleurFond = HTMLVersRVB("#22b14c")
+      IMG_FONDCOUL14..CouleurFond = HTMLVersRVB("#b5e61d")
+      IMG_FONDCOUL15..CouleurFond = HTMLVersRVB("#00a2e8")
+      IMG_FONDCOUL16..CouleurFond = HTMLVersRVB("#99d9ea")
+      IMG_FONDCOUL17..CouleurFond = HTMLVersRVB("#3f48cc")
+      IMG_FONDCOUL18..CouleurFond = HTMLVersRVB("#7092be")
+      IMG_FONDCOUL19..CouleurFond = HTMLVersRVB("#a349a4")
+      IMG_FONDCOUL20..CouleurFond = HTMLVersRVB("#c8bfe7")
+      
+      // Couleur sélectionnée
+      ChangeCouleur(noir)
+      
+      // Taille par défaut
+      BTN_TAILLE..note = 3
+      
+      // Nombre de points de contact
+      LIB_NBCONTACTS = "0/" + SysTouchNbPointsContacts()
+      
+      // Active le multitouch pour la fenêtre
+      RegisterTouchWindow(Handle(IMG_DESSIN), TWF_WANTPALM)
+      
+      // Réception des événements
+      evenement(OnTouch, "*.*", wm_touch)
+      evénement(OnDPIChanged, "*.*", 0x02E0) // WM_DPICHANGED
+   -
+     code : |1-
+      
+      // Dessin initial
+      dDébutDessin(IMG_DESSIN, dEffacer)
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+      // Désactive le multitouch
+      UnregisterTouchWindow(Handle(IMG_DESSIN))
+     type : 2
+   -
+     code : |1-
+      
+     type : 11
+   -
+     code : |1-
+      
+     type : 12
+   -
+     code : |1-
+      
+     type : 17
+   -
+     code : |1-
+      
+     type : 13
+  procedures :
+   -
+     name : ChangeCouleur
+     procedure_id : 1964529895331056819
+     type_code : 14
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //ChangeCouleur (<nCouleur> est entier)
+      //
+      // Paramètres :
+      //	nCouleur (entier) : <indiquez ici le rôle de nCouleur>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE ChangeCouleur(local nCouleur est un entier)
+      
+      	AnimationPrépare(IMG_COULEURSELECTIONNEE)
+      	
+      	IMG_COULEURSELECTIONNEE..couleurfond = nCouleur	
+      	gnCouleur = nCouleur
+      	
+      	// Redémarre le dessin
+      	dDébutDessin(IMG_DESSIN, dSansEffacer)
+      	
+      	animationjoue(animfondu)
+     type : 458752
+   -
+     name : OnTouch
+     procedure_id : 1964529895331122355
+     type_code : 14
+     code : |1-
+      // Résumé : Evénement WM_TOUCH
+      // Syntaxe :
+      //[ <Résultat> = ] OnTouch ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Aucune
+      //
+      PROCEDURE OnTouch()
+      
+      	nNbPointsContact est un entier systeme = poidsfaible(_eve.wparam)
+      	tabTouch		 est un tableau de TOUCHINPUT
+      	stPoint			 est un point
+      	
+      	// Nombre de points de contact
+      	LIB_NBCONTACTS = nNbPointsContact + "/" + SysTouchNbPointsContacts()
+      	
+      	// Redimensionne le tableau
+      	dimension(tabTouch, nNbPointsContact)
+      	
+      	// Récupère les informations sur les points de contact
+      	si GetTouchInputInfo(_eve.lparam, nNbPointsContact, &tabTouch, tableauinfo(tabTouch, tiTailleElément)) ALORS
+      				
+      		// Pour chaque point
+      		pour i = 1 _a_ nNbPointsContact
+      									
+      			// Point
+      			stPoint = [TOUCH_COORD_TO_PIXEL(tabTouch[i].x), TOUCH_COORD_TO_PIXEL(tabTouch[i].y)]
+      			
+      			// Conversion du point écran en point client
+      			SysEcranVersClient(stPoint.x, stPoint.y, img_dessin)
+      			
+      			// Nouveau point
+      			si (tabTouch[i].dwFlags & TOUCHEVENTF_DOWN) = TOUCHEVENTF_DOWN ALORS
+      				
+      				// Conserve le point
+      				gtaPoints[tabTouch[i].dwID] = stPoint			
+      				
+      				// Dessin du trait
+      				dLigne(stPoint.x, stPoint.y, gtaPoints[tabTouch[i].dwID].x, gtaPoints[tabTouch[i].dwID].y, gnCouleur, gnTaille)			
+      				
+      			// Déplacement du point
+      			sinon si (tabTouch[i].dwFlags & TOUCHEVENTF_MOVE) = TOUCHEVENTF_MOVE alors
+      			
+      				// Dessin du trait
+      				dLigne(stPoint.x, stPoint.y, gtaPoints[tabTouch[i].dwID].x, gtaPoints[tabTouch[i].dwID].y, gnCouleur, gnTaille)		
+      							
+      				// Conserve le point
+      				gtaPoints[tabTouch[i].dwID] = stPoint
+      				
+      			sinon si (tabTouch[i].dwFlags & TOUCHEVENTF_UP) = TOUCHEVENTF_UP ALORS
+      				
+      				// Dessin du trait
+      				dLigne(stPoint.x, stPoint.y, gtaPoints[tabTouch[i].dwID].x, gtaPoints[tabTouch[i].dwID].y, gnCouleur, gnTaille)		
+      				
+      				// Supprime les données du point
+      				supprime(gtapoints, tabTouch[i].dwID)		
+      				
+      				// Nombre de points de contact
+      				LIB_NBCONTACTS = (nNbPointsContact - 1) + "/" + SysTouchNbPointsContacts()	
+      				nNbPointsContact --
+      				
+      			fin			
+      		FIN			
+      			
+      		
+      		// Fin 
+      		CloseTouchInputHandle(_eve.lparam)
+      		renvoyer 0
+      	sinon
+      		
+      		RENVOYER API(USER32, "DefWindowProcA", _EVE.hWnd, _EVE.wMessage, _EVE.wParam, _EVE.lParam)			
+      	FIN
+      	
+     type : 458752
+   -
+     name : OnDPIChanged
+     procedure_id : 1967051960308495064
+     type_code : 14
+     code : |1-
+      // Résumé : Lorsque la fenêtre est déplacée d'un écran à l'autre, lorsque le DPI de l'écran change, etc...
+      // Syntaxe :
+      // OnDPIChanged ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE OnDPIChanged()
+      
+      // Désactive le multitouch
+      UnregisterTouchWindow(Handle(IMG_DESSIN))
+      
+      // Active le multitouch pour la fenêtre
+      RegisterTouchWindow(Handle(IMG_DESSIN), TWF_WANTPALM)
+      
+      // Redémarre le dessin
+      dDébutDessin(IMG_DESSIN, dSansEffacer)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : FEN_Fenêtre1
+resources :
+ string_res :
+  identifier : 0x1fbe22ee06669980
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+associated_test :
+ name : TEST_Dessin_WMTOUCH.wxt
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

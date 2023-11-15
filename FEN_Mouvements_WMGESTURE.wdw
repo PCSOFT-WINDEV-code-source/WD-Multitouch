@@ -1,0 +1,538 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Mouvements_WMGESTURE
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Mouvements_WMGESTURE
+ identifier : 0x2b43698dde93e63b
+ internal_properties : CAAAAAgAAADtMYkckf01ZaLzSdQqqKBJpEk1cPABYEY7Xli7kP9crS28RjPERp3hgxIE0p1DmMt6B1ld20FA+pcvDYBU0aV8L12OMxXMb+rPfklstysHO0mQrV3OseJRYc5LadD/RA1d7vbpHrYoDv8qdq4moQqkt43/qyU+/ypw4HlNlF0kgwU7wP/3cm6thuBPDETX6TatJ7oy2dKfXAn2qSzV3Z9UfQZMkCtRAQi4Hjo+8igKjb5JBYiAWgQZr6YgvTwg/lXVbiAxrPtq5Zf9y1zoN2txZs78cjVik3FaKNtX6WqP/iLvRGG527gCzYClpJEvaZ5QxoT6EMOwwbzYITR4MfoSheHMTyCfCrMlJ/zd8qHVttOvJ+ybLF1khE1lEhO1q1/OwIiPG4ZY1K2TsF5fgDFFyJYGcoLH7y865roD/sqVrTgG8k5FP76EAHO8vSLhecgm9Hn5qWV80Rd8OGbbr5jFfa1gkWvK5ePfzcpSds1AL11UeqKUynsxQbw19nhh3fT8af/f/0fOerFpZm/X9eb8mv1rBWAsssQE7dZ1Y5/ZUZbRTkEkrOET2bAXerPJOc+a3Bg5gLKtp0kipUCu5NxuVHE5W1HlZKKZn7Q/kVAGmpb3O7ltptan8TFhO8NOti0uSmY91Ab9/gfAAQHdvZz+CXF/RulgQ9De4VjhAcg85Vvsg1rPkpE3RnSKwhMSvU9fhC+/0EKQg7Rv3NVTZQ5ipY2SZJnF9gqWtoUSOQVBD7pwoqkHuRsy6n9InFLqakgP8Yu8xD9sDduGvDktH/0J5I18lmGkQD7QeKZibWc3Hga+clPpJUMbkFKUUVcp9d80Iu1oIe51RsD/EaFzbUlPqixVvpqBXcZ1/JH8ur2/ZisJ7tPvHNHtIfTDHpjEjqy6Jmuu6+vCDv3WZfTRhWiW1j0jt+Ir7fiW4c6F4mYDFsHm8rSVgPQmIRQvqA==
+ properties :
+  width : 1020
+  height : 772
+  widthClient : 1018
+  heightClient : 740
+ controls :
+  -
+    name : IMG_DESSIN
+    identifier : 0x2b43698dde95e63b
+    internal_properties : CAAAAAgAAADrpT8cc/kMahXJjVbQuac6n9paG4HrAASbImPJFWr/RYtYNTL98NpOpD78rblY+fLoRudmuK8FNDS67GNQahI004V1a58k9S/OopcthgD1urtFMUjfDZgn1P7OEHYlf11sJ95bsIcWf5tdNQA63Wh8ST4uB/adWa+oH9BYkKiIM0FFjDOgMS1AT35xqfOUPBmbJUWrO2kcCZslPpvbprhD6/cwSQSBAYNrwyMlJ9LOpns4t2G+XADCqcMEoWWhITkrzFEnYxGp8IttUcTEcnOsGfxg6i2nqZl8lvYCFKwdQl+jdCEkAluZgqe5lmsO4KFV2gdeS62RjLeG1e36yxbX6QoLZYFQHp0bJpMQ7nF36RJuLPoKcE+PhvmS51BEL3QHrshg2086XMnzmTB6aGbnxJhlYHNDndm6+MLgAIAfgyMRfcVnT/mSbSb/+miDAS9ObwkmOvKsgsITh/a1jKoyPfcPwJbHve+f5zENxX9dYtJY7ok=
+    properties :
+     width : 1018
+     height : 742
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : LIB_INFO
+    identifier : 0x2b43698dde96e63b
+    internal_properties : CAAAAAgAAADLPlq7pwdsgy3Fnl3daI6eb9FlNuJMnq6qYQzJsqtkWGVAjIJeum1rkjioHdIlzLRVk903IQqgnUmFrxU8DS3tvX5B34uWJ2a+8yTrRXZaG+BSe+E8Em+nV3zd9On8rbg/mdmuzkumtdNOmFv+oULWtp0DGzMvgovx3JfHFtOpntpdHZFggd8uaXQEAnW7mNFwRDPFuZUPCxMPmRdSrrXrcco1ikb1plemsa55HmlTpO8zn1Kw/uyo7LaNRF92p0wOiJw+TANb5KRdLhJUQ3Atwdz9wZ1VfIG2h2dHJCgiCY94YnWAxvRwX6+4DdSvkbUcQD/qsyjlHrRxAnmOQSW3hwCliILCBbUM7qv/7e7yUVNRnEqW1guaDW9PqQR6MPBEaMQUd2Y+Z4qbdftMkFY1s37uExb+22kIP3To3vtvknQfVenGUMY4O7WwlJqyzA57RGtkeCLOJyL14/F2fd1vmN8E4Zh1zYnXW2mJ3HdAE4KPhkYZKj3GI7hY/PsF0rZ0OIvz1mo73guFWkaN82lKMmqQBhJ/yA==
+    properties :
+     x : 6
+     y : 6
+     width : 1006
+     height : 85
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : IMG_INFO
+    identifier : 0x2b43698dde97e63b
+    internal_properties : CAAAAAgAAABDNwQbqsQYrfsPKglKY/ChbOx1PY/+VwwqBUhcWmDcZkvIZqW8nrLaA7Utf9XrOdPni2jclUZ+Ytgu3F3NoM42ASwc692uZQTSkhwnjmIU+2V0nRXReTgVsReHEbVyju1eDFg3j5cKjmSkcyjmlSt8NxWPpm6SQFqT3nR0SjBVV3EpgQqJ0OPK8FLTMvC74sJUh86m3j9eH30/uXAV5e4iYbb9durNoJ8uTiY+jJ4dzF7BJqdBqLybvKxVbHczvCpk0OGcC3qhFNjwOVNDXDgIpknurK7QP7I/xb1dmY6li8+8LLNL74PMnprY2H9IGdnrk0yclRcYGzcztlljptMfqt8ggmt7ygo6DRG8okT7Kq626Xi2zvWvwFxFt0myfkXgCW72194q09kKPRCk6+O1g0KbtGxjY+yvm724SABuvT+iGkCdSIPLDJKoKnn9oleuAVu6Exk0I25mWS5xIhWlKL2ZZgUSAiYJz/yLdO/nsrytV8+W1zI3gkuHeE3ArCf5lXg/ngS0g8Ci7vEQyXwZCkljvoL7Smiqwf2OdWdfosyfTNDBbCARdRO7ubjH6EHLnjYt7h54gq3kBLI3rDBnR66+
+    properties :
+     x : 732
+     y : 370
+     width : 280
+     height : 364
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+ menu :
+  name : _Menu
+  identifier : 0x2b43698dde98e63b
+  internal_properties : CAAAAAgAAAD7S+2GOLjEeheq9Y6YZGIRPpLnwB8KUS2je4S4X5oxSGrv51WBBaVxxbk/BTEdUwW0fnnvlhQNIBAuQTAO0S9+S8FMTvDhqkS1JydqFJBfHlbZSFzBkZAjjJ5aIH/cuMnF4Pme57TAyYvjnlkzTJmN5UX9hu+BEl3AsIsso5gsz3oX/KHp1ai/xWZCb54MlUFXdWmT2EOpULKqea/LH9EOlTkaiWsV2aM2/FfXQjTSY3NhAR6zEzKHYKVJwiZULchG0D4LNvRbPifZJPDMmlF6ptz+Rg0QN6SXG5jU7HifIzmkonwDFnOJQw==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAAAWGYroA/fNRx2cXL61u1ve4mpNbEDcY2Y+hEgXEl9Z6/V259X6hOvv/TGm/ZBlx9I8WKyX9HYxpamY8udS/qN2N/05R0bf0WcHu1NnMB9r7HARUWDSUdC1nt9X
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAABLLRJphcdTNg9MHxpED/BJg90MnOiNYxvPsjMgCNXPT9FcbrjzENFNWIPDlMjmnX7XujpQYNRShB4dSL2wAI6krVH0ezV8CFhkTuLcZqKoestJuJPqO3YHQIjthKdR59TVlWcRkphukkSWt+w=
+     code : |1-
+      
+      gnUllArguments	est un entier
+      gPremierPoint	est un point
+      gSecondPoint	est un point
+      gnCentreX		est un entier
+      gnCentreY		est un entier
+      grValZoom		est un reel
+      grAngleRotation	est un reel
+      gnLargeur		est un entier
+      gnHauteur		est un entier
+      
+      // Gestion des événements sur le champ image
+      evenement(OnGestureConfig, 	mafenetre..Nom, WM_GESTURENOTIFY)
+      evenement(OnGesture, 		MaFenêtre..nom, WM_GESTURE)
+      
+      // Vérifie la capacité
+      si pas SysTouchDisponible() _ou_ SysTouchNbPointsContacts() < 2 alors	
+      	erreur("La fonctionnalité Windows Touch n'est pas disponible sur votre ordinateur.", "", "Un écran tactile multipoints ou un périphérique multipoints est requis pour activer les fonctionnalités Windows Touch.")
+      	ferme()
+      FIN
+   -
+     code : |1-
+      
+      // Dessin
+      dChangeMode(dessinAntiAliasing)
+      
+      // Initialise les données
+      gnCentreX  = IMG_DESSIN..largeur / 2 - 120
+      gnCentrey  = IMG_DESSIN..hauteur / 2
+      gnLargeur  = IMG_DESSIN..Largeur / 2
+      gnHauteur  = IMG_DESSIN..Hauteur / 2
+      grValZoom  = 1.0
+      grAngleRotation = 0.0
+      
+      DessinFigure()
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     type : 13
+  procedures :
+   -
+     name : OnGestureConfig
+     procedure_id : 1964529921101522491
+     type_code : 14
+     code : |1-
+      // Résumé : Evénément WM_GESTURENOTIFY
+      // Syntaxe :
+      //[ <Résultat> = ] OnGestureConfig ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	variant : // 	Aucune
+      //
+      PROCEDURE OnGestureConfig()
+      
+      	stConfig est un gestureconfig
+      	stNotify est un GESTURENOTIFYSTRUCT
+      	nHandle  est un entier systeme
+      	
+      	// Récupère les données
+      	transfert(&stNotify, _eve.lparam, dimension(stNotify))
+      	
+      	// Récupère le handle pour lequel on doit configurer les mouvements
+      	nHandle = stNotify.hwndTarget
+      	
+      	// On accepte tous les mouvements
+      	stConfig = [0, GC_ALLGESTURES, 0]
+      	
+      	// Applique la configuration
+      	SetGestureConfig(nHandle, 0, 1, &stConfig, sizeofGESTURECONFIG)
+      		
+      // On doit faire suivre au traitement initial
+      RENVOYER API(USER32, "DefWindowProcA", _EVE.hWnd, _EVE.wMessage, _EVE.wParam, _EVE.lParam)
+     type : 458752
+   -
+     name : OnGesture
+     procedure_id : 1964529921101588027
+     type_code : 14
+     code : |1+
+      // Résumé : Evénement WM_GESTURE
+      // Syntaxe :
+      //[ <Résultat> = ] OnGesture ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : 
+      //
+      PROCEDURE OnGesture()
+      
+      	nHandle 		est un entier systeme = _eve.lparam
+      	stGesture 		est un gestureinfo
+      	bGéré			est un booléen
+      	CentreZoom		est un point
+      	rRatio			est un reel
+      	rAngle			est un reel
+      	
+      	// Taille de la structure
+      	stGesture.cbSize = sizeofGESTUREINFO
+      		
+      	// Récupère les informations
+      	si GetGestureInfo(nHandle, &stGesture) alors
+      		
+      		FinAutomatismeProcédure(AfficheInfo)
+      		
+      		// Cache les infos
+      		si LIB_INFO..Visible ALORS
+      			ChampInvisible(GR_INFO, animFondu)
+      		FIN
+      		
+      		// En fonction du type de mouvement reçu
+      		selon stGesture.dwID
+      						
+      			// Windows a détecté un mouvement de zoom
+      			cas gid_zoom		
+      			
+      				bGéré = vrai
+      				
+      				// Si le mouvement démarre
+      				SI stGesture.dwFlags = GF_BEGIN ALORS
+      					
+      					// Conserve le membre ullArguments
+      					gnUllArguments 	= LODWORD(stGesture.ullArguments)
+      					
+      					// Conserve le point
+      					gPremierPoint.x	= stGesture.ptslocation.x
+      					gPremierPoint.y	= stGesture.ptslocation.y
+      					
+      					// Conversion des coordonnées écran
+      					SysEcranVersClient(gpremierpoint.x, gPremierPoint.y, IMG_DESSIN)
+      					
+      				sinon
+      					
+      					// Conserve le second point
+      					gSecondPoint.x = stGesture.ptsLocation.x
+      					gSecondPoint.y = stGesture.ptsLocation.y
+      					
+      					// Conversion des coordonnées écran
+      					SysEcranVersClient(gSecondPoint.x, gSecondPoint.y, IMG_DESSIN)
+      					
+      					// Calcule le centre du zoom
+      					CentreZoom.x = (gpremierpoint.x + gsecondpoint.x) / 2
+      					CentreZoom.y = (gpremierpoint.y - gsecondpoint.y) / 2
+      					
+      					// Calcule le facteur du zoom
+      					rRatio = LODWORD(stGesture.ullArguments) / gnUllArguments
+      					
+      					// Calcule le zoom
+      					EffectueZoom(CentreZoom, rRatio)
+      					
+      					// Conserve le point et ullArguments
+      					gPremierPoint  = gSecondPoint
+      					gnUllArguments = LODWORD(stGesture.ullArguments)
+      					
+      					// Dessin de la figure
+      					DessinFigure()
+      				FIN
+      				
+      			// Windows a détecté un mouvement de déplacement
+      			cas gid_pan	
+      				
+      				// Le membre ullArguments contient la distance entre les deux points
+      				// Le membre ptsLocation contient le centre actuel entre les deux points
+      				
+      				bGéré = Vrai
+      				
+      				// Si le mouvement démarre
+      				si stGesture.dwFlags = GF_BEGIN ALORS
+      									
+      					// Conserve le point
+      					gPremierPoint.x	= stGesture.ptsLocation.x
+      					gPremierPoint.y	= stGesture.ptsLocation.y
+      					
+      					// Conversion des coordonnées écran
+      					SysEcranVersClient(gPremierPoint.x, gPremierPoint.y, IMG_DESSIN)			
+      				sinon
+      				
+      					// Conserve le second point
+      					gSecondPoint.x = stGesture.ptsLocation.x
+      					gSecondPoint.y = stGesture.ptsLocation.y
+      					
+      					// Conversion des coordonnées écran
+      					SysEcranVersClient(gSecondPoint.x, gSecondPoint.y, IMG_DESSIN)
+      					
+      					// La valeur du déplacement est la différence entre les deux points
+      					EffectueDéplacement((gSecondPoint.x - gPremierPoint.x), (gSecondPoint.y - gPremierPoint.y))
+      					
+      					// Conserve la valeur
+      					gPremierPoint  = gSecondPoint
+      					
+      					// Dessin de la figure
+      					DessinFigure()
+      				FIN
+      				
+      							
+      			// Windows a détecté une rotation
+      			cas GID_ROTATE			
+      				
+      				bGéré = Vrai				
+      								
+      				// Si le mouvement démarre
+      				si stGesture.dwFlags = GF_BEGIN ALORS
+      			
+      					// RAZ de gnUllArguments
+      					gnUllArguments = 0
+      				sinon
+      										
+      					// Conserve le point
+      					gPremierPoint.x	= stGesture.ptsLocation.x
+      					gPremierPoint.y	= stGesture.ptsLocation.y
+      										
+      					// Conversion des coordonnées écran
+      					SysEcranVersClient(gPremierPoint.x, gPremierPoint.y, IMG_DESSIN)
+      																		
+      					rAngle = GID_ROTATE_ANGLE_FROM_ARGUMENT(LODWORD(stGesture.ullArguments)) - GID_ROTATE_ANGLE_FROM_ARGUMENT(gnUllArguments)
+      														
+      					// Effectue la rotation
+      					EffectueRotation(gPremierPoint, rAngle)		
+      					
+      					// Conserve ullArguments
+      					gnUllArguments = LODWORD(stGesture.ullArguments)	
+      					
+      					// Dessin de la figure
+      					DessinFigure()
+      				FIN							
+      				
+      		FIN
+      	FIN
+      		
+      	// Pour les autres mouvements, on doit renvoyer le résultat de l'appel à DefWindowProc
+      	si bGéré = faux ALORS		
+      		renvoyer api(user32, "DefWindowProcA", _eve.hwnd, _eve.wmessage, _eve.wparam, _eve.lparam)
+      	FIN
+      		
+      	// Pour les autres cas, on doit libérer le handle
+      	CloseGestureInfoHandle(nHandle)
+      	
+      renvoyer vrai
+      
+      fin:
+      	// Actualise
+      	AfficheInfo()
+     type : 458752
+   -
+     name : EffectueZoom
+     procedure_id : 1964529921101653563
+     type_code : 14
+     code : |1-
+      // Résumé : Calcule les effets du zoom
+      // Syntaxe :
+      //EffectueZoom (<stCentre> est POINT, <rZoom> est réel)
+      //
+      // Paramètres :
+      //	stCentre (POINT) : Centre du zoom
+      //	rZoom (réel) : Facteur de zoom
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE EffectueZoom(local stCentre est un point, local rZoom est un reel)
+      
+      	// Repositionne le centre
+      	gnCentreX = stCentre.x * (1.0 - rZoom) + gnCentreX * rZoom
+      	gnCentrey = stCentre.y * (1.0 - rZoom) + gnCentreY * rZoom
+      
+      	// Cumule le zoom
+      	grValZoom = grValZoom * rZoom
+     type : 458752
+   -
+     name : EffectueDéplacement
+     procedure_id : 1964529921101719099
+     type_code : 14
+     code : |1-
+      // Résumé : Calcule les effets du déplacement
+      // Syntaxe :
+      //EffectueDéplacement (<nDeltaX> est entier, <nDeltaY> est entier)
+      //
+      // Paramètres :
+      //	nDeltaX (entier) : Distance horizontale
+      //	nDeltaY (entier) : Distance verticale
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE EffectueDéplacement(local nDeltaX est un entier, local nDeltaY est un entier)
+      	
+      	// Cumule le déplacement
+      	gnCentreX += nDeltaX
+      	gnCentrey += nDeltaY
+     type : 458752
+   -
+     name : EffectueRotation
+     procedure_id : 1964529921101784635
+     type_code : 14
+     code : |1+
+      // Résumé : Effectue une rotation sur le parallélogramme
+      // Syntaxe :
+      //EffectueRotation (<stCentre> est POINT, <rAngle> est réel)
+      //
+      // Paramètres :
+      //	stCentre (POINT) : Centre de rotation
+      //	rAngle (réel) : Angle de rotation
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE EffectueRotation(local stCentre est un point, local rAngle est un reel)
+      
+      	// Calcule la rotation
+      	rCos est un reel = cos(rAngle * 180 / valpi)
+      	rSin est un reel = sin(rAngle * 180 / valpi)
+      		
+      	// Calcule la différence de centre
+      	nDx  est un entier = gnCentreX - stCentre.x
+      	nDy  est un entier = gnCentrey - stCentre.y
+      		
+      	// Applique la rotation
+      	gnCentreX = stCentre.X + arrondi((nDx * rCos + nDy * rSin))
+      	gnCentrey = stCentre.y + Arrondi((nDy * rCos - nDx * rSin))
+      	
+      	// Cumule la rotation
+      	grAngleRotation += rAngle
+     type : 458752
+   -
+     name : DessinFigure
+     procedure_id : 1964529921101850171
+     type_code : 14
+     code : |1-
+      // Résumé : Dessin de la figure
+      // Syntaxe :
+      // DessinFigure ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE DessinFigure()
+      
+      	tabPolygone est un tableau <agrandissement=N> de point
+      	rCos		est un reel
+      	rSin		est un reel
+      	nDx			est un entier
+      	nDy			est un entier
+      	nAjoutX		est un entier
+      	nAjoutY		est un entier
+      	
+      	// Détermine les coordonnées du polygone
+      	tabPolygone[1].x = -(grValZoom * gnLargeur / 2)
+      	tabPolygone[1].y = -(grValZoom * gnHauteur / 2)
+      	
+      	tabPolygone[2].x = (grValZoom * gnLargeur / 2)
+      	tabPolygone[2].y = tabPolygone[1].y
+      	
+      	tabPolygone[3].x = tabPolygone[2].x
+      	tabPolygone[3].y = (grValZoom * gnHauteur / 2)
+      	
+      	tabPolygone[4].x = tabPolygone[1].x
+      	tabPolygone[4].y = tabPolygone[3].y
+      	
+      	// Calcule la rotation
+      	rCos = cos(grAngleRotation * 180 / valpi)	
+      	rSin = Sin(grAngleRotation * 180 / valpi)	
+      	
+      	pour i = 1 _a_ 4
+      		
+      		nDx = tabPolygone[i].x
+      		nDy = tabPolygone[i].y
+      		
+      		// Applique la rotation
+      		tabPolygone[i].x = (nDx * rCos + nDy * rSin) + gnCentreX
+      		tabPolygone[i].y = (nDy * rCos - nDx * rSin) + gnCentreY
+      
+      	fin	
+      	
+      	// Butée à gauche
+      	SI Min(tabPolygone[1].x, tabPolygone[2].x, tabPolygone[3].x, tabPolygone[4].x) <= 0 ALORS
+      		nAjoutX = abs(Min(tabPolygone[1].x, tabPolygone[2].x, tabPolygone[3].x, tabPolygone[4].x))
+      		tabPolygone[1].x += nAjoutX
+      		tabPolygone[2].x += nAjoutX
+      		tabPolygone[3].x += nAjoutX
+      		tabPolygone[4].x += nAjoutX
+      	FIN
+      	
+      	// Butée à droite
+      	SI Max(tabPolygone[1].x, tabPolygone[2].x, tabPolygone[3].x, tabPolygone[4].x) >= IMG_DESSIN..largeur ALORS
+      		nAjoutX = IMG_DESSIN..Largeur-Abs(Max(tabPolygone[1].x, tabPolygone[2].x, tabPolygone[3].x, tabPolygone[4].x))
+      		tabPolygone[1].x += nAjoutX
+      		tabPolygone[2].x += nAjoutX
+      		tabPolygone[3].x += nAjoutX
+      		tabPolygone[4].x += nAjoutX
+      	FIN
+      	
+      	// Butée en haut
+      	SI Min(tabPolygone[1].y, tabPolygone[2].y, tabPolygone[3].y, tabPolygone[4].y) <= 0 ALORS
+      		nAjoutY = Abs(Min(tabPolygone[1].y, tabPolygone[2].y, tabPolygone[3].y, tabPolygone[4].y))
+      		tabPolygone[1].y += nAjoutY
+      		tabPolygone[2].y += nAjoutY
+      		tabPolygone[3].y += nAjoutY
+      		tabPolygone[4].y += nAjoutY
+      	FIN
+      	
+      	// Butée en bas
+      	SI Max(tabPolygone[1].y, tabPolygone[2].y, tabPolygone[3].y, tabPolygone[4].y) >= IMG_DESSIN..hauteur ALORS
+      		nAjoutY = IMG_DESSIN..Hauteur-Abs(Max(tabPolygone[1].y, tabPolygone[2].y, tabPolygone[3].y, tabPolygone[4].y))
+      		tabPolygone[1].y += nAjoutY
+      		tabPolygone[2].y += nAjoutY
+      		tabPolygone[3].y += nAjoutY
+      		tabPolygone[4].y += nAjoutY
+      	FIN
+      	
+      	// Met à jour l'affichage
+      	dDébutDessin(IMG_DESSIN, dEffacer)
+      	
+      	// Paramétrage du dessin
+      	dstylo(0x194148, 0, 3)
+      	dfond(0xa9c7cc)
+      	
+      	// Dessin du polygone
+      	dPolygone(4, tabPolygone[1].x, tabPolygone[1].y, tabPolygone[2].x, tabPolygone[2].y, tabPolygone[3].x, tabPolygone[3].y, tabPolygone[4].x, tabPolygone[4].y)
+      	
+      	
+      	dStylo(0x194148, 0, 1)
+      	
+      	dligne(tabPolygone[1].x, tabPolygone[1].y, tabPolygone[3].x, tabPolygone[3].y)
+      	dligne(tabPolygone[2].x, tabPolygone[2].y, tabPolygone[4].x, tabPolygone[4].y)
+     type : 458752
+   -
+     name : AfficheInfo
+     internal_properties : CAAAAAgAAADXvCpgHa19JNQX+4CLq5D0+SOK/KKLT1Uq9rbpBiUI4KEgVvY7tSLEc+tRoxbkq3/1lBmH+hdVToLZh37E3+okAZ6ojX2iO9/ZNWLJE/2XXFcGqiwKmZSJ0ofGm7dE5UBc+2mJwMtwpf/C3FJsvDJGM+FTi2tdWDDfzjrNnYtY2w==
+     procedure_id : 1964529921101915707
+     type_code : 14
+     code : |1-
+      // Résumé : Affiche le libellé d'information
+      //
+      // Procédure automatique :
+      // La procédure est exécutée manuellement, lors d'un appel dans le code, avec un différé de 1 seconde
+      // 
+      
+      PROCEDURE AfficheInfo()
+      
+      	ChampVisible(GR_INFO, animFondu)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : FEN_Fenêtre1
+resources :
+ string_res :
+  identifier : 0x1fbe22ee066f99ed
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

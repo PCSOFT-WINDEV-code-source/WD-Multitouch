@@ -1,0 +1,518 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : IManipulationEvents
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1b43790c02fd6a1b
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAACVX4NH9QYjxs+cj0ok74BJo/18zEiNE/vfEjOAWAWvP8FsbljDYFE9OPNzhAgm7b73GupgoHRK7DYVgDXIiHaMxbnMM01kYMAchroUfgowQiMRUGsCI25v+KDl/P+ZL5ytvb9JarCnGaW4aTI=
+     code : |1-
+      
+      // VTABLE de la classe
+      VTABLE est une structure
+      	__vtblPointer		est un entier systeme
+      	__methodsPointers	est un tableau fixe de 6 entiers systeme
+      FIN
+      
+      // Classe IManipulationEvents
+      // =======================
+      // (Implémente l'interface COM _IManipulationEvents)
+      // 
+      // Réceptionne les événements déclenchés par les interfaces IIntertiaProcessor et IManipulationProcessor
+      // Cette classe peut être surchargées pour effectuer des opérations spécifiques en fonction des événements reçues.
+      // Cette classe est également liée point par point à la collection de procédures pIManipulationEvents qui gère les appels externes vers cette classe.
+      //
+      IManipulationEvents est une classe
+      
+      	RESTREINT
+      		__vtbl								est une VTABLE											// VTABLE
+      		m_nRefCount							est un entier sans signe								// Compteur de référence
+      		m_nCookie							est un entier sans signe								// Cookie de connexion
+      		m_pclConnexionPoint					est un IConnectionPoint dynamique						// Connexion
+      		IID_IUnknown 						est un WDGUID											// IID d'un IUnknown (utilisé par QueryInterface)
+      		IID_IManipulationEvents				est un WDGUID											// IID d'un IManipulationEvents (utilisé par QueryInterface)
+      		
+      		// Callbacks
+      		m_sCallback_ManipulationStarted		est une chaine											// Fonctions de rebond
+      		m_sCallback_ManipulationDelta		est une chaine
+      		m_sCallback_ManipulationCompleted	est une chaine
+      
+      Fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1964546954960595483
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()
+      
+      	// Crée les IIDs nécessaires pour QueryInterface
+      	IID_IUnknown 				= [0x00000000, 0x0000, 0x0000, [0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46]]			// IID d'un IUnknown (utilisé par QueryInterface)
+      	IID_IManipulationEvents		= [0x4F62C8DA, 0x9C53, 0x4B22, [0x93, 0xDF, 0x92, 0x7A, 0x86, 0x2B, 0xBB, 0x03]]			// IID d'un IManipulationEvents (utilisé par QueryInterface)
+      	
+      	// Enregistre les pointeurs virtuels des méthodes	
+      	// /!\ L'ordre ne doit pas être modifié
+      	__vtbl.__methodsPointers[1] = &pIManipulationEvents.IManipulationEvents_QueryInterface
+      	__vtbl.__methodsPointers[2] = &pIManipulationEvents.IManipulationEvents_AddRef
+      	__vtbl.__methodsPointers[3] = &pIManipulationEvents.IManipulationEvents_Release
+      	__vtbl.__methodsPointers[4] = &pIManipulationEvents.IManipulationEvents_ManipulationStarted
+      	__vtbl.__methodsPointers[5] = &pIManipulationEvents.IManipulationEvents_ManipulationDelta
+      	__vtbl.__methodsPointers[6] = &pIManipulationEvents.IManipulationEvents_ManipulationCompleted
+      	__vtbl.__vtblPointer 		= &__vtbl.__methodsPointers
+      		
+      	// Enregistre l'objet auprès de la collection de procédures pIManipulationEvents
+      	__RegisterIManipulationEventsObject(objet)
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1964546954960661019
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()
+      
+      	// Déconnexion
+      	Déconnecte()
+     type : 655360
+   -
+     name : __vtblPtr
+     procedure_id : 1964546954960726555
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Renvoie le pointeur de la VTABLE virtuelle de la classe
+      PROCEDURE __vtblPtr()
+      renvoyer &__vtbl
+     type : 458752
+   -
+     name : QueryInterface
+     procedure_id : 1964546954960792091
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de QueryInterface
+      PROCEDURE QueryInterface(riid est un entier systeme, ppvObject est un entier systeme)
+      
+      	IID 	est un WDGUID
+      	nPtr	est un entier systeme = __vtblPtr()
+      	
+      	// Récupère le IID demandé
+      	transfert(&IID, riid, dimension(IID))
+      	
+      	// Compare les IID pour vérifier si l'appelant demande une instance de IUnknown ou de IManipulationEvents
+      	si CompareIID(IID, IID_IUnknown) _ou_ CompareIID(IID, IID_IManipulationEvents) ALORS
+      		
+      		// Ajoute une référence
+      		addref()
+      		
+      		// On renvoie notre pointeur
+      		transfert(ppvObject,  &nPtr, dimension(ppvObject))		
+      	sinon
+      		
+      		// On ne gère pas ces IIDs, on renvoie donc E_NOINTERFACE
+      		renvoyer E_NOINTERFACE
+      	FIN
+      
+      // Par défaut : tout s'est bien déroulé, renvoie S_OK (0)
+      renvoyer S_OK
+     type : 458752
+   -
+     name : AddRef
+     procedure_id : 1964546954960857627
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de AddRef
+      PROCEDURE AddRef()
+      
+      	// Incrémente le compteur
+      	m_nRefCount ++
+      
+      renvoyer m_nRefCount
+     type : 458752
+   -
+     name : Release
+     internal_properties : CAAAAAgAAADemYLCpZpFuPOu006itwwvWwBRzUQ1lJ7ZQ6dz1b+GT4d4fNktTZevfgobmYWib6SXoH8PszUNjLdIuhU3SFuDQCtir5JGK8gdQdrIHagBhRY9fEX9Rb2DP1UHplR3pskqcRPnF9FepU6nTw==
+     procedure_id : 1964546954960923163
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de Release
+      PROCEDURE Release()
+      
+      	// Décrémente le compteur
+      	m_nRefCount --
+      
+      renvoyer m_nRefCount
+      
+      fin:
+      
+      	// On libère l'objet
+      	si m_nRefCount = 0 ALORS
+      		libérer objet
+      	FIN
+     type : 458752
+   -
+     name : ManipulationCompleted
+     internal_properties : CAAAAAgAAADHG8E9vB2OlbCt7+6jSwwsaq1l/949aQyNWHY3qiMfNB6L41+DSu0WQMI5X0WXql0bGh6M41hn9R6e11EfdKWkQPjCc50ux1JvrGVN85VKfQJ7DDdqDMtE40a+fZDsgCnTTswT3RPV4te0BHB/KCOyr1EgwhHLlhHLdoKb+o7UDVigvZ6k7C63pZxJsQ+wOb52Ncm8
+     procedure_id : 1964546954960988699
+     type_code : 12
+     starred : true
+     code : |1-
+      // Résumé : (EVENEMENT - Surchargeable) Gère l'événement reçu lorsqu'une manipulation (IManipulationProcessor) ou une inertie (IInertiaProcessor) est terminée
+      // Description des paramètres d'entrée/sortie de 'ManipulationCompleted' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ManipulationCompleted (<x> est réel sur 4 octets, <y> est réel sur 4 octets, <rCumulativeTranslationX> est réel sur 4 octets, <rCumulativeTranslationY> est réel sur 4 octets, <rCumulativeScale> est réel sur 4 octets, <rCumulativeExpansion> est réel sur 4 octets, <rCumulativeRotation> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	x (réel sur 4 octets) : Coordonnée X d'origine
+      //	y (réel sur 4 octets) : Coordonnée Y d'origine
+      //	rCumulativeTranslationX (réel sur 4 octets) : Déplacement horizontal total 
+      //	rCumulativeTranslationY (réel sur 4 octets) : Déplacement vertical total 
+      //	rCumulativeScale (réel sur 4 octets) : Agrandissement total
+      //	rCumulativeExpansion (réel sur 4 octets) : Expansion totale
+      //	rCumulativeRotation (réel sur 4 octets) : Rotation totale
+      // Valeur de retour :
+      // 	entier : S_OK si le traitement de l'événement a réussi, S_FALSE si le traitement n'a pas réussi. Dans les autres cas, il est préférable de renvoyer E_NOTIMPL
+      //
+      PROCEDURE virtuelle ManipulationCompleted(x est un reel sur 4 <utile>, y est un reel sur 4 <utile>, rCumulativeTranslationX est un reel sur 4 <utile>, rCumulativeTranslationY est un reel sur 4 <utile>, rCumulativeScale est un reel sur 4 <utile>, rCumulativeExpansion est un reel sur 4 <utile>, rCumulativeRotation est un reel sur 4 <utile>)
+      
+      	bRetour est un booléen
+      
+      	// Si une procédure a été spécifiée
+      	si m_sCallback_ManipulationCompleted <> "" ALORS
+      		
+      		quand exception dans
+      			
+      			// Exécute la procédure
+      			bRetour = ExécuteTraitement(m_sCallback_ManipulationCompleted, trtProcédure, MesParamètres)
+      		faire
+      			bRetour = Faux
+      		fin
+      		
+      		// En fonction du retour
+      		si bRetour alors
+      			renvoyer s_ok
+      		sinon
+      			renvoyer s_false
+      		FIN
+      		
+      	FIN
+      
+      RENVOYER E_NOTIMPL	
+     type : 458752
+   -
+     name : ManipulationDelta
+     internal_properties : CAAAAAgAAADHG8E9vB2OlbCt7+6jSwwsaq1l/949aQyNWHY3qiMfNB6L41+DSu0WQMI5X0WXql0bGh6M41hn9R6e11EfdKWkQPjCc50ux1JvrGVN85VKfQJ7DDdqDMtE40a+fZDsgCnTTswT3RPV4te0BHB/KCOyr1EgwhHLlhHLdoKb+o7UDVigvZ6k7C63pZxJsQ+wOb52Ncm8
+     procedure_id : 1964546954961054235
+     type_code : 12
+     starred : true
+     code : |1-
+      // Résumé : (EVENEMENT - Surchargeable) Gère l'événement déclenché lorsqu'une donnée de manipulation change
+      // Description des paramètres d'entrée/sortie de 'ManipulationDelta' :
+      //
+      // Syntaxe :
+      //[ <Résultat> = ] ManipulationDelta (<x> est réel sur 4 octets, <y> est réel sur 4 octets, <rTranslationDeltaX> est réel sur 4 octets, <rTranslationDeltaY> est réel sur 4 octets, <rScaleDelta> est réel sur 4 octets, <rExpansionDelta> est réel sur 4 octets, <rRotationDelta> est réel sur 4 octets, <rCumulativeTranslationX> est réel sur 4 octets, <rCumulativeTranslationY> est réel sur 4 octets, <rCumulativeScale> est réel sur 4 octets, <rCumulativeExpansion> est réel sur 4 octets, <rCumulativeRotation> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	x (réel sur 4 octets) : Coordonnée X d'origine
+      //	y (réel sur 4 octets) : Coordonnée Y d'origine
+      //	rTranslationDeltaX (réel sur 4 octets) : Déplacement horizontal depuis le dernier appel
+      //	rTranslationDeltaY (réel sur 4 octets) : Déplacement vertical depuis le dernier appel
+      //	rScaleDelta (réel sur 4 octets) : Agrandissement depuis le dernier appel
+      //	rExpansionDelta (réel sur 4 octets) : Expansion depuis le dernier appel
+      //	rRotationDelta (réel sur 4 octets) : Rotation depuis le dernier appel
+      //	rCumulativeTranslationX (réel sur 4 octets) : Déplacement horizontal total 
+      //	rCumulativeTranslationY (réel sur 4 octets) : Déplacement vertical total 
+      //	rCumulativeScale (réel sur 4 octets) : Agrandissement total
+      //	rCumulativeExpansion (réel sur 4 octets) : Expansion totale
+      //	rCumulativeRotation (réel sur 4 octets) : Rotation totale
+      // Valeur de retour :
+      // 	entier :  S_OK si le traitement de l'événement a réussi, S_FALSE si le traitement n'a pas réussi. Dans les autres cas, il est préférable de renvoyer E_NOTIMPL
+      //
+      PROCEDURE ManipulationDelta(x est un reel sur 4 <utile>, y est un reel sur 4 <utile>, rTranslationDeltaX est un reel sur 4 <utile>, rTranslationDeltaY est un reel sur 4 <utile>, rScaleDelta est un reel sur 4 <utile>, rExpansionDelta est un reel sur 4 <utile>, rRotationDelta est un reel sur 4 <utile>, rCumulativeTranslationX est un reel sur 4 <utile>, rCumulativeTranslationY est un reel sur 4 <utile>, rCumulativeScale est un reel sur 4 <utile>, rCumulativeExpansion est un reel sur 4 <utile>, rCumulativeRotation est un reel sur 4 <utile>)
+      
+      	bRetour est un booléen
+      	
+      	// Si une procédure a été spécifiée
+      	SI m_sCallback_ManipulationDelta <> "" ALORS
+      		
+      		QUAND EXCEPTION DANS
+      			
+      			// Exécute la procédure
+      			bRetour = ExécuteTraitement(m_sCallback_ManipulationDelta, trtProcédure, MesParamètres)
+      		FAIRE
+      			bRetour = Faux
+      		FIN
+      		
+      		// En fonction du retour
+      		SI bRetour ALORS
+      			RENVOYER S_OK
+      		SINON
+      			RENVOYER S_FALSE
+      		FIN
+      		
+      	FIN
+      
+      RENVOYER E_NOTIMPL
+     type : 458752
+   -
+     name : ManipulationStarted
+     internal_properties : CAAAAAgAAADHG8E9vB2OlbCt7+6jSwwsaq1l/949aQyNWHY3qiMfNB6L41+DSu0WQMI5X0WXql0bGh6M41hn9R6e11EfdKWkQPjCc50ux1JvrGVN85VKfQJ7DDdqDMtE40a+fZDsgCnTTswT3RPV4te0BHB/KCOyr1EgwhHLlhHLdoKb+o7UDVigvZ6k7C63pZxJsQ+wOb52Ncm8
+     procedure_id : 1964546954961119771
+     type_code : 12
+     starred : true
+     code : |1-
+      // Résumé : (EVENEMENT - Surchargeable) Gère l'événement déclenché lorsqu'une manipulation ou une inertie débute
+      // Description des paramètres d'entrée/sortie de 'ManipulationStarted' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ManipulationStarted (<x> est réel sur 4 octets, <y> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	x (réel sur 4 octets) : Coordonnée X d'origine
+      //	y (réel sur 4 octets) : Coordonnée Y d'origine
+      // Valeur de retour :
+      // 	entier :  S_OK si le traitement de l'événement a réussi, S_FALSE si le traitement n'a pas réussi. Dans les autres cas, il est préférable de renvoyer E_NOTIMPL
+      //
+      PROCEDURE ManipulationStarted(x est un reel sur 4 <utile>, y est un reel sur 4 <utile>)
+      
+      	bRetour est un booléen
+      	
+      	// Si une procédure a été spécifiée
+      	SI m_sCallback_ManipulationStarted <> "" ALORS
+      		
+      		QUAND EXCEPTION DANS
+      			
+      			// Exécute la procédure
+      			bRetour = ExécuteTraitement(m_sCallback_ManipulationStarted, trtProcédure, MesParamètres)
+      		FAIRE
+      			bRetour = Faux
+      		FIN
+      		
+      		// En fonction du retour
+      		SI bRetour ALORS
+      			RENVOYER S_OK
+      		SINON
+      			RENVOYER S_FALSE
+      		FIN
+      		
+      	FIN
+      
+      renvoyer E_NOTIMPL
+     type : 458752
+   -
+     name : Connecte
+     internal_properties : CAAAAAgAAACA4cqHdOFbW6bZKfUjeasj8tRQj4A0WdJknki1A2HrkJhI86kwVtslvLW3pBUTzxaaFEZuj+BhUoD4U3s2ATyz45sIMOzakInNMvLDVvOFD/dA9sCFAFgO6QZNF6aVFy7vf1Vn3Oy+itiXyHneYVI1yArb78bbx8abIEZq85Q=
+     procedure_id : 1964546954961185307
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : (Interne) Etablit la connexion avec l'objet
+      PROCEDURE Connecte()
+      
+      	HRESULT est un entier systeme
+      	
+      	// Si le point de connexion a été créé
+      	si m_pclConnexionPoint <> null  alors
+      	
+      		// Etablit la connexion
+      		HRESULT = m_pclConnexionPoint.Advise(__vtblPtr(), &m_nCookie)
+      		
+      	sinon
+      		
+      		// Aucune connexion n'a été créée
+      		HRESULT = E_NOINTERFACE
+      	fin
+      	
+      renvoyer HRESULT
+     type : 458752
+   -
+     name : Déconnecte
+     procedure_id : 1964546954961250843
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : (Interne) Coupe la connexion avec l'objet
+      PROCEDURE Déconnecte()
+      
+      	HRESULT est un entier systeme
+      	
+      	// Si le point de connexion a été créé
+      	si m_pclConnexionPoint <> null alors
+      	
+      		// Si la connexion a été établie
+      		si m_nCookie <> 0 alors
+      	
+      			// Termine la connexion
+      			HRESULT = m_pclConnexionPoint.Unadvise(m_nCookie)
+      		sinon
+      			
+      			// Aucune connexion n'a été établie
+      			HRESULT = s_false
+      		fin
+      	sinon
+      	
+      		// Aucune connexion n'a été préparée
+      		HRESULT = E_NOINTERFACE
+      	fin
+      
+      RENVOYER HRESULT
+     type : 458752
+   -
+     name : CompareIID
+     internal_properties : CAAAAAgAAACarGqw1G5dYHI38AhQsOq/8JC1yCP9neQlVArvL7HciOQ5TVJCdd//+9kHCB3CsKJ5JAy9k7j1G97Ef7KtkEhCH9FVeSThEA3pgkb2RBOvNZfJgACLmppqURKDFG92d31KXHQ60gMCemuyo7e+mGCMVG/cn0jJVT9RmuMEHxxd5e3Mo0vLDg8tKxyUoB7PLv7fo1ILOw==
+     procedure_id : 1964546954961316379
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Compare deux IIDs
+      // Syntaxe :
+      //[ <Résultat> = ] CompareIID (<IID1>, <IID2>)
+      //
+      // Paramètres :
+      //	IID1 : Premier IID à comparer
+      //	IID2 : Seconde IID à comparer
+      // Valeur de retour :
+      // 	booléen : Vrai si les deux IIDs sont identiques, Faux dans le cas contraire
+      
+      PROCEDURE RESTREINTe CompareIID(IID1 est un WDGUID, IID2 est un WDGUID)
+      
+      	bIIDIdentiques 	est un booléen
+      	bufIID1 		est un buffers sur 16
+      	bufIID2 		est un buffers sur 16
+      	
+      	// Copie les IID dans les buffers
+      	transfert(&bufIID1, &IID1, 16)
+      	transfert(&bufIID2, &IID2, 16)
+      	
+      	// Compare
+      	bIIDIdentiques = (bufIID1 = bufIID2)
+      	
+      renvoyer bIIDIdentiques
+     type : 458752
+  properties :
+   -
+     name : Connexion
+     identifier : 0x1b43790c02fe6a1b
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE Connexion()
+         renvoyer m_pclConnexionPoint
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE Connexion(ppv est un entier systeme)
+         
+         	// Si on annule la connexion
+         	si ppv = null alors
+         		
+         		// Si l'objet est valide
+         		si m_pclConnexionPoint <> null alors
+         			
+         			// Déconnexion
+         			Déconnecte()
+         		
+         			// Libère l'objet
+         			m_pclConnexionPoint.Release()
+         			m_pclConnexionPoint <- null
+         		fin
+         	sinon
+         		
+         		// Conserve le pointeur
+         		m_pclConnexionPoint = allouer un IConnectionPoint(ppv)
+         	FIN
+        type : 2031616
+     template_refs : []
+   -
+     name : Cookie
+     identifier : 0x1b43790c02ff6a1b
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE Cookie()
+         renvoyer m_nCookie
+        type : 1966080
+      -
+        code : |1-
+         
+        type : 2031616
+     template_refs : []
+   -
+     name : SurDébutManipulation
+     identifier : 0x1b437b7004f8bdb7
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE SurDébutManipulation()
+         renvoyer m_sCallback_ManipulationStarted
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE SurDébutManipulation(sProcédureWL est une chaine)
+         
+         	// Conserve la procédure 
+         	m_sCallback_ManipulationStarted = sProcédureWL
+        type : 2031616
+     template_refs : []
+   -
+     name : SurFinManipulation
+     identifier : 0x1b437b9404f94a1d
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE SurFinManipulation()
+         renvoyer m_sCallback_ManipulationCompleted
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE SurFinManipulation(sProcédureWL est une chaine)
+         
+         	// Conserve la procédure
+         	m_sCallback_ManipulationCompleted = sProcédureWL
+        type : 2031616
+     template_refs : []
+   -
+     name : SurModificationManipulation
+     identifier : 0x1b437bcc04fa2761
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE SurModificationManipulation()
+         renvoyer m_sCallback_ManipulationDelta
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE SurModificationManipulation(sProcédureWL est une chaine)
+         
+         	// Conserve la procédure
+         	m_sCallback_ManipulationDelta = sProcédureWL
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CClasse1
+resources :
+ string_res :
+  identifier : 0x1fbe22ed05a79886
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,102 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WD Multitouch
+ major_version : 28
+ minor_version : 0
+ type : 4097
+ description : ""
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : CAAAAAgAAACMTOxY5zIkr8NZJxnzqjhI20ECrByV4S5vcF1SICP7dy9uprMZIG0Yqppn55oqC8L441ysNhboqngOi/jUrvjJOZ0joqhw3I2wFsqwsWW75EEFI/LuWyh3Q9fduNYet6MjEbq1mq59QG6QoUrYH4/ZJ1DE3MCM/Fhl2Ve/9QPnMJVbYF1rcLLA7kvlkHxSRngoKgVHfuaGuG/ZR1crIHxl4DDVAPHRszbEcD0+o4zSu2N7hzG0Q+gJV2pTdeXafXFa/8IYsB4OuX8NXQlkmy0WEvNooWCU8qq7riSd865injAwzQ434s7RBisrDR1MeowedYpLt6m1gmNGlHyWQCPXdOSQ1W/RDtKFGe/1M//2quDq2pyvXNe+alCRC9fEbdKxsZrXGZXbdIGyyLQb9u3pdSMNyAk99+dJTUm8yo8CefsCdEtj/LpIUoY8PJsK+stAr5pYqKZagwRkvcasAQA41H9IdABVUQWQG3H0MSGodlNlLgRhf1tD24oRcotfcTtklI9yLzfbxxd5K3CCjAE2YMLG6ZBq3YmTeoZ+EeEXWyVGqY+YYLIJC7N0ppndrnVe7C3VjTm5MpKq9LynmHTPZ2ScL2fS8dDRUPH/YPN71oKnIO2vedgyHMUDNQjmd9+yC0Z52PHsEaEGPAiwDgm6K0JhwQc80tN/Pmm+4rEasFGcDm4g3qy7UlrXipafx48g9sJGQ+PnUrkhmIa5lYoRYGgxJGFUicj7XvFZ+4b3jWc7D4YymyJtZgRxpsH/gDBJKATRZtz+VaqePaG3VfPjlFkbfk3u7rknEMpfPVMOiRtp72k0bTFLMUSVqiV+Y5ck1ByuCrlmek8bX/7gGDXt9AsHA7iBrXAjPVru297qC8GXqtIWpfNT4LQKObE+mF1dbcyrmkh04gFBTUBhU84e1t16BLUIbU2+mv3towctMNRxRzmqkz20PHlIVbEHcQEBpIGGDhAZTEpTeYjFcjDuiP9sqjCi9wjwrJSCPUUpIHy7R45IOQdb61PGvBtDuCVX8njQSJIwbnVoUqNvqj8aUg7sezvihLinEV4q8hcsurZJonwumkkxFj3Yg79jA33+1wg0fOdM/63NM7hiV7PgrQIphrxJfg7iB1JPTfEQr2qrS6jZBdlPfzTtOYMaamiH3qdgwYH22bJS33jIVucXxdgnzg/Zunhqe+ubDs7Ttb7iFEg4K/EqUSu7iacyDQZ1jBaio5kcHWt9ODKITy2norUzUMsT40AaZeMBrF4KVs4XmYmzxH2qUd2MPS+rA8uCQ+vmJr0ELf9T42unCf5rGbdJYPSNzgCXxx+pB+yxD1ousY/ll/RBr35wiJtTGUHIobS7pWP+u0AqNGtYycab1SMTFSjcMiofivhANevvgYOQNAXKQn5RRU/RtyX+Iit/CT3OZFW3G35BxSYWL4VhuJxNRxSWoCCvYeXUYfK4wgP8XugWko5Ux8kZKw4SqBvqetSfWUBeRa08mThUMc0/JYaBlz/9BYeJgtgA49iWLdTaNC82ZsFWiwxwwMABif8Fg/GsDET4pmMJUpoe/cMVPShomfqn/VvY63OL1QnH9hMPVoubvTrosFhdjkwP6Z9KmXxmS2XLreouNUx/7/OA145sNfojBlPwWVRvPe9shYd3NxOJiCMMAMXqzqaMShhiduX3cWBk7fxdl3oJVeF8iZiHPjenu5iTtW5RKD3ATEgpPMXBYapyh9SX122/rVMI3w608NV/EOU+lEsVGrIFjhB3KTTo0KEORRqhtyvjNx2erqUgEA/56pdrnRCI9Ef+iT1zl2v16KR0lMaEOezGADv3mggE34B+MurV/rHnC8QW6nurVMic73rEOszFyXSFItQ2MRnRC5t3033cfclB5xh/ojS1gTBrVsralCeSd7l9
+ configurations :
+  -
+    name : WD Multitouch
+    internal_properties : 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
+    configuration_id : 12503184134172389667
+    type : 1
+    generation_name : WD Multitouch.exe
+    version :
+     major_version : 21
+     internal_generation_version : 1
+    icon_filename : .\main.ico
+    language : 1
+ elements :
+  identifier : 0x4b98b6770002da6e
+  elements :
+   -
+     name : FEN_Manipulations_WMTOUCH
+     identifier : 0x4b98b6fa000cdc42
+     internal_properties : CAAAAAgAAADOVCZ6yfa+8f6ND7tpVYWJZnUNRXVYADGgxQFhT9DMxAzWnsBeqOXkl4F7Rc0D//HbWw==
+     physical_name : .\FEN_Manipulations_WMTOUCH.wdw
+     type : 2
+   -
+     name : TEST_Dessin_WMTOUCH
+     identifier : 0x4e7c365400323cb5
+     internal_properties : CAAAAAgAAACGjO4y8a4GKTb1p1NRri1BqjuhKSPewaxE5OQG2iV3cVub1Rn20A2MT8kzjRXLtymTkw==
+     physical_name : .\TEST_Dessin_WMTOUCH.wxt
+     type : 17
+   -
+     name : FEN_Mouvements_WMGESTURE
+     identifier : 0x4b98b6fb0010dfbb
+     internal_properties : CAAAAAgAAACsqoSQL1Tcj1gb0ek/DUfX9KcT2/ciNPi4P7V1T9DEVKgmaoSYdrc2JR+ZZy+hWU+5uQ==
+     physical_name : .\FEN_Mouvements_WMGESTURE.wdw
+     type : 2
+   -
+     name : FEN_MouvementsSurChamps_WMGESTURE
+     identifier : 0x4b98b6fb000ede26
+     internal_properties : CAAAAAgAAAD7VyNnRAEpMj3AskpYry5Oey6K4lbxIOyIu1GRiWasvDCs4hz31xaXWsQ+unp2AvbeZg==
+     physical_name : .\FEN_MouvementsSurChamps_WMGESTURE.wdw
+     type : 2
+   -
+     name : FEN_Dessin_WMTOUCH
+     identifier : 0x4b98b6fa000ada6e
+     internal_properties : CAAAAAgAAABYNgAcq9BYA8yfRX2zg8/f6L+3v4eiL4W4vzfj2TZe8sI8dPoU8iuqqZMN66sl3dM9xQ==
+     physical_name : .\FEN_Dessin_WMTOUCH.wdw
+     type : 2
+   -
+     name : FENPOP_Taille
+     identifier : 0x4b98b6f90008d917
+     internal_properties : CAAAAAgAAAD/W9fL+KUNHim8fpZkbd7O95beVm7xhs+433Ovk4wGOspadPorm9LThrAqlh7SriLqag==
+     physical_name : .\FENPOP_Taille.wdw
+     type : 2
+  other_elements : []
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components :
+   -
+     physical_name : .\Multitouch\Multitouch.wci
+ report_and_queries_enabled : false
+ common_generation_directory : true
+ languages :
+  - fr-FR
+ code_elements :
+  internal_properties : CAAAAAgAAABqK1ClE0lvJ2O83gbbUZC7QQmPcraJH6MwQ26ug0n5OlzFpjFFlHWR5++KIStmokhkXrNtFCJT6dI4Q3Wel3483iX1vJef0b5qMBuuNXIWeWQVOAqiIrQVEz+Dcbwdn9LLBHjaijVw
+  type_code : 0
+  p_codes :
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+  orphans :
+   -
+     name : WD Multitouch
+     identifier : 0x4b98b6770003da9d
+     code_elements :
+      type_code : 159
+      p_codes : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+rad :
+ internal_properties : CAAAAAgAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

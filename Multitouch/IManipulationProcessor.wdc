@@ -1,0 +1,441 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : IManipulationProcessor
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1b2276900049ba99
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAACLbVKpMeZOhs8cj4rkL8DJoz18DIjNU/sfUvOAWIWvfwFsLlhDYNF9uHNzREjmrT53Wuog4LRqjJZ1IJWoKNasJdlsky2EAGD8Ztp0XioQ4gOxcEtiw44P2IAFXF85j7yN3V8pSrOSUgTWdyw=
+     code : |1-
+      // Classe IManipulationProcessor
+      // =======================
+      // (Implémente l'interface COM IManipulationProcessor)
+      // 
+      // Fournit des fonctionnalités pour monitorer et gérer les entrées multitouch
+      //
+      IManipulationProcessor est une classe
+      	
+      	RESTREINT
+      		_this_												est un COMObjet		// Objet COM chargé
+      
+      	constant 
+      		
+      		// Méthodes de l'interface
+      		
+      		// -> IUnknown
+      		IManipulationProcessor_QueryInteface				= 0
+      		IManipulationProcessor_AddRef						= 1
+      		IManipulationProcessor_Release 						= 2
+      		
+      		// -> IManipulationProcessor : Propriétés
+      		IManipulationProcessor_get_SupportedManipulations	= 3
+      		IManipulationProcessor_put_SupportedManipulations	= 4
+      		IManipulationProcessor_get_PivotPointX				= 5
+      		IManipulationProcessor_put_PivotPointX				= 6
+      		IManipulationProcessor_get_PivotPointY				= 7
+      		IManipulationProcessor_put_PivotPointY				= 8 
+      		IManipulationProcessor_get_PivotRadius				= 9
+      		IManipulationProcessor_put_PivotRadius				= 10
+      		IManipulationProcessor_get_MinimumScaleRotateRadius	= 22
+      		IManipulationProcessor_put_MinimumScaleRotateRadius	= 23
+      		
+      		// -> IManipulationProcessor : Méthodes
+      		IManipulationProcessor_CompleteManipulation			= 11
+      		IManipulationProcessor_ProcessDown					= 12 
+      		IManipulationProcessor_ProcessMove					= 13
+      		IManipulationProcessor_ProcessUp					= 14
+      		IManipulationProcessor_ProcessDownWithTime			= 15
+      		IManipulationProcessor_ProcessMoveWithTime			= 16
+      		IManipulationProcessor_ProcessUpWithTime			= 17
+      		IManipulationProcessor_GetVelocityX					= 18
+      		IManipulationProcessor_GetVelocityY					= 19
+      		IManipulationProcessor_GetExpansionVelocity			= 20
+      		IManipulationProcessor_GetAngularVelocity			= 21
+      	FIN
+      
+      Fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1955255549084482201
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()
+      	
+      	quand exception dans
+      		
+      		// Crée une instance de IManipulationProcessor
+      		_this_ 		= COMCréeInstance(CLSID_ManipulationProcessor, IID_IManipulationProcessor)
+      	faire
+      		
+      		// On n'a pas pu créer l'instance
+      		libérer objet
+      	fin		
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1955255549084547737
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : QueryInterface
+     procedure_id : 1955257451755109458
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de QueryInterface
+      PROCEDURE QueryInterface(local riid est un entier systeme, local ppvObject est un entier systeme)
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_QueryInteface, riid, ppvObject)
+     type : 458752
+   -
+     name : AddRef
+     procedure_id : 1955258087410351915
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de AddRef
+      PROCEDURE AddRef()
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_AddRef)
+     type : 458752
+   -
+     name : Release
+     internal_properties : CAAAAAgAAADemYLCpZpFuPOu006itwwvWwBRzUQ1lJ7ZQ6dz1b+GT4d4fNktTZevfgobmYWib6SXoH8PszUNjLdIuhU3SFuDQCtir5JGK8gdQdrIHagBhRY9fEX9Rb2DP1UHplR3pskqcRPnF9FepU6nTw==
+     procedure_id : 1955258207669464439
+     type_code : 12
+     group : 2
+     code : |1-
+      // Résumé : Implémentation de Release
+      PROCEDURE Release()
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_Release)
+     type : 458752
+   -
+     name : CompleteManipulation
+     procedure_id : 1955258327928642531
+     type_code : 12
+     code : |1-
+      // Résumé : Cette méthode doit être appelée pour terminer une manipulation. Déclenche l'événement ManipulationCompleted
+      // Description des paramètres d'entrée/sortie de 'CompleteManipulation' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] CompleteManipulation ()
+      //
+      // Paramètres :
+      //	Aucun
+      //
+      PROCEDURE CompleteManipulation()
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_CompleteManipulation)
+     type : 458752
+   -
+     name : GetAngularVelocity
+     procedure_id : 1955258856209677129
+     type_code : 12
+     code : |1-
+      // Résumé : Calcule la vitesse de rotation avec laquelle l'objet est manipulé
+      // Description des paramètres d'entrée/sortie de 'GetAngularVelocity' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] GetAngularVelocity (<rAngularVelocity> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	rAngularVelocity (réel sur 4 octets) : Variable de type réel qui recevra la vitesse de rotation
+      //
+      PROCEDURE GetAngularVelocity(rAngularVelocity est un reel sur 4)
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_GetAngularVelocity, &rAngularVelocity)
+     type : 458752
+   -
+     name : GetExpansionVelocity
+     procedure_id : 1955259032303377480
+     type_code : 12
+     code : |1-
+      // Résumé : Calcule la vitesse d'expansion avec laquelle l'objet est manipulé
+      // Description des paramètres d'entrée/sortie de 'GetExpansionVelocity' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] GetExpansionVelocity (<rExpansionVelocity> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	rExpansionVelocity (réel sur 4 octets) : Variable de type réel qui recevra la vitesse d'expansion
+      //
+      PROCEDURE GetExpansionVelocity(rExpansionVelocity est un reel sur 4)
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_GetExpansionVelocity, &rExpansionVelocity)
+     type : 458752
+   -
+     name : GetVelocityX
+     procedure_id : 1955259169742427766
+     type_code : 12
+     code : |1-
+      // Résumé : Calcule la vitesse de déplacement horizontal de l'objet manipulé
+      // Description des paramètres d'entrée/sortie de 'GetVelocityX' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] GetVelocityX (<rX> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	rX (réel sur 4 octets) : Variable de type réel qui recevra la vitesse de déplacement horizontal
+      //
+      PROCEDURE GetVelocityX(rX est un reel sur 4)
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_GetVelocityX, &rX)
+     type : 458752
+   -
+     name : GetVelocityY
+     procedure_id : 1955259229872049315
+     type_code : 12
+     code : |1-
+      // Résumé : Calcule la vitesse de déplacement vertical de l'objet manipulé
+      // Description des paramètres d'entrée/sortie de 'GetVelocityY' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] GetVelocityY (<rY> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	rY (réel sur 4 octets) : Variable de type réel qui recevra la vitesse de déplacement vertical
+      // Valeur de retour :
+      // 	variant : <indiquez ici les valeurs possibles ainsi que leur interprétation>
+      //
+      PROCEDURE GetVelocityY(rY est un reel sur 4)
+      renvoyer COMAppelleMéthode(_this_, IManipulationProcessor_GetVelocityY, &rY)
+     type : 458752
+   -
+     name : ProcessDown
+     procedure_id : 1955259358721098709
+     type_code : 12
+     code : |1-
+      // Résumé : Alimente le processeur avec les données multitouch reçues pour le début d'un toucher
+      // Description des paramètres d'entrée/sortie de 'ProcessDown' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessDown (<nManipulatorID> est entier sans signe sur 4 octets, <rX> est réel sur 4 octets, <rY> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	nManipulatorID (entier sans signe sur 4 octets) : Identifiant du point de contact
+      //	rX (réel sur 4 octets) : Coordonnée X associée
+      //	rY (réel sur 4 octets) : Coordonnée Y associée
+      //
+      PROCEDURE ProcessDown(local nManipulatorID est un entier sans signe, local rX est un reel sur 4, local rY est un reel sur 4)
+      RENVOYER COMAppelleMéthode(_this_, IManipulationProcessor_ProcessDown, nManipulatorID, rX, rY)
+     type : 458752
+   -
+     name : ProcessMove
+     procedure_id : 1955259749563213921
+     type_code : 12
+     code : |1-
+      // Résumé : Alimente le processeur avec les données multitouch reçues pour le mouvement d'un toucher
+      // Description des paramètres d'entrée/sortie de 'ProcessMove' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessMove (<nManipulatorID> est entier sans signe sur 4 octets, <rX> est réel sur 4 octets, <rY> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	nManipulatorID (entier sans signe sur 4 octets) : Identifiant du point de contact
+      //	rX (réel sur 4 octets) : Coordonnée X associée
+      //	rY (réel sur 4 octets) : Coordonnée Y associée
+      //
+      PROCEDURE ProcessMove(local nManipulatorID est un entier sans signe, local rX est un reel sur 4, local rY est un reel sur 4)
+      RENVOYER COMAppelleMéthode(_this_, IManipulationProcessor_ProcessMove, nManipulatorID, rX, rY)
+     type : 458752
+   -
+     name : ProcessUp
+     procedure_id : 1955259813987803436
+     type_code : 12
+     code : |1-
+      // Résumé : Alimente le processeur avec les données multitouch reçues pour la fin d'un toucher
+      // Description des paramètres d'entrée/sortie de 'ProcessUp' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessUp (<nManipulatorID> est entier sans signe sur 4 octets, <rX> est réel sur 4 octets, <rY> est réel sur 4 octets)
+      //
+      // Paramètres :
+      //	nManipulatorID (entier sans signe sur 4 octets) : Identifiant du point de contact
+      //	rX (réel sur 4 octets) : Coordonnée X associée
+      //	rY (réel sur 4 octets) : Coordonnée Y associée
+      //
+      PROCEDURE ProcessUp(local nManipulatorID est un entier sans signe, local rX est un reel sur 4, local rY est un reel sur 4)
+      RENVOYER COMAppelleMéthode(_this_, IManipulationProcessor_ProcessUp, nManipulatorID, rX, rY)
+     type : 458752
+   -
+     name : ProcessDownWithTime
+     internal_properties : CAAAAAgAAADsMdf4BvbrSufn0lK+9fkP9QVKBkQJ4Wip8ZVpVJvt3D1WncCSvmuPIvME3EKUNS0fJHODDSYcaXeTO8J5uvuER6JC4x4mQjaFaNW3U+UPcisPrVxe0/Uy88EPzpKztDI9LgeA28zlrp1X3b8/kwtNE8erswscjnUJ5Zn2rCHqWfU/KT6RvFVQ0NbJMTzemlMcbzN5/t3Cok9YWiHTbqIm26Ov
+     procedure_id : 1955259882707296708
+     type_code : 12
+     code : |1-
+      // Résumé : Alimente le processeur avec les données multitouch reçues pour le début d'un toucher (y compris un "timestamp")
+      // Description des paramètres d'entrée/sortie de 'ProcessDownWithTime' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessDownWithTime (<nManipulatorID> est entier sans signe sur 4 octets, <rX> est réel sur 4 octets, <rY> est réel sur 4 octets, <nTimestamp> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	nManipulatorID (entier sans signe sur 4 octets) : Identifiant du point de contact
+      //	rX (réel sur 4 octets) : Coordonnée X associée
+      //	rY (réel sur 4 octets) : Coordonnée Y associée
+      //	nTimestamp (entier sans signe sur 4 octets) : Valeur du "timestamp"
+      //
+      PROCEDURE ProcessDownWithTime(local nManipulatorID est un entier sans signe, local rX est un reel sur 4, local rY est un reel sur 4, local nTimestamp est un entier sans signe)
+      RENVOYER COMAppelleMéthode(_this_, IManipulationProcessor_ProcessDownWithTime, nManipulatorID, rX, rY, nTimestamp)
+     type : 458752
+   -
+     name : ProcessMoveWithTime
+     internal_properties : CAAAAAgAAADcAceIdga7end3YiLuhWn/5RW6FLwh7bQpjan5ROsJXL36JSyCZg/7GidwzEKcWV3PMKMv3dZQdUcvDwKB8t9sl64S315efvq9LEHHczWDYgPpq5IEeZ9M3QPFHCAJPrjrmDX2UaL/iJ8hK0WFcTV7mRm5YdlCcIdTt+8E6n8kFwN5v1QPKgdC6mhfh0rErGMMXyMJbq2S8p/o6lEDXrI2y5Of
+     procedure_id : 1955259887002329634
+     type_code : 12
+     code : |1-
+      // Résumé : // Résumé : Alimente le processeur avec les données multitouch reçues pour le mouvement d'un toucher (y compris un "timestamp")
+      // Description des paramètres d'entrée/sortie de 'ProcessMoveWithTime' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessMoveWithTime (<nManipulatorID> est entier sans signe sur 4 octets, <rX> est réel sur 4 octets, <rY> est réel sur 4 octets, <nTimestamp> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	nManipulatorID (entier sans signe sur 4 octets) : Identifiant du point de contact
+      //	rX (réel sur 4 octets) : Coordonnée X associée
+      //	rY (réel sur 4 octets) : Coordonnée Y associée
+      //	nTimestamp (entier sans signe sur 4 octets) : Valeur du "timestamp"
+      //
+      PROCEDURE ProcessMoveWithTime(local nManipulatorID est un entier sans signe, local rX est un reel sur 4, local rY est un reel sur 4, local nTimestamp est un entier sans signe)
+      RENVOYER COMAppelleMéthode(_this_, IManipulationProcessor_ProcessMoveWithTime, nManipulatorID, rX, rY, nTimestamp)
+     type : 458752
+   -
+     name : ProcessUpWithTime
+     internal_properties : CAAAAAgAAADgPdP0AvLnVuv71mai+a0zobluuwjvZbKbfZvZ7k33/EcGRdz6oGMddC82NKgqw7EtEAfj6XCcc2k/nYLTpJ3cIRqSr3qENrxLOM/PRa+N3nkkaF/JstaFGk6SpbEWGyFi06prfmOG4RQIdJoSolqYtDhawvpnm5CInvhR/3DFsEo83Kkk0277g394ZC9ttW84A19NKunWtlNcXiXfcqYq36+j
+     procedure_id : 1955259887002395217
+     type_code : 12
+     code : |1-
+      // Résumé : Alimente le processeur avec les données multitouch reçues pour la fin d'un toucher (y compris un "timestamp")
+      // Description des paramètres d'entrée/sortie de 'ProcessUpWithTime' :
+      //
+      // Syntaxe :
+      // [ <Résultat> = ] ProcessUpWithTime (<nManipulatorID> est entier sans signe sur 4 octets, <rX> est réel sur 4 octets, <rY> est réel sur 4 octets, <nTimestamp> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	nManipulatorID (entier sans signe sur 4 octets) : Identifiant du point de contact
+      //	rX (réel sur 4 octets) : Coordonnée X associée
+      //	rY (réel sur 4 octets) : Coordonnée Y associée
+      //	nTimestamp (entier sans signe sur 4 octets) : Valeur du "timestamp"
+      //
+      PROCEDURE ProcessUpWithTime(local nManipulatorID est un entier sans signe, local rX est un reel sur 4, local rY est un reel sur 4, local nTimestamp est un entier sans signe)
+      RENVOYER COMAppelleMéthode(_this_, IManipulationProcessor_ProcessUpWithTime, nManipulatorID, rX, rY, nTimestamp)
+     type : 458752
+  properties :
+   -
+     name : MinimumScaleRotateRadius
+     identifier : 0x1b227ada005a7a01
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE MinimumScaleRotateRadius()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IManipulationProcessor_get_MinimumScaleRotateRadius, &rValeur)
+         	
+         renvoyer rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE MinimumScaleRotateRadius(rValeur est un reel sur 4)
+         COMAppelleMéthode(_this_, IManipulationProcessor_put_MinimumScaleRotateRadius, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : PivotPointX
+     identifier : 0x1b227ae2005b9b95
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PivotPointX()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IManipulationProcessor_get_PivotPointX, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PivotPointX(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IManipulationProcessor_put_PivotPointX, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : PivotPointY
+     identifier : 0x1b227ae7005cae69
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PivotPointY()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IManipulationProcessor_get_PivotPointY, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PivotPointY(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IManipulationProcessor_put_PivotPointY, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : PivotRadius
+     identifier : 0x1b227aee005dcb4c
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PivotRadius()
+         
+         	rValeur est un réel sur 4
+         	COMAppelleMéthode(_this_, IManipulationProcessor_get_PivotRadius, &rValeur)
+         
+         RENVOYER rValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PivotRadius(rValeur est un réel sur 4)
+         COMAppelleMéthode(_this_, IManipulationProcessor_put_PivotRadius, rValeur)
+        type : 2031616
+     template_refs : []
+   -
+     name : SupportedManipulations
+     identifier : 0x1b227af7005eebf5
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE SupportedManipulations()
+         
+         	nValeur est un entier
+         	COMAppelleMéthode(_this_, IManipulationProcessor_get_SupportedManipulations, &nValeur)
+         	
+         renvoyer nValeur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE SupportedManipulations(nValeur est un entier)
+         COMAppelleMéthode(_this_, IManipulationProcessor_put_SupportedManipulations, nValeur)
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CClasse1
+resources :
+ string_res :
+  identifier : 0x1fbe22ed05c798a5
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

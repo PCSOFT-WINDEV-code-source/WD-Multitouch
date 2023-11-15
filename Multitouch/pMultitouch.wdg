@@ -1,0 +1,69 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : pMultitouch
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1b27781f0045837d
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : FenActiveMultitouch
+     procedure_id : 1956664663429519147
+     type_code : 15
+     starred : true
+     code : |1+
+      // Résumé : Active ou désactive la réception des messages multitouch sur une fenêtre
+      // Syntaxe :
+      //[ <Résultat> = ] FenActiveMultitouch (<Fenêtre> [, <bActive> est booléen])
+      //
+      // Paramètres :
+      //	Fenêtre : Nom de la fenêtre
+      //	bActive (booléen - valeur par défaut=1) : Vrai (par défaut) pour activer le multitouch, Faux sinon
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux dans le cas contraire
+      //
+      PROCEDURE FenActiveMultitouch(Fenêtre, local bActive est un booléen = vrai)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI ptouchapi.OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      	// Si la fenêtre n'est pas ouverte, on ne peut pas activer le multitouch
+      	si fenetat(Fenêtre) = Inexistant alors
+      		ErreurDéclenche(1, "La fenêtre n'est pas ouverte")
+      		renvoyer faux
+      	FIN
+      	
+      	si bActive ALORS
+      		
+      		// Active le multitouch sur la fenêtre
+      		renvoyer RegisterTouchWindow(handle(Fenêtre), TWF_WANTPALM)
+      	sinon
+      
+      		// Désactive le multitouch
+      		renvoyer UnregisterTouchWindow(handle(Fenêtre))
+      	FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_Collection1
+resources :
+ string_res :
+  identifier : 0x1fbe22ee05f498f3
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

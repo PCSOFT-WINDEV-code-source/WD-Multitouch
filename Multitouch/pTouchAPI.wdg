@@ -1,0 +1,719 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : pTouchAPI
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1b2120c3000d2abf
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAACxYOuxp81zOvfS+xnb7xY6ALEYt7HDgbsJL+B2VwpxF6jtxep5boQb2C2GROndh6BVRKh32UCmB0M5PTv23cfaOasL7d3k4DNTC9bKkjsESAfEaPBDeQNmw+Iq6bNCSyrheAFPagXh9of7pnV5gC0k4htN3DpWotMP7kpSorq/B2pB44P4wQ8/uNYXyn0vd/KAMSoIFTmS348z8vxKt9+tBomPydc5bTTFWJA=
+     code : |1-
+      
+      constant
+      	// Messages Windows
+      	WM_TOUCH									= 0x0240				// Evénement déclenché lorsqu'un ou plusieurs points de contacts ont été établis
+      	WM_GESTURE									= 0x0119				// Evénement déclenché pour récupérer des informations sur un mouvement
+      	WM_GESTURENOTIFY							= 0x011A				// Evénement déclenché pour paramétrer les options de mouvement
+      	
+      	// Type de mouvements
+      	GF_BEGIN									= 0x00000001			// Le mouvement débute
+      	GF_INERTIA									= 0x00000002			// Le mouvement déclenche une inertie
+      	GF_END 										= 0x00000004			// Le mouvement est terminé
+      	
+      	// Identifiants des mouvements gérés nativement par Windows
+      	GID_BEGIN									= 1						// Le mouvement débute
+      	GID_END										= 2						// Le mouvement est terminé
+      	GID_ZOOM									= 3						// Mouvement de zoom
+      	GID_PAN										= 4						// Mouvement de défilement
+      	GID_ROTATE									= 5						// Mouvement de rotation
+      	GID_TWOFINGERTAP							= 6						// Mouvement "deux frappes" de doigts
+      	GID_PRESSANDTAP								= 7						// Mouvement de frappe et de glissement
+      	GID_ROLLOVER								= GID_PRESSANDTAP
+      	
+      	// Options de configuration des mouvements
+      	GC_ALLGESTURES                              = 0x00000001			// Tous les mouvements
+      	GC_ZOOM                                     = 0x00000001			// Mouvement de zoom
+      	GC_PAN                                      = 0x00000001			// Mouvement de défilement
+      	GC_PAN_WITH_SINGLE_FINGER_VERTICALLY        = 0x00000002			// Mouvement de défilement vertical avec un doigt
+      	GC_PAN_WITH_SINGLE_FINGER_HORIZONTALLY      = 0x00000004			// Mouvement de défilement horizontal avec un doigt
+      	GC_PAN_WITH_GUTTER                          = 0x00000008			// Limite le mouvement perpendiculaire à sa direction originale jusqu'à ce qu'un seuil soit dépassé
+      	GC_PAN_WITH_INERTIA                         = 0x00000010			// Mouvement de défilement avec inertie
+      	GC_ROTATE                                   = 0x00000001			// Mouvement de rotation
+      	GC_TWOFINGERTAP                             = 0x00000001			// Mouvement "deux frappes" de doigts
+      	GC_PRESSANDTAP                              = 0x00000001			// Mouvement de frappe et de glissement
+      	GC_ROLLOVER                                 = GC_PRESSANDTAP
+      	GESTURECONFIGMAXCOUNT           			= 256
+      	
+      	GCF_INCLUDE_ANCESTORS           			= 0x00000001
+      	
+      	// Constantes relatives à Windows Touch utilisables avec [API]GetSystemMetrics
+      	SM_DIGITIZER		  						= 94					// Options disponibles avec le service Tablet PC
+      	SM_MAXIMUMTOUCHES	  						= 95					// Nombre maximal de points de contact gérés par le périphérique d'entrée
+      	
+      	// Constantes utilisables pour SysTouchOptionActive / [API]GetSystemMetrics(SM_DIGITIZER)
+      	NID_INTEGRATED_TOUCH  						= 0x00000001			// Le périphérique propose un système multipoints intégré
+      	NID_EXTERNAL_TOUCH    						= 0x00000002			// Le périphérique propose un système externe multipoints
+      	NID_INTEGRATED_PEN    						= 0x00000004			// Le périphérique propose un système de stylet intégré
+      	NID_EXTERNAL_PEN      						= 0x00000008			// Le périphérique propose un système externe de stylet 
+      	NID_MULTI_INPUT       						= 0x00000040			// Le périphérique supporte plusieurs sources d'entrées
+      	NID_READY             						= 0x00000080			// Le périphérique est prêt
+      	
+      	// Constantes utilisables pour RegisterTouchWindow
+      	TWF_FINETOUCH		  						= 0x00000001			// Utilisé pour réceptionner des données non-liées
+      	TWF_WANTPALM		  						= 0x00000002			// Utilisé pour accélérer la réception des messages WM_TOUCH
+      		
+      	// Valeur des options pour TOUCHINPUT.dwFlags
+      	TOUCHEVENTF_MOVE            				= 0x0001				// Un déplacement a eu lieu
+      	TOUCHEVENTF_DOWN            				= 0x0002				// Le point de contact est nouveau
+      	TOUCHEVENTF_UP              				= 0x0004				// Le point de contact n'existe plus
+      	TOUCHEVENTF_INRANGE        					= 0x0008				// Le point de contact est dans les bornes
+      	TOUCHEVENTF_PRIMARY         				= 0x0010				// Les données du point de contact correspondent au premier point de contact établi
+      	TOUCHEVENTF_NOCOALESCE     					= 0x0020				// L'entrée n'est pas liée
+      	TOUCHEVENTF_PEN            					= 0x0040				// 
+      	TOUCHEVENTF_PALM            				= 0x0080				// Le point de contact provient de la paume
+      	
+      	// Valeurs de masques pour TOUCHINPUT.dwMask
+      	TOUCHINPUTMASKF_TIMEFROMSYSTEM  			= 0x0001 				// Le membre TOUCHINPUT.dwTime est valide
+      	TOUCHINPUTMASKF_EXTRAINFO       			= 0x0002 				// Le membre TOUCHINPUT.dwExtraInfo est valide
+      	TOUCHINPUTMASKF_CONTACTAREA     			= 0x0004 				// Les membres TOUCHINPUT.cxContact et TOUCHINPUT.cyContact sont valides
+      		
+      	// DLL
+      	USER32										= "user32"
+      	KERNEL32									= "kernel32"
+      	
+      	sizeofGESTUREINFO							= 48
+      	sizeofGESTURENOTIFYSTRUCT					= 20
+      	sizeofGESTURECONFIG							= 12
+      fin
+      
+      POINT est une structure
+      	x, y			sont des entiers				// Coordonnées du point
+      FIN
+      
+      POINTF est une structure
+      	x, y			sont des reels sur 4			// Coordonnées du point
+      FIN
+      
+      POINTS est une structure
+      	x, y 			sont des entiers sur 2			// Coordonnées du point
+      FIN
+      
+      GESTUREINFO est une structure
+      	cbSize			est un entier sans signe sur 4	// Taille de la structure
+      	dwFlags			est un entier sans signe sur 4	// voir constantes GF_xxx
+      	dwID			est un entier sans signe sur 4	// Identifiant du mouvement, voir constantes GID_xxx
+      	hwndTarget		est un entier systeme			// Handle de la fenêtre ciblée par le mouvement
+      	ptsLocation		est un POINTS					// Point courant
+      	dwInstanceID	est un entier sans signe sur 4	// <usage interne>
+      	dwSequenceID	est un entier sans signe sur 4	// <usage interne>
+      	ullArguments	est un entier sans signe sur 8	// Arguments 
+      	cbExtraArgs		est un entier sans signe sur 4	// Taille des arguments supplémentaires
+      FIN
+      
+      GESTURENOTIFYSTRUCT est une structure
+      	cbSize			est un entier sans signe		// Taille de la structure
+      	dwFlags			est un entier sans signe		// <inutilisé>
+      	hwndTarget		est un entier 					// Handle de la fenêtre ciblée par le mouvement
+      	ptsLocation		est un POINTS					// Point de départ
+      	dwInstanceID	est un entier sans signe		// <usage interne>
+      FIN
+      
+      GESTURECONFIG est une structure
+      	dwID			est un entier sans signe		// Identifiant du mouvement, voir constantes GID_xxx
+      	dwWant			est un entier sans signe		// Paramètres associés au mouvement qui doivent être activés, voir constantes GC_xxx
+      	dwBlock			est un entier sans signe		// Paramètres associés au mouvement qui doivent être désactivés, voir constantes GC_xxx
+      FIN
+      
+      TOUCHINPUT est une structure
+      	x				est un entier					// Coordonnée x du point de contact (en centaine de pixels)
+      	y 				est un entier					// Coordonnée y du point de contact (en centaine de pixels)
+      	hSource			est un entier 					// Handle de périphérique pour le périphérique d'entrée
+      	dwID			est un entier sans signe		// Identifiant du point de contact
+      	dwFlags			est un entier sans signe		// Options (voir constantes TOUCHEVENTF_xxx)
+      	dwMask			est un entier sans signe		// Masque des options (voir constantes TOUCHINPUTMASKF_xxx)
+      	dwTime			est un entier sans signe		// Horodatage du point de contact (en millisecondes)
+      	dwExtraInfo		est un entier sans signe		// Données additionnelles associées à l'événement
+      	cxContact		est un entier sans signe		// Largeur de la zone de contact en centaine de pixels
+      	cyContact		est un entier sans signe		// Hauteur de la zone de contact en centaine de pixels
+      FIN
+      
+      OS_VERSION est un reel = val(sysversionwindows(sysVersionNuméro))
+     type : 720896
+  procedures :
+   -
+     name : GID_ROTATE_ANGLE_TO_ARGUMENT
+     procedure_id : 1954894230660950649
+     type_code : 15
+     group : 3
+     code : |1-
+      // Résumé : (MSDN) Macro GDI_ROTATE_ANGLE_TO_ARGUMENT : Convertit une valeur radian en un argument utilisable pour les messages de mouvement de rotation
+      // Syntaxe :
+      // [ <Résultat> = ] GID_ROTATE_ANGLE_TO_ARGUMENT (<_arg_> est réel)
+      //
+      // Paramètres :
+      //	_arg_ (réel) : Angle de rotation en radians
+      // Valeur de retour :
+      // 	entier sans signe sur 2 octets : Argument pour les messages de mouvement de rotation
+      //
+      PROCEDURE GID_ROTATE_ANGLE_TO_ARGUMENT(local _arg_ est un reel)
+      nRésultat est un entier sans signe sur 2 = (((_arg_ + 2.0 * 3.14159265) / (4.0 * 3.14159265)) * 65535.0)
+      renvoyer nRésultat
+     type : 458752
+   -
+     name : GID_ROTATE_ANGLE_FROM_ARGUMENT
+     procedure_id : 1954894582848351025
+     type_code : 15
+     group : 3
+     code : |1-
+      // Résumé : (MSDN) Macro GDI_ROTATE_ANGLE_FROM_ARGUMENT : Interprète le membre ullArguments de la structure GESTUREINFO lorsque l'identifiant du mouvement est GID_ROTATE
+      // Syntaxe :
+      //[ <Résultat> = ] GID_ROTATE_ANGLE_FROM_ARGUMENT (<_arg_>)
+      //
+      // Paramètres :
+      //	_arg_ : Valeur de l'argument (membre ullArguments de la structure GESTUREINFO)
+      // Valeur de retour :
+      // 	réel : Angle de rotation en radians
+      //
+      PROCEDURE GID_ROTATE_ANGLE_FROM_ARGUMENT(_arg_)
+      rRésultat est un reel = (((_arg_ / 65535.0) * 4.0 * valpi) - 2.0 * valpi)
+      renvoyer rRésultat
+     type : 458752
+   -
+     name : GetGestureInfo
+     procedure_id : 1954896193461134106
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Récupère les informations d'un mouvement à partir d'un handle
+      // Syntaxe :
+      //[ <Résultat> = ] GetGestureInfo (<hGestureInfo> est entier système, <pGestureInfo> est entier système)
+      //
+      // Paramètres :
+      //	hGestureInfo (entier système) : Handle du mouvement
+      //	pGestureInfo (entier système) : Pointeur vers une structure GESTUREINFO
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux sinon
+      //
+      PROCEDURE GetGestureInfo(local hGestureInfo est un entier systeme, pGestureInfo est un entier systeme)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      renvoyer (api(user32, "GetGestureInfo", hGestureInfo, pGestureInfo) = vrai)
+     type : 458752
+   -
+     name : GetGestureExtraArgs
+     internal_properties : CAAAAAgAAABknwDWrtgTOWp6581K5jvyP/Tc/FLzzV4o4qzFXRRiQ5Y7sRyRyoClEEi68N5m1d6ULMQFvg6t45BMBY4cHLRF51AqKpwyvwJWfsp0JscYA6AN+9PPkB26dhsmmD2O0K1dRNthxtvP+Dq9CH+OioNud+1hyELPynF6Py5gP8sBbHhKdDgxkP9aBqutW14mR2rsjqlE3/Q=
+     procedure_id : 1954896923605612802
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Récupère des informations additionnelles à propos d'un mouvement à partir d'un handle
+      // Syntaxe :
+      //[ <Résultat> = ] GetGestureExtraArgs (<hGestureInfo> est entier système, <cbExtraArgs> est entier sans signe sur 4 octets, <pExtraArgs> est entier système)
+      //
+      // Paramètres :
+      //	hGestureInfo (entier système) : Handle du mouvement
+      //	cbExtraArgs (entier sans signe sur 4 octets) : Nombre d'octets de données stockées dans les arguments supplémentaires
+      //	pExtraArgs (entier système) : Pointeur vers un buffer ou un tableau d'entiers sans signe sur 1 de taille <cbExtraArgs>
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux sinon
+      //
+      PROCEDURE GetGestureExtraArgs(local hGestureInfo est un entier systeme, local cbExtraArgs est un entier sans signe, pExtraArgs est un entier systeme)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      renvoyer (api(user32, "GetGestureExtraArgs", hGestureInfo, cbExtraArgs, pExtraArgs) = vrai)
+     type : 458752
+   -
+     name : CloseGestureInfoHandle
+     procedure_id : 1954897705289712014
+     type_code : 15
+     code : |1-
+      // Résumé : Libère les ressources allouées avec un handle de mouvement
+      // Syntaxe :
+      //[ <Résultat> = ] CloseGestureInfoHandle (<hGestureInfo> est entier système)
+      //
+      // Paramètres :
+      //	hGestureInfo (entier système) : Handle du mouvement
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux sinon
+      //
+      PROCEDURE CloseGestureInfoHandle(LOCAL hGestureInfo est un entier systeme)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      renvoyer (api(USER32, "CloseGestureInfoHandle", hGestureInfo) = vrai)
+     type : 458752
+   -
+     name : SetGestureConfig
+     internal_properties : CAAAAAgAAACImkxmEYeTf33sREa5TEe7RuwJymirT0uzQF6tAV2IxLqdkxaIZ/ch2e3vVnceLKYD3GIZnZ6BJfQgU2Sz0KjyscFnwc6DmKd/XvebxzqGqGiYJzkSMSOD/h/AUaJtfmhHy6NnfWbvZwT7XJSxL4PTDa6TUK/ohuwC62AhYrSNeTQrBJosg4Ufbu//Gne5nHO1+TgVLQ==
+     procedure_id : 1954898723197067294
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Configure les messages envoyés à une fenêtre pour les messages Windows Touch
+      // Syntaxe :
+      //[ <Résultat> = ] SetGestureConfig (<hWnd> est entier système, <dwReserved> est entier sans signe sur 4 octets, <cIDs> est entier sans signe sur 4 octets, <pGestureConfig> est entier système, <cbSize> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	hWnd (entier système) : Handle de la fenêtre
+      //	dwReserved (entier sans signe sur 4 octets) : Valeur réservée et doit être égale à 0
+      //	cIDs (entier sans signe sur 4 octets) : Nombre d'éléments dans le tableau de structures GESTURECONFIG
+      //	pGestureConfig (entier système) : Pointeur vers un tableau de structures GESTURECONFIG
+      //	cbSize (entier sans signe sur 4 octets) : Taille de la structure GESTURECONFIG
+      // Valeur de retour :
+      // 	Type indéterminé : Vrai si la fonction a réussi, Faux sinon
+      //
+      PROCEDURE SetGestureConfig(local hWnd est un entier systeme, local dwReserved est un entier sans signe, local cIDs est un entier sans signe, pGestureConfig est un entier systeme, local cbSize est un entier sans signe)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      renvoyer api(user32, "SetGestureConfig", hWnd, dwReserved, cIDs, pGestureConfig, cbSize)
+     type : 458752
+   -
+     name : GetGestureConfig
+     internal_properties : CAAAAAgAAAB4Svw2VTcbP22crGaxdD/b1gyx6uDDn+OrKD6FYT24LFL1A25IVy/hWa135k/W9PaTfNo5lUZxTXyoY4zjAOiqGdnXGe4zwPefDqunM6YKnEx8a20OXVe3KiskPb45cgzLXye7eUKzmzC3cODNSzcX8QKnFBtEyqA+Z3S9nkBx3fj/aD54H4kjepsjltM14OdlKejlXQ==
+     procedure_id : 1954900050342008636
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Récupère la configuration de messages envoyés à une fenêtre pour les messages Windows Touch
+      // Syntaxe :
+      //[ <Résultat> = ] GetGestureConfig (<hWnd> est entier système, <dwReserved> est entier sans signe sur 4 octets, <dwFlags> est entier sans signe sur 4 octets, <pcIDs> est entier système, <pGestureConfig> est entier système, <cbSize> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	hWnd (entier système) : Handle de la fenêtre
+      //	dwReserved (entier sans signe sur 4 octets) : Valeur réservée et doit être égale à 0
+      //	dwFlags (entier sans signe sur 4 octets) : Option de commande (voir constantes GFC_xxx)
+      //	pcIDs (entier système) : Pointeur vers un entier sans signe qui recevra la taille du tableau de structures GESTURECONFIG
+      //	pGestureConfig (entier système) : Pointeur vers un tableau de structures GESTURECONFIG
+      //	cbSize (entier sans signe sur 4 octets) : Taille de la structure GESTURECONFIG
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux sinon
+      //
+      PROCEDURE GetGestureConfig(LOCAL hWnd est un entier systeme, local dwReserved est un entier sans signe, local dwFlags est un entier sans signe, pcIDs est un entier système, pGestureConfig est un entier système, local cbSize est un entier sans signe)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		renvoyer faux
+      	FIN
+      
+      renvoyer (api(user32, "GetGestureConfig", hWnd, dwReserved, dwFlags, pcIDs, pGestureConfig, cbSize) = vrai)
+     type : 458752
+   -
+     name : SysTouchOptionActive
+     internal_properties : CAAAAAgAAABuQIY0XlWz+ZuM6Ij3gBfzQIibph6ph31FVIpvr7FcCGS5TdJCdd9/+1kHCB1CsKJ5JIy9Ezh1G17E/zItkMjCn1FV+SThEI3pAga2BFPvdVeJwEBL2lqqkVJD1C+2t70KHLR6kkPCuqvyY3d+2KDMFC8c3wgJFX+R2qPE//U68u/0pQG1PDxmuaomPaSKTaBbJ+7vRw==
+     procedure_id : 1954903559330384894
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Vérifie si un type d'entrée (pour Windows Touch) est valide
+      // Syntaxe :
+      //[ <Résultat> = ] SysTouchOptionActive (<nOptionType> est entier)
+      //
+      // Paramètres :
+      //	nOptionType (entier) : Type d'entrée à vérifier (voir constantes NID_xxx)
+      // Valeur de retour :
+      // 	booléen : Vrai si le type demandé est actif, Faux sinon ou en cas d'erreur
+      //
+      PROCEDURE SysTouchOptionActive(local nOptionType est un entier)
+      
+      	nTypeEntrée	est un entier
+      	
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	si OS_VERSION >= 6.1 alors
+      
+      		// Vérifie si la valeur de l'option est valide
+      		si nOptionType dans (NID_INTEGRATED_TOUCH, nID_EXTERNAL_TOUCH, NID_INTEGRATED_PEN, NID_EXTERNAL_PEN, NID_MULTI_INPUT, NID_READY) ALORS
+      			
+      			// Récupère des informations sur le type d'entrée
+      			nTypeEntrée = sysmétrique(SM_DIGITIZER)
+      	
+      			// Teste et renvoie la valeur
+      			renvoyer ((nTypeEntrée & nOptionType) = nOptionType)
+      	
+      		sinon
+      			ErreurDéclenche(1, "Paramètre <nOptionType> incorrect")
+      			renvoyer faux
+      		FIN	
+      	sinon
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		renvoyer faux
+      	fin
+     type : 458752
+   -
+     name : SysTouchNbPointsContacts
+     internal_properties : CAAAAAgAAADoOmyGMy/3P/lM6FKtQFOvCkRxrixTc2s/kOoR3WF0aEZd+8rsp8Ph/e2L+pOquFr3lBoFwXY11UgI55gHjBwOfRF/rSKL7N/b3gWN1Qiomkry0fNgL6UBYFGOA2BLWGKhLRVZ0yyppQ7FAi4/HeXFb4D9im3ugOJ8xYb7ODp/24aF5kx6cXclYAGdhP3vrgXVmVh1zQ==
+     procedure_id : 1954904804870928783
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Renvoie le nombre de points de contact supportés par l'entrée numérique (pour Windows Touch)
+      // Syntaxe :
+      //SysTouchNbPointsContacts ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE SysTouchNbPointsContacts()
+      
+      	nNbContacts est un entier
+      	
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION >= 6.1 ALORS
+      	
+      		// Récupère le nombre de points de contact supportés par l'entrée numérique
+      		nNbContacts = sysmétrique(SM_MAXIMUMTOUCHES)
+      	sinon
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		renvoyer 0
+      	fin
+      		
+      renvoyer nNbContacts
+     type : 458752
+   -
+     name : IsTouchWindow
+     internal_properties : CAAAAAgAAACeX4W+RDjfMblivh7VKJUJSxFstMPZkmNXyWapuU9N3vsq79WksQdZrCOK1EAC93H1fKfnMSgA19GDoZLT9AlM2XZCU9JMQpijXNtXRQfp3mF2Ho0fECCvVGCYe09MfYfYhTixpAlgCwa6upjIGJxmAjo4mIDlXZJyCFbvfec8krSIktcCkWtWGy9oj1MVzFMW8TevQLauDltDZ52h5AT0CVHd
+     procedure_id : 1956342218770944603
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Vérifie si une fenêtre supporte Windows Touch
+      // Syntaxe :
+      //[ <Résultat> = ] IsTouchWindow (<hWnd> est entier système, <pulFlags> est entier système)
+      //
+      // Paramètres :
+      //	hWnd (entier système) : Handle de la fenêtre
+      //	pulFlags (entier système) : Options (voir constantes TWF_xxx)
+      // Valeur de retour :
+      // 	booléen : Vrai si la fenêtre supporte Windows Touch, Faux sinon ou en cas d'erreur
+      //
+      PROCEDURE IsTouchWindow(local hWnd est un entier systeme, pulFlags est un entier systeme)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      renvoyer (api(user32, "IsTouchWindow", hWnd, pulFlags) = vrai)
+     type : 458752
+   -
+     name : RegisterTouchWindow
+     internal_properties : CAAAAAgAAACYqlyWL+/vbxlsEIIFeBv/emTpniTb83OXyFo5vQGEIA7FuxKspyshPf2jGvuyYGpXxBJlGY6FncCgZwCn7Oy2FVn/VdIrNF8LDrGhyVwklmYevZ+0kxHdxMUKl9Q/NB79iYEV1+DlUTKpjqKjQfGhG7y5pjEirI7g6bJ/XM4rdyKhktje9WMRFPWJaOEDihHFiUgFPQ==
+     procedure_id : 1956352303361549808
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Enregistre une fenêtre en tant que fenêtre compatible Windows Touch
+      // Syntaxe :
+      // [ <Résultat> = ] RegisterTouchWindow (<hWnd> est entier système, <ulFlags> est entier sans signe sur 4 octets)
+      //
+      // Paramètres :
+      //	hWnd (entier système) : Handle de la fenêtre
+      //	ulFlags (entier sans signe sur 4 octets) : Options (voir constantes TWF_xxx)
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux dans le cas contraire
+      //
+      PROCEDURE RegisterTouchWindow(local hWnd est un entier systeme, local ulFlags est un entier sans signe)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      renvoyer (api(USER32, "RegisterTouchWindow", hWnd, ulFlags) = vrai)
+     type : 458752
+   -
+     name : GetTouchInputInfo
+     internal_properties : CAAAAAgAAACI45Tyx2zoiebmGy1qqhsua8AMHErvgR58dtgVfZj690LPYdSZ3uRNjDTm0HYSZdqwwLwlLkJZs+wYCV4EEATZg/yaigS2wzqq0s7S3FW+7W5DqaXttkPQrAGsbqMstpfTIrHDZHkFPnBrJmUs4CmItYMPoigd+A/YBaS2Vdl37qZoGpI/vuVQJIGDacys/fWjMsW4a2A=
+     procedure_id : 1956353583261840395
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Récupère les informations détaillées sur les entrées associées à un point de contact reçu via WM_TOUCH
+      // Syntaxe :
+      //[ <Résultat> = ] GetTouchInputInfo (<hTouchInput> est entier système, <cInputs> est entier sans signe sur 4 octets, <pInputs> est entier système, <cbSize> est entier)
+      //
+      // Paramètres :
+      //	hTouchInput (entier système) : Handle du point de contact (reçu via _Eve.lParam sur le message WM_TOUCH)
+      //	cInputs (entier sans signe sur 4 octets) : Nombre d'éléments dans le tableau dont l'adresse est passée via pInputs
+      //	pInputs (entier système) : Adresse du tableau de structure TOUCHINPUT
+      //	cbSize (entier) : Taille de la structure TOUCHINPUT
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux dans le cas contraire
+      //
+      PROCEDURE GetTouchInputInfo(local hTouchInput est un entier systeme, local cInputs est un entier sans signe, pInputs est un entier systeme, local cbSize est un entier)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      RENVOYER (API(USER32, "GetTouchInputInfo", hTouchInput, cInputs, pInputs, cbSize) = Vrai)
+     type : 458752
+   -
+     name : CloseTouchInputHandle
+     internal_properties : CAAAAAgAAACI45Tyx2zoiebmGy1qqhsua8AMHErvgR58dtgVfZj690LPYdSZ3uRNjDTm0HYSZdqwwLwlLkJZs+wYCV4EEATZg/yaigS2wzqq0s7S3FW+7W5DqaXttkPQrAGsbqMstpfTIrHDZHkFPnBrJmUs4CmItYMPoigd+A/YBaS2Vdl37qZoGpI/vuVQJIGDacys/fWjMsW4a2A=
+     procedure_id : 1956355722155592772
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Ferme le handle d'un point de contact et libère les ressources qui lui étaient attribuées
+      // Syntaxe :
+      //[ <Résultat> = ] CloseTouchInputHandle (<hTouchInput> est entier système)
+      //
+      // Paramètres :
+      //	hTouchInput (entier système) : Handle du point de contact (reçu via _Eve.lParam sur le message WM_TOUCH)
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux dans le cas contraire
+      //
+      PROCEDURE CloseTouchInputHandle(LOCAL hTouchInput est un entier systeme)
+      
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      RENVOYER (API(USER32, "CloseTouchInputHandle", hTouchInput) = Vrai)
+     type : 458752
+   -
+     name : UnregisterTouchWindow
+     internal_properties : CAAAAAgAAAC+kFZkFgXzSfs8uGi3UGfzcOgbxr6Jtz2VVMp/P3FcOCQJHYLS5Z8PW+m3CB2SACKJZKx9U/jFO67kn2J90Ogyv0FlKZQxMH2Jku7ufGvXTb9xyFgzEoJiWXpr7AfOnzWSpPxS+vvqUvM6y092sEgk/BdE97Dh/Ve5QkscN62CShccDZkdtKQ+QVJu9XxiNXir9z4fFw==
+     procedure_id : 1956356207487009837
+     type_code : 15
+     code : |1-
+      // Résumé : (MSDN) Dé-enregistre une fenêtre en tant que fenêtre compatible Windows Touch
+      // Syntaxe :
+      //[ <Résultat> = ] UnregisterTouchWindow (<hWnd> est entier système)
+      //
+      // Paramètres :
+      //	hWnd (entier système) : Handle de la fenêtre
+      // Valeur de retour :
+      // 	booléen : Vrai si la fonction a réussi, Faux dans le cas contraire
+      //
+      PROCEDURE UnregisterTouchWindow(LOCAL hWnd est un entier systeme)
+      	
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      RENVOYER (API(USER32, "UnregisterTouchWindow", hWnd) = Vrai)
+     type : 458752
+   -
+     name : TOUCH_COORD_TO_PIXEL
+     procedure_id : 1956356697113329770
+     type_code : 15
+     group : 3
+     code : |1-
+      // Résumé : (MSDN) Macro TOUCH_COORD_TO_PIXEL : Converti une coordonnées d'un point de contact en pixel
+      // Syntaxe :
+      //[ <Résultat> = ] TOUCH_COORD_TO_PIXEL (<l> est entier)
+      //
+      // Paramètres :
+      //	l (entier) : Coordonnée d'un point de contact
+      // Valeur de retour :
+      // 	entier : Valeur en pixels de la coordonnée
+      //
+      PROCEDURE TOUCH_COORD_TO_PIXEL(l est un entier)
+      nRésultat est un entier = (l / 100)
+      renvoyer nRésultat
+     type : 458752
+   -
+     name : SysTouchDisponible
+     internal_properties : CAAAAAgAAAAM6vlXL8DAkXv4KTxK/nkedprK8JxAwW543bkM9YBjJcrF82CG2RA+kd6CrkdIM+bmYgTym+fo2xLzEvDKwhEgYT0z4rUHsfYxCTlhE0ZtJtOUQ41OtwxiyO1vTIUedl7tRbXbUHVByXrQ2+eXsttR+8on7uCRVOg2Xo1KeNVZH7CKH46vCf2+AVRHSpVwKkzSeHqtABsLypIIfqcB0xmUh8xdl2DU4ehyC0D5qEn+iUEp+HUz5Nb6eYWaevaB+w==
+     procedure_id : 1956376578542806260
+     type_code : 15
+     starred : true
+     code : |1+
+      // Résumé : Renvoie la disponibilité du système Windows Touch
+      // Syntaxe :
+      //[ <Résultat> = ] SysTouchDisponible ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	entier : 1 si Windows Touch est disponible; -1 si la version de Windows ne supporte pas Windows Touch; -2 si le nombre de points de contacts gérés par le périphérique d'entrée n'est pas suffisant; -3 si le périphérique d'entrée n'est pas prêt
+      //
+      PROCEDURE SysTouchDisponible()
+      
+      	nRetour est un entier
+      	
+      	// Vérifie la version de Windows
+      	si OS_VERSION < 6.1 ALORS
+      		
+      		nRetour = -1
+      		
+      	// Vérifie si le périphérique "Touch" est prêt
+      	sinon si SysTouchOptionActive(NID_READY) = faux alors
+      		
+      		nRetour = -3
+      		
+      	// Vérifie le nombre de points de contact gérés (2 minimum)
+      	sinon si SysTouchNbPointsContacts() <= 1
+      		
+      		nRetour = -2
+      		
+      	sinon
+      		
+      		// Le système Windows Touch est disponible
+      		nRetour = 1
+      	FIN
+      
+      renvoyer nRetour
+     type : 458752
+   -
+     name : POINTSTOPOINT
+     procedure_id : 1956684978626872358
+     type_code : 15
+     group : 3
+     code : |1-
+      // Résumé : (MSDN) Macro POINTSTOPOINT : Convertit un POINTS en POINT
+      // Syntaxe :
+      //POINTSTOPOINT (<pts> est POINTS, <pt> est POINT)
+      //
+      // Paramètres :
+      //	pts (POINTS) : POINTS à convertir
+      //	pt (POINT) : POINT à remplir
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE POINTSTOPOINT(local pts est un POINTS, pt est un point)
+      
+      	nPts est un entier sur 4
+      	transfert(&nPts, &pts, 4)
+      
+      	// Conversion
+      	pt.x = poidsfaible(nPts)
+      	pt.y = poidsfort(nPts)
+     type : 458752
+   -
+     name : POINTTOPOINTS
+     procedure_id : 1956685386648795102
+     type_code : 15
+     group : 3
+     code : |1-
+      // Résumé : (MSDN) Macro POINTTOPOINTS : Convertit un POINT en POINTS
+      // Syntaxe :
+      //POINTTOPOINTS (<pt> est POINT, <pts> est POINTS)
+      //
+      // Paramètres :
+      //	pt (POINT) : POINT à convertir
+      //	pts (POINTS) : POINTS à remplir
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE POINTTOPOINTS(local pt est un point, pts est un points)
+      
+      	// Conversion
+      	pts = [pt.y, pt.x]
+     type : 458752
+   -
+     name : SysEcranVersClient
+     procedure_id : 1956714966086314450
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Convertit des coordonnées écran en coordonnées relative à une fenêtre ou un champ
+      // Syntaxe :
+      //SysEcranVersClient (<nX> est entier, <nY> est entier [, <FenêtreOuChamp>])
+      //
+      // Paramètres :
+      //	nX (entier) : Coordonnée horizontale. 
+      //	nY (entier) : Coordonnée verticale
+      // 	FenêtreOuChamp : Nom du champ ou de la fenêtre cliente
+      // Valeur de retour :
+      // 	Après l'exécution de la fonction, <nX> et <nY> contiennent les nouvelles coordonnées
+      //
+      PROCEDURE SysEcranVersClient(nX est un entier, nY est un entier, FenêtreOuChamp = FenEnExécution())
+      
+      	ptPoint est un point = [nX, nY]
+      	
+      	// Conversion des coordonnées
+      	api(user32, "ScreenToClient", handle(FenêtreOuChamp), &ptPoint)
+      	
+      	// Recopie les données
+      	nX = ptPoint.x
+      	nY = ptPoint.Y
+     type : 458752
+   -
+     name : LODWORD
+     procedure_id : 1956725042079708554
+     type_code : 15
+     group : 3
+     code : |1-
+      // Résumé : Macro LODWORD : Permet de récupérer les 4 octets de poids faible d'un entier 64 bits (8 octets)
+      // Syntaxe :
+      //[ <Résultat> = ] LODWORD (<nEntier64> est entier sur 8 octets)
+      //
+      // Paramètres :
+      //	nEntier64 (entier sur 8 octets) : Entier sur 8
+      // Valeur de retour :
+      // 	entier : Entier sur 4
+      //
+      PROCEDURE LODWORD(local nEntier64 est un entier sur 8)
+      
+      	nEntier32 est un entier
+      	transfert(&nEntier32, (&nEntier64) + 4, 4)
+      	
+      renvoyer nEntier32
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_Collection1
+resources :
+ string_res :
+  identifier : 0x1fbe22ee06239922
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

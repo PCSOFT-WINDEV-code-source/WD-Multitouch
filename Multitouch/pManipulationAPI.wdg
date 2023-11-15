@@ -1,0 +1,238 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : pManipulationAPI
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1b22648f00ce674a
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAABPrfVeZCR+Zn5Jn1N+hssm/FY3p98ju5GDld4lZVGR/k/F4KC/XyMD0hF4gpo4HstTgpUb/18VftiRtdm96gATrwP5/p308BF5OSsA3ATpHP5X7Y5MDR7q/F1b/WHQVvfJ/1uu+FeIvEhnEMCvU5oBHtipWRkNtsfwJbvOUoTmOTpGr2RYb37EHUOqwr8V0KSJqzm4xJJojVZqWpTa+Q==
+     code : |1-
+      
+      constant
+      	
+      	// Enumération MANIPULATION_PROCESSOR_MANIPULATIONS
+      	MANIPULATION_NONE			= 0											// Aucune manipulation n'a été effectuée
+      	MANIPULATION_TRANSLATE_X	= 0x1										// La manipulation consiste à déplacer horizontalement la cible
+      	MANIPULATION_TRANSLATE_Y	= 0x2										// La manipulation consiste à déplacer verticalement la cible
+      	MANIPULATION_SCALE			= 0x4										// La manipulation consiste à agrandir ou réduire la cible
+      	MANIPULATION_ROTATE			= 0x8										// La manipulation consiste à effectuer une rotation de la cible
+      	MANIPULATION_ALL			= 0xf										
+      		
+      	// Identifiants de classes
+      	CLSID_InertiaProcessor			= "abb27087-4ce0-4e58-a0cb-e24df96814be"
+      	CLSID_ManipulationProcessor		= "597D4FB0-47FD-4aff-89B9-C6CFAE8CF08E"
+      	
+      	// Identifiants d'interfaces
+      	IID_IInertiaProcessor			= "18b00c6d-c5ee-41b1-90a9-9d4a929095ad"
+      	IID_IManipulationProcessor		= "A22AC519-8300-48a0-BEF4-F1BE8737DBA4"
+      FIN
+      
+      CONSTANT
+      	
+      	// Constantes d'erreur pour les retours COM
+      	E_NOINTERFACE = 0x80004002
+      	E_POINTER 	  = 0x80004003
+      	E_NOTIMPL	  = 0x80004001
+      	S_OK		  = 0x00000000
+      	S_FALSE		  = 0x00000001
+      FIN
+     type : 720896
+  procedures :
+   -
+     name : ManipulationEvénement
+     procedure_id : 1955281602363148611
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Intercepte les événements provoqués par un IManipulationProcessor
+      // Syntaxe :
+      //[ <Résultat> = ] ManipulationEvénement (<pclManipulationProcessor> est IManipulationProcessor dynamique, <pclManipulationEvents> est IManipulationEvents dynamique)
+      //
+      // Paramètres :
+      //	pclManipulationProcessor (IManipulationProcessor dynamique) : Objet IManipulationProcessor dont les événements doivent être interceptés
+      //	pclManipulationEvents (IManipulationEvents dynamique) : Implémentation de IManipulationEvents qui recevra les événements
+      // Valeur de retour :
+      // 	booléen : Vrai si les événements ont été interceptés, Faux dans le cas contraire
+      //
+      PROCEDURE ManipulationEvénement(pclManipulationProcessor est un IManipulationProcessor dynamique, pclManipulationEvents est un IManipulationEvents dynamique)
+      renvoyer TouchEvénement(pclManipulationProcessor, pclManipulationEvents)
+     type : 458752
+   -
+     name : InertieEvénement
+     procedure_id : 1956364642809527346
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Intercepte les événements provoqués par un IInertiaProcessor
+      // Syntaxe :
+      //[ <Résultat> = ] InertieEvénement (<pclInertiaProcessor> est IInertiaProcessor dynamique, <pclManipulationEvents> est IManipulationEvents dynamique)
+      //
+      // Paramètres :
+      //	pclInertiaProcessor (IInertiaProcessor dynamique) : Objet IInertiaProcessor dont les événements doivent être interceptés
+      //	pclManipulationEvents (IManipulationEvents dynamique) : Implémentation de IManipulationEvents qui recevra les événements
+      // Valeur de retour :
+      // 	booléen : Vrai si les événements ont été interceptés, Faux dans le cas contraire
+      //
+      PROCEDURE InertieEvénement(pclInertiaProcessor est un IInertiaProcessor dynamique, pclManipulationEvents est un IManipulationEvents dynamique)
+      RENVOYER TouchEvénement(pclInertiaProcessor, pclManipulationEvents)	
+     type : 458752
+   -
+     name : TouchEvénement
+     internal_properties : CAAAAAgAAAAiI5sFw45qQR7Cf5ifmXu+uHHGhQon2byVS5oE8IGQV5YTMfGHe4HU2db7+ciA5hl8O1VQupQ1RJPzwCrDgs3QtaOnEJS6o8ajrJIdX7JbcLckf8I5vEsQEnzJyvcqywqvvJad/rP8p5jUBp35
+     procedure_id : 1956365171090562709
+     type_code : 15
+     group : 2
+     code : |1-
+      // Résumé : (Interne) Cette méthode permet de brancher la gestion des événements sur des objets de type IInertiaProcessor ou IManipulationProcessor
+      // Syntaxe :
+      //[ <Résultat> = ] TouchEvénement (<pclProcesseur> est objet dynamique, <pclManipulationEvents> est IManipulationEvents dynamique)
+      //
+      // Paramètres :
+      //	pclProcesseur (objet dynamique) : Objet de type IInertiaProcessor ou IManipulationProcessor dont les événements doivent être interceptés
+      //	pclManipulationEvents (IManipulationEvents dynamique) : Implémentation de IManipulationEvents qui recevra les événements
+      // Valeur de retour :
+      // 	booléen : Vrai si les événements ont été interceptés, Faux dans le cas contraire
+      //
+      PROCEDURE RESTREINTe TouchEvénement(pclProcesseur est un objet dynamique, pclManipulationEvents est un IManipulationEvents dynamique)
+      
+      	ppvConnectionContainer	est un entier systeme
+      	ppvConnection			est un entier système	
+      	pclConnectionContainer	est un IConnectionPointContainer dynamique
+      	riidConnectionContainer	est un WDGUID = [0xB196B284, 0xBAB4, 0x101A, [0xB6, 0x9C, 0x00, 0xAA, 0x00, 0x34, 0x1D, 0x07]]
+      	riidManipulationEvents	est un WDGUID = [0x4F62C8DA, 0x9C53, 0x4B22, [0x93, 0xDF, 0x92, 0x7A, 0x86, 0x2B, 0xBB, 0x03]]
+      	
+      	// Vérifie la version de Windows
+      	// - Windows 7
+      	// - Windows 2008 Serveur R2
+      	SI pTouchAPI.OS_VERSION < 6.1 ALORS
+      		ErreurDéclenche(1, "Version de Windows incorrecte")
+      		RENVOYER Faux
+      	FIN
+      
+      	// Teste l'objet
+      	SI pclProcesseur = Null	ALORS 
+      		ErreurDéclenche(1, chaineconstruit("L'objet <%1> est invalide", pclProcesseur..classe))
+      		RENVOYER Faux
+      	FIN
+      	
+      	// Teste l'objet IManipulationEvents
+      	SI pclManipulationEvents = Null ALORS 
+      		ErreurDéclenche(1, "L'objet <IManipulationEvents> est invalide")
+      		RENVOYER Faux
+      	FIN
+      
+      	// Vérifie la classe de l'objet
+      	SI PAS pclProcesseur..Classe DANS (IInertiaProcessor, IManipulationProcessor) ALORS
+      		ErreurDéclenche(1, ChaîneConstruit("L'objet <%1> n'est pas un objet IInertiaProcessor ou IManipulationProcessor", pclProcesseur..Classe))
+      		RENVOYER Faux
+      	FIN
+      	
+      	// Vérifie l'état de la connexion
+      	SI pclManipulationEvents.Cookie <> 0 _ET_ pclManipulationEvents.Connexion <> Null ALORS
+      		ErreurDéclenche(1, "Les événements sont déjà interceptés pour cet objet <IManipulationEvents>")
+      		RENVOYER Vrai
+      	FIN
+      	
+      	// Récupère un gestionnaire de connexions sur l'objet 
+      	SI pclProcesseur.QueryInterface(&riidConnectionContainer, &ppvConnectionContainer) = S_OK ALORS
+      		
+      		// Alloue un IConnectionContainer
+      		pclConnectionContainer = allouer un IConnectionPointContainer(ppvConnectionContainer)
+      		
+      		// Récupère un point de connexion
+      		SI pclConnectionContainer.FindConnectionPoint(&riidManipulationEvents, &ppvConnection) <> S_OK ALORS
+      			
+      			// Libération
+      			pclConnectionContainer <- Null
+      			
+      			ErreurDéclenche(1, ChaîneConstruit("Impossible d'intercepter les événements de l'objet <%1> : IConnectionPointContainer::FindConnectionPoint a échoué", pclProcesseur..Classe))
+      			RENVOYER Faux
+      		FIN
+      		
+      		// Attribue la connexion
+      		pclManipulationEvents.Connexion = ppvConnection
+      		
+      		// Libération
+      		pclConnectionContainer <- Null
+      		
+      		// Etablit une connexion temporaire
+      		SI pclManipulationEvents.Connecte() <> s_ok ALORS
+      			
+      			// Libère la connexion
+      			pclManipulationEvents.Connexion = Null
+      			
+      			ErreurDéclenche(1, ChaîneConstruit("Impossible d'intercepter les événements de l'objet <%1> : IConnectionPoint::Advise a échoué", pclProcesseur..Classe))
+      			RENVOYER Faux
+      		SINON
+      			
+      			// La connexion est établie
+      			RENVOYER Vrai
+      		FIN		
+      	SINON
+      		
+      		ErreurDéclenche(1, ChaîneConstruit("Impossible d'intercepter les événements de l'objet <%1> : IManipulationProcessor::QueryInterface a échoué", pclProcesseur..Classe))
+      		RENVOYER Faux
+      	FIN
+     type : 458752
+   -
+     name : ManipulationFinEvénement
+     procedure_id : 1964931672361994719
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Met fin à la réception des événements d'un IManipulationProcessor
+      // Syntaxe :
+      //ManipulationFinEvénement (<pclManipulationEvenements> est IManipulationEvents dynamique)
+      //
+      // Paramètres :
+      //	pclManipulationEvenements (IManipulationEvents dynamique) : Objet IManipulationEvents qui recevait les événements
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE ManipulationFinEvénement(pclManipulationEvenements est un IManipulationEvents dynamique)
+      
+      	si pclManipulationEvenements = null alors retour
+      
+      	// Déconnexion
+      	pclManipulationEvenements.Déconnecte()
+     type : 458752
+   -
+     name : InertieFinEvénement
+     procedure_id : 1964931899995380295
+     type_code : 15
+     starred : true
+     code : |1-
+      // Résumé : Met fin à la réception des événements d'un IManipulationProcessor
+      // Syntaxe :
+      //InertieFinEvénement (<pclManipulationEvenements> est IManipulationEvents dynamique)
+      //
+      // Paramètres :
+      //	pclManipulationEvenements (IManipulationEvents dynamique) : Objet IManipulationEvents qui recevait les événements
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE InertieFinEvénement(pclManipulationEvenements est un IManipulationEvents dynamique)
+      
+      	// Déconnexion
+      	ManipulationFinEvénement(pclManipulationEvenements)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_Collection1
+resources :
+ string_res :
+  identifier : 0x1fbe22ed05e798d4
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

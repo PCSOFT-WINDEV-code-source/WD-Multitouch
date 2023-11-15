@@ -1,0 +1,461 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_MouvementsSurChamps_WMGESTURE
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_MouvementsSurChamps_WMGESTURE
+ identifier : 0x2b45c3288b3bb379
+ internal_properties : CAAAAAgAAADtwk0hVvGbe4YGUmS1Z1ZvnN86hsocgpWCA2C13ANVbUPliRVMZQCpc0DoE4jetIYvyWq8nRlJXMDTz6jGJNH+INmtavkl6USp1RkUbMMmBGmp0Zz19JpZhj2pzkr1LOFYNm2aZlsxCa8mSG5yhX8QUgAR35PO3U5Wsi/LrduWq+Y9Ohm8OWbQfnMihCRCWKFCTFcVO7GJuX76KbGB1T2Oh9jHvFu/G9tjXjZIuQ/1u8INnmwthQnyjd6wqQ1irKqtBF9HvWGSa1u76RPJaAmSKAsBiwXAoIcpBKVZ51GgQjSHuZ0C6Xhc+RkUTWlPYwblvooXmoc/NByurj+sKBOn7zIbCMJSPzQOcUmsHsUa5J/Rr9DC9pGIGq+rb36mD+XCPX7ANMl2iBNiV8qNSsoFHee4ygzZhHCYOSQicnKs3ptgMzD2IX6nlT3javQPJP7+rqREch1TRq9/gPp78/uPK7gUKjSm94uuUxNReyXxTPoqkA3z9uF7xlF49uYf+Csi60eT3r7huiD+pIpKYmjosHST3utbC/LWPw+MHMbZvfnm5vZaEoJge70BctWB3HUihKge/tfc0tnIRA+Z2zWTXwXRndjLIPpCAuwSqn3acr1dAOEnl3qyKNLeBs5XZ8WvGHV3l71zofuf5QLNUjME9aadrX05wLn6mYDxHce0pmGOI5XGIkSBzXbwotl+t41QHDN4908C2J9J87NoTtdiX5G6MD/m68J6jFSsVDiBpgneMVKC4iWneF5QHigLCH6W11zDLWz1cbl0Za1yAGeWLFsPEOvbzxGMt5R9ozMvOdexFusAtcogD+c=
+ properties :
+  width : 1020
+  height : 772
+  widthClient : 1018
+  heightClient : 740
+ controls :
+  -
+    name : IMG_RIBBON
+    identifier : 0x2b45c3288b3db379
+    internal_properties : CAAAAAgAAADmsCE3Yy8DpPARQ7GtBppByBfWCW9t3l/rWF2H86uKnSxuuVFAABwYsTcabPhSutwbTcfKoQ3Eaz2aUzkLIEW0EEj2jLzwZgU4jOxrgSJwRXn63sOzpzAdhgqdNaK5AY/Ju9oq5el2t+V4RMuqQerV3slLZ17o3W9oLtKX+CF1n226Kjaw5H+LNsznHyzDQSsr1GVXCYKI4Re9qxKDHo13l1sAKNyHJ38lu+9tz5U5orfAw+0Onn1uD3YOuVWGICMzCg6oqKdasGE4hKYerEnLetokaBu8rYsvmon8MjqFvIjpuYf4w7txudCFEZCrurNBM6PAGYG4iz1ISmuCJgJXsF79Y/cQMJQrkYqhbDTPzK8W0hvdJzTzH+IDKL8Q4k8En3HIgvMM6VdNNPRpQeiESva29guvW3Rbj1EZQEB3A1++LB/HC5Afh5/jqZs7i0BPls01sJjplFITs7+blWVrDzXi6fLV2wj0HmB96yGZeM9rNusn2nWZ+LlQHYfqvhcmjsYBBptQGde4qqKiNsLQCI4be/jyZZeF2PwuSkVpg5NX
+    properties :
+     width : 1019
+     height : 93
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : IMG_DESSIN
+    identifier : 0x2b45c3288b3eb379
+    internal_properties : CAAAAAgAAACwA9P1BQSyYKkxFEYDYGkwlTZcvYiJSg3SW9v4ZENmuyWR3fHiZCBbEyt13209nYWjfur2IYldb4pVZ4MY0gS0VtL3ST3z2KOkvWLx8FseYlDJ41+97T1wDge3Nof1cnJcCelECeRdi1mOZfi1nGrKhyZgjRBbUIcMJn/ycAOr8qRW+1TzTjXfQuEatGyR7rbBMfdy3J/RgunJqAJez7udr7HTT6cXhBBMFR83N7G/dnl+Dk2V+El3vvAetbUQJtE/+WRmfz/lHh98E+Myhzcnrhwx0wz3j9mWVBA7LOs5BGPldE9X5LQAiHhz4stySHVz8Hk9AFnggEPVAAcwR095N6lst7uDJxQcS8hlOJQmdfEKhG0dyMte6XjNqaRNj1v79DnW7kt4jsMv1WWiXusxpHSs6Aq6Vi7uRSM8cdZrUACdF//MsQiClNm+jSllOtCCuDnFhouoOYFa2dSx/Afe5tkP8Luk5run8ZVclTr76Gkh52476qsuGezZPrtAOWT5Qv/sUjp1v7lykhwJq1X8AqW0dkxunx5JKoFLd8kS3vGxJ3WuvdwywkqJAbk8LdvmrZyqRoFNAcD55uY2Ykxh3GHUqjxFUfLGqfA/nY+urjkYpAl5IZCzyQTrFpRwsTLTIovnDdu+ZAyEgJh2YvwByPWYZpjSyOZIS4mmKUintA==
+    properties :
+     x : 6
+     y : 99
+     width : 1006
+     height : 635
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1-
+         
+        type : 18
+      -
+        code : |1-
+         
+        type : 66048
+      -
+        code : |1-
+         
+        type : 66049
+      -
+        code : |1-
+         
+        type : 66050
+  -
+    name : TABLE_Table
+    identifier : 0x2b45c3288b3fb379
+    internal_properties : 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
+    properties :
+     x : 6
+     y : 99
+     width : 1006
+     height : 629
+    columns :
+     -
+       name : COL_Colonne1
+       identifier : 0x2b45c3288b40b379
+       internal_properties : CAAAAAgAAABPK/D0g411slIDVbsCuYEnm/CAMHg93ji1AaQAaU9K8c8X85q+Omr4EdvsMQCLn5GEC4WesIeO5uVYZXWCvF4oZTSdF4ItNuXr0c2yhEG9Bi3Kav6qi5Zxp9rB/5SbUWCYy9UMRYnd0+devmpmsQA8N5qIbTYg8gIjsJmPBO49VrZbDLgIVB96V3/IMBonzioMuCymGuHoFuYyTPhQLJAnNCDelMYlc0WtbAOgnqmF9aq9O5zBmkXG
+       type : 2
+       content :
+        internal_properties : CAAAAAgAAABq39FIOgQoc9m2KzHsIHv+F8xgX0HMsSAUMbMfSZkp1bdmnmLbvUldwC5ByRIcnz1HcwqjUCUWlGJJN7VXklDx2b7ZxTwxnqJMnf/0cjKj6d/lOkDgC2jvq1VhhiMVQregEFjPUZzeriRNHhkmHgwNnPLEAAEruAEnXe80bAJK9RYKIuUsgKloZZ88yTsjgwLBfZkKctzyOEqmdrU0SZY2YkPtX1Ogx24Pw0/g0YmnA29FKdIJXEMJm38r9Atakp2Bd6PkEfcMUnE+pCpeZjqp7AITfYYrFCWSEDzeAZanTkn6zXEzHNYX+xQ8ruZnwksicYz1gQQVezMNNp3rIncwgHz5HSH+sbEbFgMHtX4oQw3yvZ7VVCYsq9m9edATqw7Q9P7+s79meJg75hHRK9k3+NC7ujoUqGdzet0hCUQ91de5PFHuYL8Ea/HaHv2moPhVymSDcNY9XDKFsUQAREc/LuqpCknw4MvShnXHSJE55ZkRuVALxU3AKp/T1ZQx7njquoT1rPq0nEQd1NXWYlVpClSJ2CfBUlB+Vj2VfOhEDjF2sZ2A9GA4Ng5Buos8GR/O
+        type : 2
+       code_elements :
+        internal_properties : CAAAAAgAAAAChSoFVb1loGV6wv+FZQL8nRmw9c2almLPhMQBuWa+7VMJs+K0ZNOpQf+bb9K00mOTfeAcexTC11JMw/gjKr+Xhg==
+        type_code : 3
+        p_codes :
+         -
+           type : 276
+           enabled : false
+         -
+           type : 277
+           enabled : false
+         -
+           type : 278
+           enabled : false
+     -
+       name : COL_Colonne2
+       identifier : 0x2b45c3288b41b379
+       internal_properties : CAAAAAgAAABR2caisT8D6BjstnvCcalrRyjo6MD9Dvhd0Uigyf+StStfyyquA2xEHUfGo3LFD882RRGiCr6qPkUARVWiDE44Zbwdx6rdRoUjYcWqzOnVrlW6Ujbak14pR7Jhb0CXBYwc3+FQCZUJ35Mail5irWT4O64UMXqcbv4vnPVzoErB8soztS8Ft7x7th5Rr7noCYWDb64EMKNaJNw4Vu5+wvqJykZoOiSX9cMjggWm5Pw3K2Dr6W7zqFfY
+       type : 2
+       content :
+        internal_properties : CAAAAAgAAABq39FIOgQoc9m2KzHsIHv+F8xgX0HMsSAUMbMfSZkp1bdmnmLbvUldwC5ByRIcnz1HcwqjUCUWlGJJN7VXklDx2b7ZxTwxnqJMnf/0cjKj6d/lOkDgC2jvq1VhhiMVQregEFjPUZzeriRNHhkmHgwNnPLEAAEruAEnXe80bAJK9RYKIuUsgKloZZ88yTsjgwLBfZkKctzyOEqmdrU0SZY2YkPtX1Ogx24Pw0/g0YmnA29FKdIJXEMJm38r9Atakp2Bd6PkEfcMUnE+pCpeZjqp7AITfYYrFCWSEDzeAZanTkn6zXEzHNYX+xQ8ruZnwksicYz1gQQVezMNNp3rIncwgHz5HSH+sbEbFgMHtX4oQw3yvZ7VVCYsq9m9edATqw7Q9P7+s79meJg75hHRK9k3+NC7ujoUqGdzet0hCUQ91de5PFHuYL8Ea/HaHv2moPhVymSDcNY9XDKFsUQAREc/LuqpCknw4MvShnXHSJE55ZkRuVALxU3AKp/T1ZQx7njquoT1rPq0nEQd1NXWYlVpClSJ2CfBUlB+Vj2VfOhEDjF2sZ2A9GA4Ng5Buos8GR/O
+        type : 2
+       code_elements :
+        internal_properties : CAAAAAgAAAD3PgtDfqBXUfQhQPgYoCojDGzAcS1Rag+uMUL8vu4YpBYMElAcYdULClAIcI+4rWdG9k28hcueohj1ZkWMWuA=
+        type_code : 3
+        p_codes :
+         -
+           type : 276
+           enabled : false
+         -
+           type : 277
+           enabled : false
+         -
+           type : 278
+           enabled : false
+    type : 9
+    controls : []
+    code_elements :
+     type_code : 9
+     p_codes :
+      -
+        type : 35
+        enabled : false
+      -
+        type : 22
+        enabled : false
+      -
+        type : 24
+        enabled : false
+      -
+        type : 23
+        enabled : false
+      -
+        type : 25
+        enabled : false
+      -
+        type : 230
+        enabled : false
+      -
+        type : 241
+        enabled : false
+      -
+        type : 263
+        enabled : false
+      -
+        type : 262
+        enabled : false
+      -
+        type : 222
+        enabled : false
+      -
+        type : 223
+        enabled : false
+      -
+        type : 224
+        enabled : false
+  -
+    name : LIB_Les_mouvements_de_zoom
+    identifier : 0x2b45c3288b42b379
+    internal_properties : CAAAAAgAAABqPawY+FxyWWqUpB5MOP0nJ/EHpXWYySF1HK9xUXrm8f5hZ4r8zonoaFseZ+10om5/r91UynmyLigSQRUIDHMXZbdG3WCznawLu5S31/IYhU8T6UoBgOU8Xpeu3O2QZS89XdNVLd/mv/9R5O7N6YOQ+HltFocnVjltUPRTMR2VOT4M/C4dKs2wyr/jZYKExNJieJE1A3x7GlYbq/Bw2id2U5I7HM+tkSuo7mDHnRFllSqpvxHYvlvlwmg0mcuvovh3MhfZoGyb2f1bO3nnYZS+3nZVgdOnkAt7d8L79yMpYZ2Mgy5wuxY6EdGGAlccDUl8Xse5ox+jFtrrxdk4qiDZdFx9ABgloSS+U9up0n963sLyWSZrmrX4NSKdvUEJ3W/fTYG8uyQq7eP2jMGorPm9p1+TB/YFLuuSSL/2mxUygYVg4ySm2TriUfE3hbfscahNv6vrdkNIyboJ92U4LyDSfS/ijdM1axij2WkrtU7at9JlcJ/KOBD5iVtwWZzAR9qY/qQJYQqm9vRX7vYnbvO+Kp1h+U0=
+    properties :
+     x : 14
+     y : 29
+     width : 782
+     height : 33
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : BTN_Image
+    identifier : 0x2b45c3288b43b379
+    internal_properties : CAAAAAgAAABdq3qdo3fCJgCyKqhbsX+blspLTjbJYpNWXobvzcxv34btpOnq+WgSOu+wfRBllSbrxYj1IjhbGkog+JTjSFt7NKCiPsoK4lpUVivceOcuSRYX8qij+JBImF7I+HJ/lYX6s0RGEauEoaRg0OYebE28pchdjAwjJoOq5e+tuEdtCHX4SiAoatcsQS/bZjhVk13hqKxmF/sLcOzFh9ijGUEOAyFxKYmzkHVEiLdC1xML5wr8PUVWKYyaCx/RjQ8oyUNivbqsY8+sgGeARpVGpdnmvVjRHQB2mf12scutA/AIR0B61Aq7VwJF48MKMgt68LpWsHSI+zEBsX3abqsm0Ki76vMxmRD/OQyWUnlJWMgDn9v1vuXxY1nPk+o7N+usJQk3widkawsgoUT6+UusmA2L9nu/J4ZImOI8f5ECKH4/gkIYT84S2F4OHRJJJrlo/KDzk501mVDu69e8eD6V7FzfMg8HW+9GS+rmtzGMPwcJ+Y8kHLyb4wuc9+svlg5M2wsNwgYLSO171GH1K/9SmlQH0bkZSK+j4dU/QJATjY/NN2TGCkl3JLJLQx7PapcXmZt4q7nxjJm22QvwjuZplW4DK0eVfod6tijtb40qcxvZ/rGUkU/yquUaoa4lFiOcbfhHpgt8iHhJcKiJ2A/3yM6p8LGE2tZzgtTqGUjGIU+RQ0x8ONDimY7Lwx4KBIP89J+wbXvW/1qS8UrEuuWDGy4+2cvZRiKZPM0=
+    properties :
+     x : 866
+     y : 10
+     width : 70
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         AnimationPrépare(mafenetre)
+         
+         btn_image..enfonce = vrai
+         BTN_Table..enfonce = faux
+         mafenetre..plan = 1
+         
+         animationjoue(animfondu)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Table
+    identifier : 0x2b45c3288b44b379
+    internal_properties : CAAAAAgAAADcq/mFOjTPREAdwvCf3uWIQXNeJ9d3Wb4msEu+thAIJNDelwDRdxBVvwENAE+uqkC7RXX2I30B+5iqC0xUC8BQav+fcD9UVk76H5D/vwQyyl2217v688zcJY+8piR2KmWLJEmfmilr0YQnNXsy7ekU8eXB5g1hfA3LBWpAZoP8QQv7HlU4ED0cFYWkCwpf8Z5UNaIFLWkifFs8KfvaFu4Ej32+r4SNm7LooDNWv4Xw+ICIvQMVy3qJ5ZlGFmgRquXsvlhYaMqwm54yoHwv+oKk9Q37tIc9giHnNaxN9SX1V163OAgAmOhEoAYDRxNSMHZTyrHQkfPL5GKsuhKk8f2J48g3y9OlqKo3bxPCtwmk2C7UaFgjygQbBHiXOCAMkKSlOl8FyZqHpUFsR3a7NMxylhF1OPTnx379JTsJe2i2oSBA5SHYBbvoxuCN3SRyX1VbzTFsU6kD3z6+dO/qnmGQSrWz6Olp4lRHI5uJGP9kIoeaxF1x0qpOaAfBlQm4QqpFvDz+3tD2LFZlm9iHECMC8/VPDW/4ilv66NRicAe4TGAEbmzX8QsDRm679W7lNmIsYbdqmrJP0VrO3yRjBmC5gFa6wMRydKkZVoocCUwL9KpLiJ2l4qPZe0NGwJHPd8hSJVHbzMvMsga8zS4RoEOz7oQlhBf2ykhzdUyrc9xR8wjFsT9G+3f1s0N8G2eyTMKKQSfjMYQNBiEqzcBS7y2E9ctX
+    properties :
+     x : 942
+     y : 10
+     width : 70
+     height : 70
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         AnimationPrépare(mafenetre)
+         
+         btn_image..enfonce = faux
+         BTN_Table..Enfoncé = Vrai
+         mafenetre..plan = 2
+         
+         animationjoue(animfondu)
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x2b45c3288b45b379
+  internal_properties : CAAAAAgAAAD7S+2GOLjEeheq9Y6YZGIRPpLnwB8KUS2je4S4X5oxSGrv51WBBaVxxbk/BTEdUwW0fnnvlhQNIBAuQTAO0S9+S8FMTvDhqkS1JydqFJBfHlbZSFzBkZAjjJ5aIH/cuMnF4Pme57TAyYvjnlkzTJmN5UX9hu+BEl3AsIsso5gsz3oX/KHp1ai/xWZCb54MlUFXdWmT2EOpULKqea/LH9EOlTkaiWsV2aM2/FfXQjTSY3NhAR6zEzKHYKVJwiZULchG0D4LNvRbPifZJPDMmlF6ptz+Rg0QN6SXG5jU7HifIzmkonwDFnOJQw==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABKff4sxysR+9kg8GIJ708iDvb5GJwiVUNVItgIbZUrW7fSt1M44lfhlxH0X2hAol+fzQfua3lOxmapqc458XPFsJSvhwaDfZNzV/+zROsnKAy1jaSejRR5UgML
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAADJq5wXD5wpxtGa11gsJzYfEQs+nAZX1wtZEOumeGVJmWvG+JhV8lVxkkk/RmxSO9zB/KhkBnoRxcVMT4A9k2/TOhIzpsabEwUvQSnX+42xASDKs4ovPgWUX1d8d1yMPK8OSq5EY63oDMIUNW4=
+     code : |1-
+      
+      // Gestion des événements sur le champ image
+      Evénement(OnGestureConfig, 	MaFenêtre..Nom, WM_GESTURENOTIFY)
+      Evénement(OnGesture, 		MaFenêtre..Nom, WM_GESTURE)
+      
+      // Vérifie la capacité
+      SI PAS SysTouchDisponible() _OU_ SysTouchNbPointsContacts() < 2 ALORS	
+      	Erreur("La fonctionnalité Windows Touch n'est pas disponible sur votre ordinateur.", "", "Un écran tactile multipoints ou un périphérique multipoints est requis pour activer les fonctionnalités Windows Touch.")
+      	Ferme()
+      FIN
+   -
+     code : |1-
+      
+      ExécuteTraitement(BTN_Image, trtclic)
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     type : 13
+  procedures :
+   -
+     name : OnGesture
+     procedure_id : 1965191393307112313
+     type_code : 14
+     code : |1+
+      // Résumé : Evénement WM_GESTURE
+      // Syntaxe :
+      //[ <Résultat> = ] OnGesture ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : 
+      //
+      PROCEDURE OnGesture()
+      
+      	nHandle 		est un entier systeme = _eve.lparam
+      	stGesture 		est un gestureinfo
+      	bGéré			est un booléen
+      	rRatio			est un reel
+      	rAngle			est un reel
+      		
+      	// Taille de la structure
+      	stGesture.cbSize = sizeofGESTUREINFO
+      		
+      	// Récupère les informations
+      	si GetGestureInfo(nHandle, &stGesture) alors
+      			
+      		// En fonction du type de mouvement reçu
+      		selon stGesture.dwID
+      						
+      			// Windows a détecté un mouvement de zoom
+      			cas gid_zoom		
+      			
+      				bGéré = vrai
+      				
+      				// Champ image
+      				si stGesture.hwndTarget = handle(IMG_DESSIN) alors
+      				
+      					// Si le mouvement démarre
+      					SI stGesture.dwFlags = GF_BEGIN ALORS
+      						
+      						// Conserve le membre ullArguments
+      						IMG_DESSIN..note 	= LODWORD(stGesture.ullArguments)		
+      						IMG_DESSIN = IMG_DESSIN
+      						
+      					sinon
+      						
+      						// Calcule le facteur du zoom
+      						rRatio = LODWORD(stGesture.ullArguments) / val(IMG_DESSIN..Note)
+      						
+      						// Conserve le membre ullArguments
+      						IMG_DESSIN..Note = LODWORD(stGesture.ullArguments)		
+      												
+      						// Applique le zoom
+      						IMG_DESSIN..Zoom = IMG_DESSIN..Zoom * rRatio
+      						IMG_DESSIN..ImageMode = imgCentré
+      						Temporisation(0, tempoDessin)
+      					FIN
+      					
+      				sinon si stGesture.hwndTarget = handle(TABLE_Table) alors
+      					
+      					// Si le mouvement démarre
+      					SI stGesture.dwFlags = GF_BEGIN ALORS
+      						
+      						// Conserve le membre ullArguments
+      						TABLE_Table..Note 	= LODWORD(stGesture.ullArguments)		
+      						
+      					SINON
+      						
+      						// Calcule le facteur du zoom
+      						rRatio = LODWORD(stGesture.ullArguments) / Val(TABLE_Table..Note)
+      						
+      						// Conserve le membre ullArguments
+      						TABLE_Table..Note = LODWORD(stGesture.ullArguments)		
+      						
+      						// Applique le zoom
+      						TABLE_Table..HauteurLigne = TABLE_Table..HauteurLigne * rRatio
+      						TABLE_Table..HauteurLigne = max(8, TABLE_Table..HauteurLigne)
+      						Temporisation(0, tempoDessin)
+      					FIN
+      					
+      				fin				
+      							
+      			// Windows a détecté une rotation
+      			cas GID_ROTATE			
+      				
+      				bGéré = Vrai				
+      				
+      				// Champ image
+      				SI stGesture.hwndTarget = Handle(IMG_DESSIN) ALORS
+      									
+      					// Si le mouvement démarre
+      					si pas stGesture.dwFlags = GF_BEGIN ALORS
+      											
+      						rAngle = GID_ROTATE_ANGLE_FROM_ARGUMENT(LODWORD(stGesture.ullArguments))
+      						rAngle = rAngle * 180 / valpi
+      					
+      						IMG_DESSIN..AffichageActif = faux
+      						IMG_DESSIN = IMG_DESSIN
+      						dRotation(IMG_DESSIN, -rAngle)
+      						IMG_DESSIN..AffichageActif = vrai
+      						
+      						IMG_DESSIN..ImageMode = imgCentré
+      						Temporisation(0, tempoDessin)				
+      					FIN		
+      				sinon SI stGesture.hwndTarget = Handle(TABLE_Table) ALORS
+      						
+      					// Si le mouvement démarre
+      					SI PAS stGesture.dwFlags = GF_BEGIN ALORS
+      						
+      						rAngle = GID_ROTATE_ANGLE_FROM_ARGUMENT(LODWORD(stGesture.ullArguments))
+      						rAngle = rAngle * 180 / ValPI
+      						rAngle = rAngle * 90 / 360
+      																		
+      						si rAngle < 0 alors
+      							TABLE_Table..Vertical = Vrai
+      							TableAjuste(TABLE_Table)
+      						sinon
+      							TABLE_Table..Vertical = faux
+      							TableAjuste(TABLE_Table)
+      						FIN
+      						
+      						Temporisation(0, tempoDessin)				
+      					FIN	
+      				fin					
+      				
+      		FIN
+      	FIN
+      		
+      	// Pour les autres mouvements, on doit renvoyer le résultat de l'appel à DefWindowProc
+      	si bGéré = faux ALORS		
+      		renvoyer api(user32, "DefWindowProcA", _eve.hwnd, _eve.wmessage, _eve.wparam, _eve.lparam)
+      	FIN
+      		
+      	// Pour les autres cas, on doit libérer le handle
+      	CloseGestureInfoHandle(nHandle)
+      	
+      renvoyer vrai
+     type : 458752
+   -
+     name : OnGestureConfig
+     procedure_id : 1965191393307177849
+     type_code : 14
+     code : |1-
+      // Résumé : Evénément WM_GESTURENOTIFY
+      // Syntaxe :
+      //[ <Résultat> = ] OnGestureConfig ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	variant : // 	Aucune
+      //
+      PROCEDURE OnGestureConfig()
+      
+      	stConfig est un gestureconfig
+      	stNotify est un GESTURENOTIFYSTRUCT
+      	nHandle  est un entier systeme
+      	
+      	// Récupère les données
+      	transfert(&stNotify, _eve.lparam, dimension(stNotify))
+      	
+      	// Récupère le handle pour lequel on doit configurer les mouvements
+      	nHandle = stNotify.hwndTarget
+      	
+      	// On accepte tous les mouvements
+      	stConfig = [0, GC_ALLGESTURES, 0]
+      	
+      	// Applique la configuration
+      	SetGestureConfig(nHandle, 0, 1, &stConfig, sizeofGESTURECONFIG)
+      		
+      // On doit faire suivre au traitement initial
+      RENVOYER API(USER32, "DefWindowProcA", _EVE.hWnd, _EVE.wMessage, _EVE.wParam, _EVE.lParam)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : FEN_Fenêtre1
+resources :
+ string_res :
+  identifier : 0x1fbe22ee066b99ce
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
